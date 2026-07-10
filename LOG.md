@@ -72,4 +72,39 @@ under git and pushing to GitHub.
 - The quarterly-connectedness robustness (H5) shows a genuinely different
   result from the monthly spec (see `DECISIONS.md`) — worth reconciling in
   the paper's discussion rather than leaving as an unexplained sensitivity.
-- `git init` this new location and push to GitHub (not yet done).
+
+### 2026-07-11 (later) — Repo pushed to GitHub; fixed paths for Overleaf sync
+
+Local-only git steps run first (`init`, `add -A`, `commit`, `branch -M
+main`), then the user created the GitHub repo and pushed. That closed out
+the last open item from the earlier entry.
+
+Next: the user plans to link this GitHub repo to Overleaf (Claude Code →
+GitHub → Overleaf workflow) and asked whether `main (1).tex`'s `\input`
+paths would need editing first. They were right to ask — Overleaf resolves
+relative paths against the *project root* it syncs, not against the folder
+containing the main `.tex` file, so the existing paths (written assuming
+`cd paper && pdflatex ...` locally) would have broken as soon as Overleaf
+tried to compile. Rewrote every `\input`, `\includegraphics`, and
+`\addbibresource` path in `main (1).tex` to be root-relative (prefixed with
+`paper/`), and updated the local compile recipe in `README.md`/`CLAUDE.md`
+to match (`pdflatex -output-directory=paper "paper/main (1).tex"` run from
+the repo root, not `cd paper` first). Verified by actually recompiling from
+the repo root rather than assuming the fix was right — biber needed the
+same treatment (`--output-directory=paper`, run from root) since it hit the
+identical resolution issue on the first attempt (`Cannot find
+'paper/references.bib'` when run from inside `paper/`). Final PDF is
+byte-count-identical in substance to the pre-fix version (242,816 vs
+242,810 bytes), confirming only the path-resolution mode changed.
+
+**Open questions for the next session:**
+- Wire the bootstrap CIs into `h1.tex` once `B` is bumped to 1000.
+- Decide whether to fix the `\label`/`\ref` mismatches in `main (1).tex`.
+- The quarterly-connectedness robustness (H5) shows a genuinely different
+  result from the monthly spec (see `DECISIONS.md`) — worth reconciling in
+  the paper's discussion rather than leaving as an unexplained sensitivity.
+- Link the repo to Overleaf via GitHub integration and do a live test
+  compile there (the local proxy is verified, but Overleaf itself hasn't
+  been tried yet).
+- Commit and push this round of changes (paths fix + updated
+  README/CLAUDE.md/DECISIONS.md/LOG.md).

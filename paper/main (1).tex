@@ -37,7 +37,7 @@
 
 \usepackage[style=apa,backend=biber,uniquename=false,natbib=true]{biblatex}
 \usepackage[autostyle=true]{csquotes}
-\addbibresource{references.bib}
+\addbibresource{paper/references.bib}
 
 \makesavenoteenv{tabular}
 \makesavenoteenv{table}
@@ -388,7 +388,7 @@ comes from the lagged component ($23.3$ vs $11.9$ at $\tau=0.9$). This indicates
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=0.68\linewidth]{TCI_decomp.pdf}
+\includegraphics[width=0.68\linewidth]{paper/TCI_decomp.pdf}
 \caption{Overall connectedness (black) and its decomposition into
 contemporaneous (blue) and lagged (red) components, by inflation quantile
 $\tau$ (monthly, $n_{\text{lag}}=2$).}
@@ -398,7 +398,7 @@ $\tau$ (monthly, $n_{\text{lag}}=2$).}
 Table \ref{conn_contemp_full}    in the appendix show the contemporaneous dependency between CPI subcomponents at $\tau = 0.9$. The rows indicate FROM connectedness so Food gets 0.2 units from Gas and 1.6 from Energy; the columns indicate TO connectedness, so Food gives 0.4 to gasoline and 1.6 household energy. The strongest contemporaneous connectedness is recorded between household energy and gasoline (in both directions), and  core goods and core services with shelter, again in both directions.  The bidirectional nature of these suggests they represent common shocks.  Higher nominal incomes and low interest rates could increase demand for houses, good and services for example.     
 Table [] shows the same for lagged connectedness. In line with the results in Table~\ref{tab:h1} we see, generally, connectedness is stronger with a lag.  WE see that shelter, services and gasoline are a net transmitter of non-contemporaneous connectedness, where as Food, core goods and household energy are net receivers [need to revise this].
 
-\input{tables/h1}
+\input{paper/tables/h1}
 
 \subsection{H3: how the two episodes broadened}
 Our most distinctive result concerns \emph{how} inflation broadened in each episode.
@@ -420,7 +420,7 @@ quarterly frequency (Panel~B) the calm-era base connectedness is already high an
 so the episode marginals are small and less sharply signed, and we read the monthly result as the
 primary evidence.
 
-\input{tables/h3}
+\input{paper/tables/h3}
 
 \subsection{Self-reinforcement: wages and expectations}
 The next two hypotheses ask whether inflation became self-reinforcing through wages and
@@ -431,7 +431,7 @@ Great-Inflation-inclusive subperiod (Panel~B): wage--price connectedness at $\ta
 1964--2019 against only $3.6$ post-1983. Wage--price dependence is thus, like broadening itself, a
 high-inflation-regime phenomenon.
 
-\input{tables/h2}
+\input{paper/tables/h2}
 
 For expectations (\textbf{H4}), Table~\ref{tab:h6net} reports the net directional connectedness of
 inflation expectations. Pooled over the full sample, expectations are net transmitters in the upper
@@ -446,8 +446,8 @@ the Great Inflation the lagged inflation$\to$expectations term dominates at high
 $50.7$ at $\tau=0.9$, against $27.5$ in the reverse direction) --- the adaptive channel. COVID shows
 the same pattern, less pronounced.
 
-\input{tables/h6net}
-\input{tables/h6}
+\input{paper/tables/h6net}
+\input{paper/tables/h6}
 
 
 To test H5 and H6 we proceed in three steps. First, for each connectedness system we
@@ -534,7 +534,7 @@ $\delta$ is statistically insignificant throughout. Again not overly strong supp
 \caption{Subcomponent connectedness }
 \label{tab:expconn}
 
-\input{tables/regime_tex/ms_six_120}
+\input{paper/tables/regime_tex/ms_six_120}
 \begin{tablenotes}\footnotesize
 \item \textit{Notes:} Estimates of equation~\eqref{eq:regime_taylor}. Columns are sample
 start dates; each panel a quantile $\tau$. Newey--West HAC $t$-statistics in parentheses;
@@ -552,10 +552,10 @@ response $\beta_\pi/(1-\rho)$ in the low and high regimes.
 \centering
 
 \textbf{Panel A. Matched: MICH and 12-month CPI inflation}\par\smallskip
-{\input{tables/regime_tex/ms_expM_120}}\par\bigskip
+{\input{paper/tables/regime_tex/ms_expM_120}}\par\bigskip
 
 \textbf{Panel B. Mismatched: MICH and month-on-month CPI inflation}\par\smallskip
-{\input{tables/regime_tex/ms_expX_120}}
+{\input{paper/tables/regime_tex/ms_expX_120}}
 
 \begin{tablenotes}\footnotesize
 \item \textit{Notes:} Estimates of equation~\eqref{eq:regime_taylor} in which the
@@ -600,7 +600,7 @@ contrast, only one of the four estimates is statistically significant.
  
  
 
-\input{tables/regime_texQtr/msq_six_120}
+\input{paper/tables/regime_texQtr/msq_six_120}
 \begin{tablenotes}\footnotesize
 \item \textit{Notes:} Estimates of equation~\eqref{eq:regime_taylor}. Columns are sample
 start dates; each panel a quantile $\tau$. Newey--West HAC $t$-statistics in parentheses;
@@ -627,7 +627,7 @@ the monetary-policy reaction function.\footnote{This conclusion holds if inflati
  
  
 
-\input{tables/regime_texQtr/msq_exp12_120}
+\input{paper/tables/regime_texQtr/msq_exp12_120}
 \begin{tablenotes}\footnotesize
 \item \textit{Notes:} Estimates of equation~\eqref{eq:regime_taylor}. Columns are sample
 start dates; each panel a quantile $\tau$. Newey--West HAC $t$-statistics in parentheses;
@@ -651,12 +651,12 @@ directional structure --- shelter and core services are the net lagged transmitt
 weakly connected to the other categories: its variation is dominated by energy-market (crude-oil)
 movements that lie outside the CPI system, so it sits at the periphery of the network.
 
-\input{tables/conn_contemp_full}
-\input{tables/conn_lagged_full}
-\input{tables/conn_contemp_gi}
-\input{tables/conn_lagged_gi}
-\input{tables/conn_contemp_core}
-\input{tables/conn_lagged_core}
+\input{paper/tables/conn_contemp_full}
+\input{paper/tables/conn_lagged_full}
+\input{paper/tables/conn_contemp_gi}
+\input{paper/tables/conn_lagged_gi}
+\input{paper/tables/conn_contemp_core}
+\input{paper/tables/conn_lagged_core}
 
 % ============================================================
 \section{Goods-to-services sequencing: a lag-window illustration}
@@ -674,8 +674,8 @@ $4.4$) and $\tau=0.7$ ($11.2$ vs $7.1$). The point is methodological --- lag-win
 materially affects what connectedness detects, which motivates the quarterly analysis used elsewhere
 --- rather than a new fact about the episode.
 
-\input{tables/h5}
-\input{tables/h5_q}
+\input{paper/tables/h5}
+\input{paper/tables/h5_q}
 
 \printbibliography
 

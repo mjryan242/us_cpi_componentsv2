@@ -35,9 +35,14 @@ diff its output against the existing file in `results_*/` or `paper/tables/`
 before assuming a change in the numbers reflects your edit rather than a
 FRED vintage update or a bug.
 
-Compile the paper with `pdflatex "main (1).tex" && biber "main (1)" &&
-pdflatex ... && pdflatex ...` from `paper/`. Note the literal space and
-`(1)` in the filename — always quote it.
+Compile the paper **from the repo root**, not from `paper/` — every path in
+`main (1).tex` (`\input`, `\includegraphics`, `\addbibresource`) is written
+relative to the repo root (e.g. `\input{paper/tables/h1}`), because that is
+how Overleaf resolves relative paths when this repo is synced via its
+GitHub integration (project root = repo root, regardless of which subfolder
+the main file lives in). See `README.md`'s compile section for the exact
+`-output-directory=paper` invocation. Note the literal space and `(1)` in
+the filename — always quote it.
 
 ## Architecture
 

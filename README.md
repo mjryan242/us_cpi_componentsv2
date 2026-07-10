@@ -98,11 +98,24 @@ cp regime_tex/msq_*.tex paper/tables/regime_texQtr/
 #    must sit next to main.tex.
 cp plots_6cpi/TCI_decomp.pdf paper/
 
-# 10. Compile
-cd paper
-pdflatex "main (1).tex" && biber "main (1)" && \
-  pdflatex "main (1).tex" && pdflatex "main (1).tex"
+# 10. Compile -- FROM THE REPO ROOT, not from paper/. main.tex's \input,
+#     \includegraphics and \addbibresource paths are all written relative to
+#     the repo root (e.g. \input{paper/tables/h1}), because that is how
+#     Overleaf resolves relative paths when this repo is synced via GitHub
+#     integration (project root = repo root, regardless of which subfolder
+#     the main .tex file lives in). Compiling from inside paper/ (the old
+#     "cd paper && pdflatex ..." recipe) will NOT find these files.
+PDFLATEX="/path/to/pdflatex"; BIBER="/path/to/biber"
+"$PDFLATEX" -interaction=nonstopmode -output-directory=paper "paper/main (1).tex"
+"$BIBER" --output-directory=paper "main (1)"
+"$PDFLATEX" -interaction=nonstopmode -output-directory=paper "paper/main (1).tex"
+"$PDFLATEX" -interaction=nonstopmode -output-directory=paper "paper/main (1).tex"
 ```
+
+**Overleaf (GitHub sync):** once this repo is linked as an Overleaf project
+via GitHub integration, set `paper/main (1).tex` as the project's "Main
+document" — no other configuration is needed; Overleaf's compiler already
+resolves relative paths from the project root, matching the recipe above.
 
 ## Bootstrap (adapted to the six-CPI system; smoke-tested at B=10)
 `us_cpi_bootstrap_r2q.R` computes fixed-design quantile-wild bootstrap CIs

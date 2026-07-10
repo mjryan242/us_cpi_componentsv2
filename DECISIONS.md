@@ -168,3 +168,28 @@ say "bootstrap confidence intervals for the six-CPI system are to be added."
 **Confidence:** High that the adaptation is correct (verified against the
 cached base numbers); the actual CIs are simply not computed yet at
 publication-quality `B`.
+
+---
+
+## Paper's `\input`/`\includegraphics`/`\addbibresource` paths: root-relative, not paper/-relative
+
+**Chosen:** All relative paths in `main (1).tex` are now written relative to
+the **repo root** (e.g. `\input{paper/tables/h1}`,
+`\includegraphics{paper/TCI_decomp.pdf}`,
+`\addbibresource{paper/references.bib}`). Compile from the repo root with
+`pdflatex -output-directory=paper "paper/main (1).tex"` and
+`biber --output-directory=paper "main (1)"`.
+
+**Rejected:** Paths relative to `paper/` (the original form, e.g.
+`\input{tables/h1}`), compiled by `cd paper && pdflatex "main (1).tex"`.
+This worked locally but breaks under Overleaf's GitHub-sync integration:
+Overleaf always resolves relative paths against the **project root** (the
+top of the synced repo), regardless of which subfolder the main `.tex` file
+lives in — it has no equivalent of "cd into paper/ first." Verified the fix
+by recompiling from the repo root locally (not `cd paper`) and confirming an
+identical PDF (242,816 vs 242,810 bytes; same content, only the resolution
+mode differs) — this is the same resolution behaviour Overleaf will use.
+
+**Confidence:** High — this is a documented Overleaf behaviour (project
+root is always the sync root), not a judgment call, and the fix was
+verified by reproducing Overleaf's exact resolution mode locally.
