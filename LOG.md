@@ -108,3 +108,19 @@ byte-count-identical in substance to the pre-fix version (242,816 vs
   been tried yet).
 - Commit and push this round of changes (paths fix + updated
   README/CLAUDE.md/DECISIONS.md/LOG.md).
+
+**Also caught while committing:** `paper/references.bib` had been reduced
+from 20 entries to 5 sometime between the initial commit and now (not by
+me — I only touched `main (1).tex` this round; git history confirms the
+initial commit had the full file). Flagged it before pushing rather than
+assuming; the user confirmed it's intentional (they're manually reconciling
+their own bibliography) and asked for a reference sheet instead of a
+restore. Wrote `paper/MISSING_REFERENCES.md` listing the 11 cited-but-
+missing keys with ready-to-paste BibTeX (pulled from the initial commit,
+not reconstructed from memory), plus a flag on an existing typo'd key
+(`ClaridaGaliGertler200`, missing the trailing `0`, so it won't match the
+paper's `\citep{ClaridaGaliGertler2000}` even though a near-identical entry
+exists). Did not touch `references.bib` or recompile — left both for the
+user to finish. Until the bib is reconciled, the committed
+`paper/main (1).pdf` reflects a compile from *before* the trim (all
+citations resolved) and will go stale relative to source if recompiled now.
