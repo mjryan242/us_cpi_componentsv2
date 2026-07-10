@@ -1,0 +1,32 @@
+# LaTeX build artifacts (regenerated on every compile; see paper/ compile
+# instructions in README.md). The compiled PDF and .bbl ARE tracked (small,
+# and useful to have on GitHub without requiring a local TeX install).
+*.aux
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.nav
+*.out
+*.run.xml
+*.snm
+*.synctex.gz
+*.toc
+
+# R session cruft
+.Rhistory
+.RData
+.Rproj.user/
+
+# Scratch run logs from ad hoc smoke tests (e.g. boot_smoke.log, v2_run_*.log)
+*_run.log
+*_smoke.log
+*run_all.log
+
+# OS / editor metadata
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,1103 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{ando2022}{article}{}
+      \name{author}{3}{}{%
+        {{hash=375fde861454228231f96f7a635a9ff6}{%
+           family={Ando},
+           familyi={A\bibinitperiod},
+           given={Tomohiro},
+           giveni={T\bibinitperiod}}}%
+        {{hash=079a2ff66766cbab9dc78dc58813e0f3}{%
+           family={Greenwood-Nimmo},
+           familyi={G\bibinithyphendelim N\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f8bdf666c2b0c08aa17261fddcf67c60}{%
+           family={Shin},
+           familyi={S\bibinitperiod},
+           given={Yongcheol},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{0b33feb8091574d4b91ece52a1d733e2}
+      \strng{fullhash}{881b06e96a404de72e5638b2d102194d}
+      \strng{bibnamehash}{881b06e96a404de72e5638b2d102194d}
+      \strng{authorbibnamehash}{881b06e96a404de72e5638b2d102194d}
+      \strng{authornamehash}{0b33feb8091574d4b91ece52a1d733e2}
+      \strng{authorfullhash}{881b06e96a404de72e5638b2d102194d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Management Science}
+      \field{number}{4}
+      \field{title}{Quantile connectedness: Modeling tail behavior in the topology of financial networks}
+      \field{volume}{68}
+      \field{year}{2022}
+      \field{pages}{2401\bibrangedash 2431}
+      \range{pages}{31}
+    \endentry
+    \entry{antonakakis2020}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e36cfce47fcf4cdc229db4cd0b8260c9}{%
+           family={Antonakakis},
+           familyi={A\bibinitperiod},
+           given={Nikolaos},
+           giveni={N\bibinitperiod}}}%
+        {{hash=738c8462fe3c3df975dc20362a8aa14f}{%
+           family={Chatziantoniou},
+           familyi={C\bibinitperiod},
+           given={Ioannis},
+           giveni={I\bibinitperiod}}}%
+        {{hash=71e5b330de45ad291d8f6c2f67f28271}{%
+           family={Gabauer},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{d6bb3a96b229933fb0c9931a1292a28a}
+      \strng{fullhash}{2da70daad8a71f0496859a000b88fcf9}
+      \strng{bibnamehash}{2da70daad8a71f0496859a000b88fcf9}
+      \strng{authorbibnamehash}{2da70daad8a71f0496859a000b88fcf9}
+      \strng{authornamehash}{d6bb3a96b229933fb0c9931a1292a28a}
+      \strng{authorfullhash}{2da70daad8a71f0496859a000b88fcf9}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Risk and Financial Management}
+      \field{number}{4}
+      \field{title}{Refined Measures of Dynamic Connectedness Based on Time-Varying Parameter Vector Autoregressions}
+      \field{volume}{13}
+      \field{year}{2020}
+      \field{pages}{84}
+      \range{pages}{1}
+    \endentry
+    \entry{balli2023}{article}{}
+      \name{author}{4}{}{%
+        {{hash=7a923ed33f736c887048f556bf937d9c}{%
+           family={Balli},
+           familyi={B\bibinitperiod},
+           given={Faruk},
+           giveni={F\bibinitperiod}}}%
+        {{hash=f9d014f7f48288597f7b5007df15cbe7}{%
+           family={Balli},
+           familyi={B\bibinitperiod},
+           given={Hatice\bibnamedelima O.},
+           giveni={H\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=c4d1eea0fca5b0bc0007ac5cfe63faed}{%
+           family={Dang},
+           familyi={D\bibinitperiod},
+           given={Tuan\bibnamedelimb Hai\bibnamedelima Nam},
+           giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=71e5b330de45ad291d8f6c2f67f28271}{%
+           family={Gabauer},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{f6a45a97702f6b0ec39d04896af4ef5d}
+      \strng{fullhash}{3ca623b9518790e5b9ee3536d19c219b}
+      \strng{bibnamehash}{3ca623b9518790e5b9ee3536d19c219b}
+      \strng{authorbibnamehash}{3ca623b9518790e5b9ee3536d19c219b}
+      \strng{authornamehash}{f6a45a97702f6b0ec39d04896af4ef5d}
+      \strng{authorfullhash}{3ca623b9518790e5b9ee3536d19c219b}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Finance Research Letters}
+      \field{title}{Contemporaneous and lagged {R2} decomposed connectedness approach: New evidence from the energy futures market}
+      \field{volume}{57}
+      \field{year}{2023}
+      \field{pages}{104168}
+      \range{pages}{1}
+    \endentry
+    \entry{bryan1994measuring}{article}{}
+      \name{author}{2}{}{%
+        {{hash=bd534b024fb909d8a99ec43e14a6a01c}{%
+           family={Bryan},
+           familyi={B\bibinitperiod},
+           given={Michael\bibnamedelima F.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=245fa654e11dfedf6b6154c9eeb56365}{%
+           family={Cecchetti},
+           familyi={C\bibinitperiod},
+           given={Stephen\bibnamedelima G.},
+           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{c30d6a8988a89e0f3d25e2cce51c1301}
+      \strng{fullhash}{c30d6a8988a89e0f3d25e2cce51c1301}
+      \strng{bibnamehash}{c30d6a8988a89e0f3d25e2cce51c1301}
+      \strng{authorbibnamehash}{c30d6a8988a89e0f3d25e2cce51c1301}
+      \strng{authornamehash}{c30d6a8988a89e0f3d25e2cce51c1301}
+      \strng{authorfullhash}{c30d6a8988a89e0f3d25e2cce51c1301}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Monetary Policy (NBER)}
+      \field{note}{In N.G. Mankiw (ed.), \textit{Monetary Policy}, University of Chicago Press, 195--215}
+      \field{title}{Measuring core inflation}
+      \field{year}{1994}
+    \endentry
+    \entry{choishin2022}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ca0830fe0991ed0fb9ceb4d52932404d}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Ji-Eun},
+           giveni={J\bibinithyphendelim E\bibinitperiod}}}%
+        {{hash=417f9e9523a6c73aaf601bd8951d51c6}{%
+           family={Shin},
+           familyi={S\bibinitperiod},
+           given={Dong\bibnamedelima Wan},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{0f9d17003ac2eb397c2f26499f00dd9e}
+      \strng{fullhash}{0f9d17003ac2eb397c2f26499f00dd9e}
+      \strng{bibnamehash}{0f9d17003ac2eb397c2f26499f00dd9e}
+      \strng{authorbibnamehash}{0f9d17003ac2eb397c2f26499f00dd9e}
+      \strng{authornamehash}{0f9d17003ac2eb397c2f26499f00dd9e}
+      \strng{authorfullhash}{0f9d17003ac2eb397c2f26499f00dd9e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistical Papers}
+      \field{number}{4}
+      \field{title}{Quantile correlation coefficient: a new tail dependence measure}
+      \field{volume}{63}
+      \field{year}{2022}
+      \field{pages}{1075\bibrangedash 1104}
+      \range{pages}{30}
+    \endentry
+    \entry{ClaridaGaliGertler2000}{article}{}
+      \name{author}{3}{}{%
+        {{hash=173c5657217198503b485c698f9fc263}{%
+           family={Clarida},
+           familyi={C\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9f86081942834923a86a56e2f4d2a7cd}{%
+           family={Galí},
+           familyi={G\bibinitperiod},
+           given={Jordi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=732a7645c3f5314d26682b07972f06a2}{%
+           family={Gertler},
+           familyi={G\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{9b734dc7151782a431d361764f59bfef}
+      \strng{fullhash}{f748fa6025648e49fa4583c167cd1572}
+      \strng{bibnamehash}{f748fa6025648e49fa4583c167cd1572}
+      \strng{authorbibnamehash}{f748fa6025648e49fa4583c167cd1572}
+      \strng{authornamehash}{9b734dc7151782a431d361764f59bfef}
+      \strng{authorfullhash}{f748fa6025648e49fa4583c167cd1572}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Quarterly Journal of Economics}
+      \field{number}{1}
+      \field{title}{Monetary policy rules and macroeconomic stability: Evidence and some theory}
+      \field{volume}{115}
+      \field{year}{2000}
+      \field{pages}{147\bibrangedash 180}
+      \range{pages}{34}
+    \endentry
+    \entry{dieboldyilmaz2012}{article}{}
+      \name{author}{2}{}{%
+        {{hash=15cc2e3b52b5ea2d3045be532376a348}{%
+           family={Diebold},
+           familyi={D\bibinitperiod},
+           given={Francis\bibnamedelima X.},
+           giveni={F\bibinitperiod\bibinitdelim X\bibinitperiod}}}%
+        {{hash=2867990091012997efa62de25aeedf18}{%
+           family={Yilmaz},
+           familyi={Y\bibinitperiod},
+           given={Kamil},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{2df5466f9046bf47f875bfa03da32776}
+      \strng{fullhash}{2df5466f9046bf47f875bfa03da32776}
+      \strng{bibnamehash}{2df5466f9046bf47f875bfa03da32776}
+      \strng{authorbibnamehash}{2df5466f9046bf47f875bfa03da32776}
+      \strng{authornamehash}{2df5466f9046bf47f875bfa03da32776}
+      \strng{authorfullhash}{2df5466f9046bf47f875bfa03da32776}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Forecasting}
+      \field{number}{1}
+      \field{title}{Better to give than to receive: Predictive directional measurement of volatility spillovers}
+      \field{volume}{28}
+      \field{year}{2012}
+      \field{pages}{57\bibrangedash 66}
+      \range{pages}{10}
+    \endentry
+    \entry{genizi1993}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a7aa8e48d8adfa2127795d8b2d553108}{%
+           family={Genizi},
+           familyi={G\bibinitperiod},
+           given={Abraham},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a7aa8e48d8adfa2127795d8b2d553108}
+      \strng{fullhash}{a7aa8e48d8adfa2127795d8b2d553108}
+      \strng{bibnamehash}{a7aa8e48d8adfa2127795d8b2d553108}
+      \strng{authorbibnamehash}{a7aa8e48d8adfa2127795d8b2d553108}
+      \strng{authornamehash}{a7aa8e48d8adfa2127795d8b2d553108}
+      \strng{authorfullhash}{a7aa8e48d8adfa2127795d8b2d553108}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistica Sinica}
+      \field{number}{2}
+      \field{title}{Decomposition of {R2} in multiple regression with correlated regressors}
+      \field{volume}{3}
+      \field{year}{1993}
+      \field{pages}{407\bibrangedash 420}
+      \range{pages}{14}
+    \endentry
+    \entry{goodfriend1997new}{inbook}{}
+      \name{author}{2}{}{%
+        {{hash=735d653161d3a96a0848b76fe55f94b6}{%
+           family={Goodfriend},
+           familyi={G\bibinitperiod},
+           given={Marvin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e068047c81ba350319902fe3f06656cf}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Robert\bibnamedelima G.},
+           giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=7c898d91e08f8405749c5ad0d0817ac2}{%
+           family={Bernanke},
+           familyi={B\bibinitperiod},
+           given={Ben\bibnamedelima S.},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=3968abaaacf460fcf10761ff1a87e388}{%
+           family={Rotemberg},
+           familyi={R\bibinitperiod},
+           given={Julio\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{f61a4672795e98e4e51f03590b1713e4}
+      \strng{fullhash}{f61a4672795e98e4e51f03590b1713e4}
+      \strng{bibnamehash}{f61a4672795e98e4e51f03590b1713e4}
+      \strng{authorbibnamehash}{f61a4672795e98e4e51f03590b1713e4}
+      \strng{authornamehash}{f61a4672795e98e4e51f03590b1713e4}
+      \strng{authorfullhash}{f61a4672795e98e4e51f03590b1713e4}
+      \strng{editorbibnamehash}{83ce44b18d6d7981eb367f1c2a4b0d11}
+      \strng{editornamehash}{83ce44b18d6d7981eb367f1c2a4b0d11}
+      \strng{editorfullhash}{83ce44b18d6d7981eb367f1c2a4b0d11}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{NBER Macroeconomics Annual 1997}
+      \field{title}{The new neoclassical synthesis and the role of monetary policy}
+      \field{volume}{12}
+      \field{year}{1997}
+      \field{pages}{231\bibrangedash 296}
+      \range{pages}{66}
+    \endentry
+    \entry{hamilton1989new}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f1528bc518ebb8f6103311513805ac7d}{%
+           family={Hamilton},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1528bc518ebb8f6103311513805ac7d}
+      \strng{fullhash}{f1528bc518ebb8f6103311513805ac7d}
+      \strng{bibnamehash}{f1528bc518ebb8f6103311513805ac7d}
+      \strng{authorbibnamehash}{f1528bc518ebb8f6103311513805ac7d}
+      \strng{authornamehash}{f1528bc518ebb8f6103311513805ac7d}
+      \strng{authorfullhash}{f1528bc518ebb8f6103311513805ac7d}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica}
+      \field{number}{2}
+      \field{title}{A new approach to the economic analysis of nonstationary time series and the business cycle}
+      \field{volume}{57}
+      \field{year}{1989}
+      \field{pages}{357\bibrangedash 384}
+      \range{pages}{28}
+    \endentry
+    \entry{Powell2021}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b58df2f9a6cdadfbc16717deb902f71f}{%
+           family={Powell},
+           familyi={P\bibinitperiod},
+           given={Jerome\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{fullhash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{bibnamehash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{authorbibnamehash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{authornamehash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{authorfullhash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \field{extraname}{1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Speech at ``Macroeconomic Policy in an Uneven Economy,'' economic policy symposium sponsored by the Federal Reserve Bank of Kansas City, Jackson Hole, Wyoming, August 27}
+      \field{title}{Monetary Policy in the Time of {COVID-19}}
+      \field{year}{2021}
+    \endentry
+    \entry{Powell2022JH}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b58df2f9a6cdadfbc16717deb902f71f}{%
+           family={Powell},
+           familyi={P\bibinitperiod},
+           given={Jerome\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{fullhash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{bibnamehash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{authorbibnamehash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{authornamehash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{authorfullhash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \field{extraname}{2}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Speech at ``Reassessing Constraints on the Economy and Policy,'' economic policy symposium sponsored by the Federal Reserve Bank of Kansas City, Jackson Hole, Wyoming, August 26}
+      \field{title}{Monetary Policy and Price Stability}
+      \field{year}{2022}
+    \endentry
+    \entry{shahzadetal}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=71c2c53028cfa6e2c804af229f66698b}{%
+           family={Shahzad},
+           familyi={S\bibinitperiod},
+           given={Syed\bibnamedelimb Jawad\bibnamedelima Hussain},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=ce0eff9c5a9f447ce822ddef00679811}{%
+           family={Ryan},
+           familyi={R\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=71e5b330de45ad291d8f6c2f67f28271}{%
+           family={Gabauer},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{7cf00c6009569de215ddb93f8879dbca}
+      \strng{fullhash}{a87c541cd65397be27476dbfad593d00}
+      \strng{bibnamehash}{a87c541cd65397be27476dbfad593d00}
+      \strng{authorbibnamehash}{a87c541cd65397be27476dbfad593d00}
+      \strng{authornamehash}{7cf00c6009569de215ddb93f8879dbca}
+      \strng{authorfullhash}{a87c541cd65397be27476dbfad593d00}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Working paper}
+      \field{title}{Pseudo-quantile {R2} connectedness [companion methodology paper]}
+      \field{year}{2026}
+    \endentry
+    \entry{stenfors2026decomposing}{article}{}
+      \name{author}{4}{}{%
+        {{hash=63fa0ee8a5446d9ce22773eca8fc5bc9}{%
+           family={Stenfors},
+           familyi={S\bibinitperiod},
+           given={Alexis},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bb523a78af0be0b99a6c6392d48bf83a}{%
+           family={Shabani},
+           familyi={S\bibinitperiod},
+           given={Mimoza},
+           giveni={M\bibinitperiod}}}%
+        {{hash=71e5b330de45ad291d8f6c2f67f28271}{%
+           family={Gabauer},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=5c8669d14dd25b70f10c6de01b5e2bde}{%
+           family={Toporowski},
+           familyi={T\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{203dedaed2210c4c1bae66dff788d486}
+      \strng{fullhash}{bc16d0603bf11e40f14b96cde69452a5}
+      \strng{bibnamehash}{bc16d0603bf11e40f14b96cde69452a5}
+      \strng{authorbibnamehash}{bc16d0603bf11e40f14b96cde69452a5}
+      \strng{authornamehash}{203dedaed2210c4c1bae66dff788d486}
+      \strng{authorfullhash}{bc16d0603bf11e40f14b96cde69452a5}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Economic Modelling}
+      \field{title}{Decomposing the rate of inflation: Forecast-based connectedness among CPI components}
+      \field{volume}{163}
+      \field{year}{2026}
+      \field{pages}{107708}
+      \range{pages}{1}
+    \endentry
+    \entry{wu2016measuring}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7b0cb32f796723b31bb3d35b7abab725}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Jing\bibnamedelima Cynthia},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=97a303e44cfd45bc0fc9e94c535a590e}{%
+           family={Xia},
+           familyi={X\bibinitperiod},
+           given={Fan\bibnamedelima Dora},
+           giveni={F\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{8583c3455f6c52bf9776d9f7646ffe3a}
+      \strng{fullhash}{8583c3455f6c52bf9776d9f7646ffe3a}
+      \strng{bibnamehash}{8583c3455f6c52bf9776d9f7646ffe3a}
+      \strng{authorbibnamehash}{8583c3455f6c52bf9776d9f7646ffe3a}
+      \strng{authornamehash}{8583c3455f6c52bf9776d9f7646ffe3a}
+      \strng{authorfullhash}{8583c3455f6c52bf9776d9f7646ffe3a}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Money, Credit and Banking}
+      \field{number}{2-3}
+      \field{title}{Measuring the macroeconomic impact of monetary policy at the zero lower bound}
+      \field{volume}{48}
+      \field{year}{2016}
+      \field{pages}{253\bibrangedash 291}
+      \range{pages}{39}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{ando2022}{article}{}
+      \name{author}{3}{}{%
+        {{hash=375fde861454228231f96f7a635a9ff6}{%
+           family={Ando},
+           familyi={A\bibinitperiod},
+           given={Tomohiro},
+           giveni={T\bibinitperiod}}}%
+        {{hash=079a2ff66766cbab9dc78dc58813e0f3}{%
+           family={Greenwood-Nimmo},
+           familyi={G\bibinithyphendelim N\bibinitperiod},
+           given={Matthew},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f8bdf666c2b0c08aa17261fddcf67c60}{%
+           family={Shin},
+           familyi={S\bibinitperiod},
+           given={Yongcheol},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{0b33feb8091574d4b91ece52a1d733e2}
+      \strng{fullhash}{881b06e96a404de72e5638b2d102194d}
+      \strng{bibnamehash}{881b06e96a404de72e5638b2d102194d}
+      \strng{authorbibnamehash}{881b06e96a404de72e5638b2d102194d}
+      \strng{authornamehash}{0b33feb8091574d4b91ece52a1d733e2}
+      \strng{authorfullhash}{881b06e96a404de72e5638b2d102194d}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Management Science}
+      \field{number}{4}
+      \field{title}{Quantile connectedness: Modeling tail behavior in the topology of financial networks}
+      \field{volume}{68}
+      \field{year}{2022}
+      \field{pages}{2401\bibrangedash 2431}
+      \range{pages}{31}
+    \endentry
+    \entry{antonakakis2020}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e36cfce47fcf4cdc229db4cd0b8260c9}{%
+           family={Antonakakis},
+           familyi={A\bibinitperiod},
+           given={Nikolaos},
+           giveni={N\bibinitperiod}}}%
+        {{hash=738c8462fe3c3df975dc20362a8aa14f}{%
+           family={Chatziantoniou},
+           familyi={C\bibinitperiod},
+           given={Ioannis},
+           giveni={I\bibinitperiod}}}%
+        {{hash=71e5b330de45ad291d8f6c2f67f28271}{%
+           family={Gabauer},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MDPI}%
+      }
+      \strng{namehash}{d6bb3a96b229933fb0c9931a1292a28a}
+      \strng{fullhash}{2da70daad8a71f0496859a000b88fcf9}
+      \strng{bibnamehash}{2da70daad8a71f0496859a000b88fcf9}
+      \strng{authorbibnamehash}{2da70daad8a71f0496859a000b88fcf9}
+      \strng{authornamehash}{d6bb3a96b229933fb0c9931a1292a28a}
+      \strng{authorfullhash}{2da70daad8a71f0496859a000b88fcf9}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Risk and Financial Management}
+      \field{number}{4}
+      \field{title}{Refined Measures of Dynamic Connectedness Based on Time-Varying Parameter Vector Autoregressions}
+      \field{volume}{13}
+      \field{year}{2020}
+      \field{pages}{84}
+      \range{pages}{1}
+    \endentry
+    \entry{balli2023}{article}{}
+      \name{author}{4}{}{%
+        {{hash=7a923ed33f736c887048f556bf937d9c}{%
+           family={Balli},
+           familyi={B\bibinitperiod},
+           given={Faruk},
+           giveni={F\bibinitperiod}}}%
+        {{hash=f9d014f7f48288597f7b5007df15cbe7}{%
+           family={Balli},
+           familyi={B\bibinitperiod},
+           given={Hatice\bibnamedelima O.},
+           giveni={H\bibinitperiod\bibinitdelim O\bibinitperiod}}}%
+        {{hash=c4d1eea0fca5b0bc0007ac5cfe63faed}{%
+           family={Dang},
+           familyi={D\bibinitperiod},
+           given={Tuan\bibnamedelimb Hai\bibnamedelima Nam},
+           giveni={T\bibinitperiod\bibinitdelim H\bibinitperiod\bibinitdelim N\bibinitperiod}}}%
+        {{hash=71e5b330de45ad291d8f6c2f67f28271}{%
+           family={Gabauer},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{f6a45a97702f6b0ec39d04896af4ef5d}
+      \strng{fullhash}{3ca623b9518790e5b9ee3536d19c219b}
+      \strng{bibnamehash}{3ca623b9518790e5b9ee3536d19c219b}
+      \strng{authorbibnamehash}{3ca623b9518790e5b9ee3536d19c219b}
+      \strng{authornamehash}{f6a45a97702f6b0ec39d04896af4ef5d}
+      \strng{authorfullhash}{3ca623b9518790e5b9ee3536d19c219b}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Finance Research Letters}
+      \field{title}{Contemporaneous and lagged {R2} decomposed connectedness approach: New evidence from the energy futures market}
+      \field{volume}{57}
+      \field{year}{2023}
+      \field{pages}{104168}
+      \range{pages}{1}
+    \endentry
+    \entry{bryan1994measuring}{article}{}
+      \name{author}{2}{}{%
+        {{hash=bd534b024fb909d8a99ec43e14a6a01c}{%
+           family={Bryan},
+           familyi={B\bibinitperiod},
+           given={Michael\bibnamedelima F.},
+           giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
+        {{hash=245fa654e11dfedf6b6154c9eeb56365}{%
+           family={Cecchetti},
+           familyi={C\bibinitperiod},
+           given={Stephen\bibnamedelima G.},
+           giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{c30d6a8988a89e0f3d25e2cce51c1301}
+      \strng{fullhash}{c30d6a8988a89e0f3d25e2cce51c1301}
+      \strng{bibnamehash}{c30d6a8988a89e0f3d25e2cce51c1301}
+      \strng{authorbibnamehash}{c30d6a8988a89e0f3d25e2cce51c1301}
+      \strng{authornamehash}{c30d6a8988a89e0f3d25e2cce51c1301}
+      \strng{authorfullhash}{c30d6a8988a89e0f3d25e2cce51c1301}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Monetary Policy (NBER)}
+      \field{note}{In N.G. Mankiw (ed.), \textit{Monetary Policy}, University of Chicago Press, 195--215}
+      \field{title}{Measuring core inflation}
+      \field{year}{1994}
+    \endentry
+    \entry{choishin2022}{article}{}
+      \name{author}{2}{}{%
+        {{hash=ca0830fe0991ed0fb9ceb4d52932404d}{%
+           family={Choi},
+           familyi={C\bibinitperiod},
+           given={Ji-Eun},
+           giveni={J\bibinithyphendelim E\bibinitperiod}}}%
+        {{hash=417f9e9523a6c73aaf601bd8951d51c6}{%
+           family={Shin},
+           familyi={S\bibinitperiod},
+           given={Dong\bibnamedelima Wan},
+           giveni={D\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{0f9d17003ac2eb397c2f26499f00dd9e}
+      \strng{fullhash}{0f9d17003ac2eb397c2f26499f00dd9e}
+      \strng{bibnamehash}{0f9d17003ac2eb397c2f26499f00dd9e}
+      \strng{authorbibnamehash}{0f9d17003ac2eb397c2f26499f00dd9e}
+      \strng{authornamehash}{0f9d17003ac2eb397c2f26499f00dd9e}
+      \strng{authorfullhash}{0f9d17003ac2eb397c2f26499f00dd9e}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistical Papers}
+      \field{number}{4}
+      \field{title}{Quantile correlation coefficient: a new tail dependence measure}
+      \field{volume}{63}
+      \field{year}{2022}
+      \field{pages}{1075\bibrangedash 1104}
+      \range{pages}{30}
+    \endentry
+    \entry{ClaridaGaliGertler2000}{article}{}
+      \name{author}{3}{}{%
+        {{hash=173c5657217198503b485c698f9fc263}{%
+           family={Clarida},
+           familyi={C\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod}}}%
+        {{hash=9f86081942834923a86a56e2f4d2a7cd}{%
+           family={Galí},
+           familyi={G\bibinitperiod},
+           given={Jordi},
+           giveni={J\bibinitperiod}}}%
+        {{hash=732a7645c3f5314d26682b07972f06a2}{%
+           family={Gertler},
+           familyi={G\bibinitperiod},
+           given={Mark},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{9b734dc7151782a431d361764f59bfef}
+      \strng{fullhash}{f748fa6025648e49fa4583c167cd1572}
+      \strng{bibnamehash}{f748fa6025648e49fa4583c167cd1572}
+      \strng{authorbibnamehash}{f748fa6025648e49fa4583c167cd1572}
+      \strng{authornamehash}{9b734dc7151782a431d361764f59bfef}
+      \strng{authorfullhash}{f748fa6025648e49fa4583c167cd1572}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Quarterly Journal of Economics}
+      \field{number}{1}
+      \field{title}{Monetary policy rules and macroeconomic stability: Evidence and some theory}
+      \field{volume}{115}
+      \field{year}{2000}
+      \field{pages}{147\bibrangedash 180}
+      \range{pages}{34}
+    \endentry
+    \entry{dieboldyilmaz2012}{article}{}
+      \name{author}{2}{}{%
+        {{hash=15cc2e3b52b5ea2d3045be532376a348}{%
+           family={Diebold},
+           familyi={D\bibinitperiod},
+           given={Francis\bibnamedelima X.},
+           giveni={F\bibinitperiod\bibinitdelim X\bibinitperiod}}}%
+        {{hash=2867990091012997efa62de25aeedf18}{%
+           family={Yilmaz},
+           familyi={Y\bibinitperiod},
+           given={Kamil},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{2df5466f9046bf47f875bfa03da32776}
+      \strng{fullhash}{2df5466f9046bf47f875bfa03da32776}
+      \strng{bibnamehash}{2df5466f9046bf47f875bfa03da32776}
+      \strng{authorbibnamehash}{2df5466f9046bf47f875bfa03da32776}
+      \strng{authornamehash}{2df5466f9046bf47f875bfa03da32776}
+      \strng{authorfullhash}{2df5466f9046bf47f875bfa03da32776}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Journal of Forecasting}
+      \field{number}{1}
+      \field{title}{Better to give than to receive: Predictive directional measurement of volatility spillovers}
+      \field{volume}{28}
+      \field{year}{2012}
+      \field{pages}{57\bibrangedash 66}
+      \range{pages}{10}
+    \endentry
+    \entry{genizi1993}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a7aa8e48d8adfa2127795d8b2d553108}{%
+           family={Genizi},
+           familyi={G\bibinitperiod},
+           given={Abraham},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{a7aa8e48d8adfa2127795d8b2d553108}
+      \strng{fullhash}{a7aa8e48d8adfa2127795d8b2d553108}
+      \strng{bibnamehash}{a7aa8e48d8adfa2127795d8b2d553108}
+      \strng{authorbibnamehash}{a7aa8e48d8adfa2127795d8b2d553108}
+      \strng{authornamehash}{a7aa8e48d8adfa2127795d8b2d553108}
+      \strng{authorfullhash}{a7aa8e48d8adfa2127795d8b2d553108}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistica Sinica}
+      \field{number}{2}
+      \field{title}{Decomposition of {R2} in multiple regression with correlated regressors}
+      \field{volume}{3}
+      \field{year}{1993}
+      \field{pages}{407\bibrangedash 420}
+      \range{pages}{14}
+    \endentry
+    \entry{goodfriend1997new}{inbook}{}
+      \name{author}{2}{}{%
+        {{hash=735d653161d3a96a0848b76fe55f94b6}{%
+           family={Goodfriend},
+           familyi={G\bibinitperiod},
+           given={Marvin},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e068047c81ba350319902fe3f06656cf}{%
+           family={King},
+           familyi={K\bibinitperiod},
+           given={Robert\bibnamedelima G.},
+           giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=7c898d91e08f8405749c5ad0d0817ac2}{%
+           family={Bernanke},
+           familyi={B\bibinitperiod},
+           given={Ben\bibnamedelima S.},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=3968abaaacf460fcf10761ff1a87e388}{%
+           family={Rotemberg},
+           familyi={R\bibinitperiod},
+           given={Julio\bibnamedelima J.},
+           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{f61a4672795e98e4e51f03590b1713e4}
+      \strng{fullhash}{f61a4672795e98e4e51f03590b1713e4}
+      \strng{bibnamehash}{f61a4672795e98e4e51f03590b1713e4}
+      \strng{authorbibnamehash}{f61a4672795e98e4e51f03590b1713e4}
+      \strng{authornamehash}{f61a4672795e98e4e51f03590b1713e4}
+      \strng{authorfullhash}{f61a4672795e98e4e51f03590b1713e4}
+      \strng{editorbibnamehash}{83ce44b18d6d7981eb367f1c2a4b0d11}
+      \strng{editornamehash}{83ce44b18d6d7981eb367f1c2a4b0d11}
+      \strng{editorfullhash}{83ce44b18d6d7981eb367f1c2a4b0d11}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{NBER Macroeconomics Annual 1997}
+      \field{title}{The new neoclassical synthesis and the role of monetary policy}
+      \field{volume}{12}
+      \field{year}{1997}
+      \field{pages}{231\bibrangedash 296}
+      \range{pages}{66}
+    \endentry
+    \entry{hamilton1989new}{article}{}
+      \name{author}{1}{}{%
+        {{hash=f1528bc518ebb8f6103311513805ac7d}{%
+           family={Hamilton},
+           familyi={H\bibinitperiod},
+           given={James\bibnamedelima D.},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1528bc518ebb8f6103311513805ac7d}
+      \strng{fullhash}{f1528bc518ebb8f6103311513805ac7d}
+      \strng{bibnamehash}{f1528bc518ebb8f6103311513805ac7d}
+      \strng{authorbibnamehash}{f1528bc518ebb8f6103311513805ac7d}
+      \strng{authornamehash}{f1528bc518ebb8f6103311513805ac7d}
+      \strng{authorfullhash}{f1528bc518ebb8f6103311513805ac7d}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Econometrica}
+      \field{number}{2}
+      \field{title}{A new approach to the economic analysis of nonstationary time series and the business cycle}
+      \field{volume}{57}
+      \field{year}{1989}
+      \field{pages}{357\bibrangedash 384}
+      \range{pages}{28}
+    \endentry
+    \entry{Powell2021}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b58df2f9a6cdadfbc16717deb902f71f}{%
+           family={Powell},
+           familyi={P\bibinitperiod},
+           given={Jerome\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{fullhash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{bibnamehash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{authorbibnamehash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{authornamehash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{authorfullhash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \field{extraname}{1}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Speech at ``Macroeconomic Policy in an Uneven Economy,'' economic policy symposium sponsored by the Federal Reserve Bank of Kansas City, Jackson Hole, Wyoming, August 27}
+      \field{title}{Monetary Policy in the Time of {COVID-19}}
+      \field{year}{2021}
+    \endentry
+    \entry{Powell2022JH}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b58df2f9a6cdadfbc16717deb902f71f}{%
+           family={Powell},
+           familyi={P\bibinitperiod},
+           given={Jerome\bibnamedelima H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{fullhash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{bibnamehash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{authorbibnamehash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{authornamehash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \strng{authorfullhash}{b58df2f9a6cdadfbc16717deb902f71f}
+      \field{extraname}{2}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Speech at ``Reassessing Constraints on the Economy and Policy,'' economic policy symposium sponsored by the Federal Reserve Bank of Kansas City, Jackson Hole, Wyoming, August 26}
+      \field{title}{Monetary Policy and Price Stability}
+      \field{year}{2022}
+    \endentry
+    \entry{shahzadetal}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=71c2c53028cfa6e2c804af229f66698b}{%
+           family={Shahzad},
+           familyi={S\bibinitperiod},
+           given={Syed\bibnamedelimb Jawad\bibnamedelima Hussain},
+           giveni={S\bibinitperiod\bibinitdelim J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=ce0eff9c5a9f447ce822ddef00679811}{%
+           family={Ryan},
+           familyi={R\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=71e5b330de45ad291d8f6c2f67f28271}{%
+           family={Gabauer},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{7cf00c6009569de215ddb93f8879dbca}
+      \strng{fullhash}{a87c541cd65397be27476dbfad593d00}
+      \strng{bibnamehash}{a87c541cd65397be27476dbfad593d00}
+      \strng{authorbibnamehash}{a87c541cd65397be27476dbfad593d00}
+      \strng{authornamehash}{7cf00c6009569de215ddb93f8879dbca}
+      \strng{authorfullhash}{a87c541cd65397be27476dbfad593d00}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Working paper}
+      \field{title}{Pseudo-quantile {R2} connectedness [companion methodology paper]}
+      \field{year}{2026}
+    \endentry
+    \entry{stenfors2026decomposing}{article}{}
+      \name{author}{4}{}{%
+        {{hash=63fa0ee8a5446d9ce22773eca8fc5bc9}{%
+           family={Stenfors},
+           familyi={S\bibinitperiod},
+           given={Alexis},
+           giveni={A\bibinitperiod}}}%
+        {{hash=bb523a78af0be0b99a6c6392d48bf83a}{%
+           family={Shabani},
+           familyi={S\bibinitperiod},
+           given={Mimoza},
+           giveni={M\bibinitperiod}}}%
+        {{hash=71e5b330de45ad291d8f6c2f67f28271}{%
+           family={Gabauer},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=5c8669d14dd25b70f10c6de01b5e2bde}{%
+           family={Toporowski},
+           familyi={T\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{203dedaed2210c4c1bae66dff788d486}
+      \strng{fullhash}{bc16d0603bf11e40f14b96cde69452a5}
+      \strng{bibnamehash}{bc16d0603bf11e40f14b96cde69452a5}
+      \strng{authorbibnamehash}{bc16d0603bf11e40f14b96cde69452a5}
+      \strng{authornamehash}{203dedaed2210c4c1bae66dff788d486}
+      \strng{authorfullhash}{bc16d0603bf11e40f14b96cde69452a5}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Economic Modelling}
+      \field{title}{Decomposing the rate of inflation: Forecast-based connectedness among CPI components}
+      \field{volume}{163}
+      \field{year}{2026}
+      \field{pages}{107708}
+      \range{pages}{1}
+    \endentry
+    \entry{wu2016measuring}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7b0cb32f796723b31bb3d35b7abab725}{%
+           family={Wu},
+           familyi={W\bibinitperiod},
+           given={Jing\bibnamedelima Cynthia},
+           giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=97a303e44cfd45bc0fc9e94c535a590e}{%
+           family={Xia},
+           familyi={X\bibinitperiod},
+           given={Fan\bibnamedelima Dora},
+           giveni={F\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{8583c3455f6c52bf9776d9f7646ffe3a}
+      \strng{fullhash}{8583c3455f6c52bf9776d9f7646ffe3a}
+      \strng{bibnamehash}{8583c3455f6c52bf9776d9f7646ffe3a}
+      \strng{authorbibnamehash}{8583c3455f6c52bf9776d9f7646ffe3a}
+      \strng{authornamehash}{8583c3455f6c52bf9776d9f7646ffe3a}
+      \strng{authorfullhash}{8583c3455f6c52bf9776d9f7646ffe3a}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Money, Credit and Banking}
+      \field{number}{2-3}
+      \field{title}{Measuring the macroeconomic impact of monetary policy at the zero lower bound}
+      \field{volume}{48}
+      \field{year}{2016}
+      \field{pages}{253\bibrangedash 291}
+      \range{pages}{39}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
