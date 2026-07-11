@@ -51,7 +51,7 @@
 % NOTE: this is a STRUCTURE/OUTLINE draft. Bullets = what to write.
 \newcommand{\todo}[1]{\textcolor{red}{[\textbf{TODO:} #1]}}
 
-\title{Comparing two periods of high inflation: the Great Inflation and the 2020s inflation}
+\title{When prices move together: connectedness among CPI components, wages, and expectations across the inflation distribution and its consequences}
 
 \author[a]{Michael Ryan}
 \affil[a]{School of Accounting, Finance and Economics, University of Waikato, Hamilton, New Zealand.
@@ -96,8 +96,8 @@ inflation expectations? If higher prices raise wage demands and inflation
 expectations, and those wages and expectations then feed back into prices,
 inflation may become more persistent and costly to reduce.
 
- This paper examines whether high inflation changes the dependence structure
-among prices, wages and inflation expectations in the United States. We use a
+ This paper examines whether high inflation changes the connectedness (the strength of association)
+among prices, wages and inflation expectations in the United States, and whether high degrees of connectedness between prices and inflation expectations affect the conduct of monetary policy. We use a
 measure of connectedness that is well-suited to this question for two reasons.
 First, it separates contemporaneous co-movement from lagged dependence, allowing
 us to distinguish price categories that move together within the same period from
@@ -109,10 +109,24 @@ contemporaneous co-movement across prices, stronger lagged propagation from one
 price category to another, or stronger interactions among prices, wages and
 inflation expectations.
 
-We study these questions by comparing two major U.S. inflation episodes: the
-Great Inflation of the 1970s and the COVID-era inflation surge of 2021--22. Much
-of the conventional understanding of high-inflation dynamics is informed by the
-1970s. The pandemic-era surge provides a modern episode, under a very different
+This paper tests six hypotheses. The first tests whether
+inflation becomes more broad-based when inflation is high:
+
+\noindent\textbf{H1 (CPI broadening).} As inflation rises, connectedness among
+disaggregated CPI categories increases, particularly in the upper tail of the
+inflation distribution.
+
+The second asks whether high-inflation states are also associated with stronger
+wage--price dependence:
+
+\noindent\textbf{H2 (Wage--price interaction).} The connectedness between wages
+and prices is stronger during high-inflation states than during normal-inflation
+states.
+
+We then compare two major U.S. inflation episodes: the Great Inflation of the
+1970s and the COVID-era inflation surge of 2021--22. Much of the conventional
+understanding of high-inflation dynamics is informed by the 1970s. The
+pandemic-era surge provides a modern episode, under a very different
 monetary-policy regime, in which inflation became sufficiently high to revisit
 those mechanisms. The two episodes differed in important respects. The Great
 Inflation occurred in an economy more dependent on oil, with less anchored
@@ -120,52 +134,35 @@ expectations and a different monetary-policy framework. The COVID-era surge, by
 contrast, reflected a combination of pandemic-related supply constraints, large
 shifts in goods demand, shipping disruption, energy shocks and subsequent
 services pressures. These differences suggest that the two episodes may have
-broadened through different channels. We therefore organise the analysis around four hypotheses. The first two concern the broadening of inflation across prices and its interaction with wages: \noindent\textbf{H1 (CPI broadening).} As inflation rises, connectedness among disaggregated CPI categories increases, particularly in the upper tail of the inflation distribution.
-
-\noindent\textbf{H1 (CPI broadening).} As inflation rises, connectedness among disaggregated CPI categories increases, particularly in the upper tail of the inflation distribution.
-
-
-\noindent\textbf{H2 (Wage--price interaction).} The connectedness between wages
-and prices is stronger during high-inflation states than during normal-inflation
-states.
-
-\noindent\textbf{H2 (Wage--price interaction).} The connectedness between wages
-and prices is stronger during high-inflation states than during normal-inflation
-states.
-
-The next hypothesis distinguishes the mechanism through which inflation
-broadened in the two episodes:
+broadened through different channels. This motivates the third hypothesis:
 
 \noindent\textbf{H3 (Episode mechanism).} The COVID-era surge was characterised
 primarily by contemporaneous connectedness, consistent with a large common
 shock, whereas the Great Inflation was characterised more by lagged propagation
 across prices.
 
-Finally, we test whether institutional changes, especially the adoption of
-inflation targeting and the associated anchoring of expectations, altered the
-role of expectations in the inflation process:
+The differences in monetary policy frameworks between the two periods of high inflation motivates the fourth hypothesis. Specifically, we study if the adoption of inflation targeting and the associated anchoring of inflation expectations, alter the
+connectedness of inflation expectations and inflation:
 
 \noindent\textbf{H4 (Expectations channel).} Inflation expectations were a
 stronger source of inflation propagation during the Great Inflation than during
 the COVID-era surge.
 
 Finally, we consider whether the breadth of price changes shapes the conduct of
-monetary policy. There is an argument that monetary policy should
+monetary policy. As we noted earlier, there is an argument that monetary policy should
 respond to broad-based, core inflation whilst `looking through' idiosyncratic
 movements in individual components (relative price changes).\footnote{ See  \cite[p.276]{goodfriend1997new}} All else equal, then, when price changes are highly
-connected across the subcomponents of the CPI, and as such is less likely to reflect idiosyncractic price changes, such
+connected across the subcomponents of the CPI, and as such are less likely to reflect idiosyncractic price changes, such
 inflation may be harder to look through, and monetary policy makers may respond to it
 more strongly:
 
 \noindent\textbf{H5 (Connectedness and monetary policy).} When the subcomponents of the
 CPI are more highly connected, monetary policy responds more strongly to inflation.
 
-Further, a related channel operates through the interaction between inflation and
-inflation expectations. When realised and expected inflation become more tightly
+Further, when realised and expected inflation become more tightly
 connected, the risk of a self-reinforcing
-spiral rises, and policy makers may respond more aggressively to forestall it.
-In particular, when inflation is spilling
-over into inflation expectations, it suggests expectations have become more adaptive than anchored.
+spiral rises as inflation expectation might become more adaptive in nature rather than well-anchonored.  When inflation and inflation expectations are more tightly connected, policy makers may respond more aggressively to forestall it. Our final hypothesis is therefore:
+ 
 
 \noindent\textbf{H6 (Connectedness and monetary policy II).} When inflation spills over
 more strongly into inflation expectations, monetary policy responds more strongly to
@@ -187,8 +184,8 @@ allowing the inflation surge of the 1970s and the COVID-era surge to be compared
 within a common empirical framework. The second is \emph{scope}. In addition to
 the six disaggregated CPI categories, we include wages and inflation
 expectations, allowing us to examine wage--price interactions and the
-expectations channel directly. The third is
-\emph{methodological}. We replace the TVP-VAR with the pseudo-$R^2$ quantile
+expectations channel directly. Further, we test whether price/ inflation connectedness changes the conduct of monetary policy. The third contribution is
+\emph{methodological}. We replace the time-varying-parameter VAR  with the pseudo-$R^2$ quantile
 connectedness approach of \textcite{shahzadetal}. This is important for two
 reasons. First, the method measures connectedness across the inflation
 distribution, rather than only at the conditional mean or median, allowing the
@@ -202,17 +199,22 @@ us separate broad contemporaneous co-movement, consistent with a common shock,
 from sequential propagation across prices, wages and expectations---precisely the
 distinction underlying H3.
 
-Our central finding is that the dependence structure among prices does change with the level of
-inflation: cross-category connectedness rises roughly threefold from the median to the
-high-inflation tail, and the rise is increasingly accounted for by the \emph{lagged} component
-rather than contemporaneous co-movement, with shelter and core services the central lagged nodes.
-The two episodes broadened differently --- the COVID surge chiefly through contemporaneous
-co-movement, consistent with a common shock, and the Great Inflation more through lagged dependence.
-A prominent narrative that is not borne out is that inflation expectations lead: in high-inflation
-episodes they read as adaptive, following realised inflation. We stress throughout that
-connectedness measures statistical association and lead--lag dependence, not identified causal
-transmission; our claims concern how that dependence structure shifts across inflation states,
-rather than what causes what. The remainder of the paper proceeds as follows.
+Our central finding is
+
+
+%that the dependence structure among prices does change with the level of
+%inflation: cross-category connectedness rises roughly threefold from the median to the
+%high-inflation tail, and the rise is increasingly accounted for by the \emph{lagged} component
+%rather than contemporaneous co-movement, with shelter and core services the central lagged nodes.
+%The two episodes broadened differently --- the COVID surge chiefly through contemporaneous
+%co-movement, consistent with a common shock, and the Great Inflation more through lagged dependence.
+%A prominent narrative that is not borne out is that inflation expectations lead: in high-inflation
+%episodes they read as adaptive, following realised inflation. We stress throughout that
+%connectedness measures statistical association and lead--lag dependence, not identified causal
+%transmission; our claims concern how that dependence structure shifts across inflation states,
+%rather than what causes what. 
+
+The remainder of the paper proceeds as follows.
 Section~\ref{sec:data} describes the data; Section~\ref{sec:method} sets out the method; and
 Section~\ref{sec:results} reports the tests of the hypotheses.
 
