@@ -124,3 +124,32 @@ exists). Did not touch `references.bib` or recompile — left both for the
 user to finish. Until the bib is reconciled, the committed
 `paper/main (1).pdf` reflects a compile from *before* the trim (all
 citations resolved) and will go stale relative to source if recompiled now.
+
+### 2026-07-11 (later still) — Introduction strengthened for JMCB
+
+Pulled the user's `revised introduction` commit (`3e79d64`) from GitHub —
+they'd been editing the intro in Overleaf, which fixed an earlier duplicated-
+H1/H2 bug I'd flagged. Reviewed the intro against JMCB expectations and made
+a round of edits: (i) reordered so the closest-prior-work + three
+contributions paragraph sits *before* the six hypotheses rather than after,
+merging it with the "what we do" paragraph to remove a duplicated method
+explanation; (ii) wrote the previously-missing results preview (two
+paragraphs, real numbers: 11.8->35.2 broadening, lagged 23.3 vs contemp 11.9,
+wage-price 25.2 vs 3.6, expectations NET +29.1 -> -20.2/-6.7, the hedged
+H5/H6 line, and the causal caveat); (iii) fixed the H6 run-on and four
+typos; (iv) inserted a `\todo{[lit review here]}` placeholder in the
+related-literature slot with a commented list of suggested cites by theme
+(breadth/core, 2021-22 surge, Great Inflation, expectations anchoring,
+wage-price, disaggregated inflation/transmission, connectedness methods).
+The working title also changed (in the user's Overleaf) to "When prices move
+together: connectedness among CPI components, wages, and expectations across
+the inflation distribution and its consequences" — flagged that the "and its
+consequences" tail leans on the weak H5/H6 result.
+
+Committed the source edits and pushed. Did **not** commit the recompiled PDF:
+with `references.bib` still trimmed to 5 entries (the user's intentional,
+in-progress bibliography reconciliation), a fresh compile shows `[?]` for the
+11 missing keys, so pushing that PDF would be misleading. The repo keeps the
+last good PDF; Overleaf regenerates on its own. Open: bib reconciliation
+(see `paper/MISSING_REFERENCES.md`), write the lit review, and the abstract
+is still empty.
