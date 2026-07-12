@@ -153,3 +153,32 @@ in-progress bibliography reconciliation), a fresh compile shows `[?]` for the
 last good PDF; Overleaf regenerates on its own. Open: bib reconciliation
 (see `paper/MISSING_REFERENCES.md`), write the lit review, and the abstract
 is still empty.
+
+### 2026-07-13 — Methodology section reviewed vs the companion methods paper
+
+Read the private companion methods paper (Shahzad-Ryan-Gabauer, in
+`additional_materials/` — gitignored, never pushed) and reviewed the CPI
+paper's methodology against it. The core (Genizi decomposition, quantile-
+correlation substitution, stacking, TCI = TCI^C + TCI^L) matches the companion
+paper exactly. Implemented the gaps: (i) added the Choi-Shin quantile-
+correlation formula; (ii) added a paragraph describing the PSD regularisation
+actually used (Schafer-Strimmer PSD-targeted shrinkage + Higham nearPD repair),
+with schafer2005 and higham2002 added to references.bib; (iii) fixed the TCI^L
+formula to sum over j != k (own-lags excluded), matching both the "off-diagonal"
+prose and the code (`od()` zeroes the diagonal); (iv) unified FROM/TO/NET to a
+single index k (row-k sum vs column-k sum), which also resolves the draft's two
+bracketed queries -- both answered "correct as written": TCI = avg FROM = avg TO
+(row-total = column-total / K, holds despite asymmetry), and NET_k = TO_k - FROM_k
+is properly indexed on the same series k.
+
+**Did NOT add the requested "own-lags dropped in the rolling estimates"
+footnote.** Verified in `use_R2Q.R` (lines 63-66) that the headline estimator
+`R2ConnectednessQ2` explicitly *refuses* to drop own-lags (`stop("drop_own_lags
+is not supported...")`) and instead secures PSD via shrinkage + nearPD. Dropping
+own-lags is the *companion paper's* rolling-window approach, not this paper's, so
+the footnote would misdescribe the method. Flagged for the user to decide:
+keep the accurate shrinkage/nearPD description (done), or switch the code to the
+own-lag-dropping (clipping) estimator to match the companion paper (a code
+change, not a footnote).
+
+Also added `additional_materials/` to `.gitignore`.

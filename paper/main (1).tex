@@ -323,11 +323,34 @@ non-negative and sum to the regression $R^2$.
 %\subsubsection{Measuring dependence in the tails}
  Using the above decomposition with Pearson correlations as inputs, \textcite{balli2023} show how contemporaneous and lagged connectedness can be quantified at the centre of the distribution. Because, however, our interest is in how dependence behaves when inflation is high, we use the adaptation of \textcite{shahzadetal}, which replaces the Pearson correlations with the quantile correlations of \textcite{choishin2022}; this allows contemporaneous and lagged connectedness to be measured at any chosen quantile $\tau$.
 
+The quantile correlation of \textcite{choishin2022} between two variables $x_1$ and
+$x_2$ at quantile $\tau$ is
+\begin{align}
+r_{1,2,\tau}=r_{2,1,\tau}
+  =\operatorname{sign}\!\big(b_{x_1\mid x_2}(\tau)\big)
+   \sqrt{\,b_{x_1\mid x_2}(\tau)\,b_{x_2\mid x_1}(\tau)\,},
+  \qquad 0<\tau<1,
+\end{align}
+where $b_{x_1\mid x_2}(\tau)$ and $b_{x_2\mid x_1}(\tau)$ are the slope coefficients from
+the $\tau$-quantile regressions of $x_1$ on $x_2$ and of $x_2$ on $x_1$, respectively. At
+$\tau=0.5$ this is a median-based analogue of the Pearson correlation, whereas for $\tau$ in
+the tails it captures dependence specific to large or small realisations.
+
 The specifics of the \textcite{shahzadetal} measure are as follows. The quantile correlation of \textcite{choishin2022} between two variables, $r_{1,2,\tau}$, is substituted for $\bm{R}_{xx}$ and $\bm{r}_{yx}$ in equations~\ref{eq:rxx} and~\ref{eq:r2d}. For each time series in turn,
 equation~\ref{eq:r2d} then returns a vector $\bm{R}^{2,d}_{\tau}$ that allocates
 the regression's overall pseudo-$R^2$ across its regressors at that $\tau$.\footnote{Quantile regressions do \emph{not} have an $R^2$ in the conventional (least-squares) sense, hence the term ``pseudo''.} The first $K-1$ entries
 record the contemporaneous contributions of the other series; the remaining
 entries record the lagged contributions of all series in the system.
+
+A quantile-correlation matrix estimated from a finite sample need not be positive
+semi-definite---a difficulty that becomes more pronounced in the tails ($\tau=0.9$ in our
+data) and in short rolling windows. Before applying the decomposition we therefore
+regularise the matrix, following the implementation of \textcite{shahzadetal}. We first
+apply the \textcite{schafer2005} shrinkage estimator, which shrinks the quantile-correlation
+matrix towards the identity; the shrinkage intensity is set to the smaller of the
+\textcite{schafer2005} analytic value and the smallest intensity that renders the shrunk
+matrix positive semi-definite. Where the shrunk matrix is still not positive semi-definite,
+we project it onto the nearest positive-semi-definite correlation matrix \citep{higham2002}.
 
 
 For a system of $K$ variables, applying  the decomposition with the quantile correlation for each of the $K$ equations in that system and stacking the results
@@ -357,37 +380,38 @@ with
   = \frac{1}{K}\sum_{k=1}^{K}\sum_{j\neq k}\bm{R}_{lag=0,\tau,k,j}^{2,d},
 \qquad
 \mathrm{TCI}_{\tau}^{L}
-  = \frac{1}{K}\sum_{k=1}^{K}\sum_{j=1}^{K}\sum_{l=1}^{p}
+  = \frac{1}{K}\sum_{k=1}^{K}\sum_{j\neq k}\sum_{l=1}^{p}
     \bm{R}_{lag=l,\tau,k,j}^{2,d},
 \end{align}
 where $\bm{R}_{lag=l,\tau,k,j}^{2,d}$ is the share of series $k$'s variation contributed by
 series $j$ at lag $l$. Throughout, connectedness measures are reported as percentages (shares of
 the $R^2$ multiplied by 100). Equivalently, $\mathrm{TCI}_{\tau}$ is the average of the directional
-\textsc{from} --- or, identically, \textsc{to} --- measures defined below [in this true?].
+\textsc{from} --- or, identically, \textsc{to} --- measures defined below.
 
-Directional measures in a similar spirit to those put forward by \textcite{dieboldyilmaz2012} can also be calculated. The total connectedness \emph{received} by series $k$
-(its \textsc{from} measure) sums the shares contributed by all other series, at
-every lag, into row $k$; 
+Directional measures in a similar spirit to those put forward by \textcite{dieboldyilmaz2012}
+can also be calculated. Both are defined for a single series $k$: its \textsc{from} measure is
+the row-$k$ sum of the connectedness matrix and its \textsc{to} measure the column-$k$ sum. The
+total connectedness \emph{received} by series $k$ (its \textsc{from} measure) sums the shares
+contributed by all \emph{other} series, at every lag, along row $k$:
 \begin{align}
 \mathrm{FROM}_{k,\tau}
   &= \sum_{j\neq k}\bm{R}_{lag=0,\tau,k,j}^{2,d}
-   + \sum_{j=1}^{K}\sum_{l=1}^{p}\bm{R}_{lag=l,\tau,k,j}^{2,d}.
+   + \sum_{j\neq k}\sum_{l=1}^{p}\bm{R}_{lag=l,\tau,k,j}^{2,d}.
 \end{align}
 
-[now we switch to j instead of k, would we? ]The total connectedness \emph{transmitted} by series $j$ to other series
-(its \textsc{to} measure) sums the shares it contributes, at every lag, down
-column $j$:
+The total connectedness \emph{transmitted} by series $k$ to the other series (its \textsc{to}
+measure) sums the shares it contributes, at every lag, down column $k$:
 \begin{align}
-\mathrm{TO}_{j,\tau}
-  &= \sum_{k\neq j}\bm{R}_{lag=0,\tau,k,j}^{2,d}
-   + \sum_{k=1}^{K}\sum_{l=1}^{p}\bm{R}_{lag=l,\tau,k,j}^{2,d}.
+\mathrm{TO}_{k,\tau}
+  &= \sum_{j\neq k}\bm{R}_{lag=0,\tau,j,k}^{2,d}
+   + \sum_{j\neq k}\sum_{l=1}^{p}\bm{R}_{lag=l,\tau,j,k}^{2,d}.
 \end{align}
 
-The net directional connectedness of series $j$,
+The net directional connectedness of series $k$,
 \begin{align}
-\mathrm{NET}_{j,\tau} = \mathrm{TO}_{j,\tau} - \mathrm{FROM}_{j,\tau},
+\mathrm{NET}_{k,\tau} = \mathrm{TO}_{k,\tau} - \mathrm{FROM}_{k,\tau},
 \end{align}
-is positive when $j$ is, on balance, a transmitter of connectedness and
+is positive when $k$ is, on balance, a transmitter of connectedness and
 negative when it is a net receiver.
 
 We prefer this measure of  quantile connectednes to other approaches to quantile connectedness, such as that of \textcite{ando2022}. Those measures propagate the non-zero-mean residuals from quantile regressions through a generalised forecast-error variance decomposition that treats them as zero-mean shocks. As \textcite{shahzadetal} show, this inflates measured connectedness in both tails.
