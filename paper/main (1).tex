@@ -88,9 +88,9 @@ decisionmaking of households and businesses.''
 
 Powell's remarks suggest two questions become central for monetary policy when inflation rises. First, are price
 increases concentrated in a small number of categories, or have they become
-broad-based across the household expenditure basket? A relative-price shock affecting a
+broad-based across the household expenditure basket? A relative price shock affecting a
 limited set of goods can often be looked through; a generalised increase across
-many categories is harder to dismiss \cite{bryan1994measuring}. Second, has
+many categories is harder to dismiss \citep{bryan1994measuring}. Second, has
 inflation become self-reinforcing through second-round effects in wages and
 inflation expectations? If higher prices raise wage demands and inflation
 expectations, and those wages and expectations then feed back into prices,
@@ -120,7 +120,7 @@ inflation may become more persistent and costly to reduce.
 
 This paper examines whether high inflation changes the connectedness---the strength
 of statistical association---among prices, wages and inflation expectations in the
-United States, and whether that connectedness has consequences for the conduct of
+United States, and whether changes in price, wage and inflations expectation connectedness has consequences for the conduct of
 monetary policy. Connectedness measures, developed to quantify directional spillovers
 in financial systems \autocite{dieboldyilmaz2012}, are well suited to this question
 because they provide a direct measure of how movements in one series are associated
@@ -129,13 +129,12 @@ with movements in others. The closest prior contribution is
 series for the United States, the United Kingdom and Japan since the late 1980s using
 the time-varying-parameter VAR (TVP-VAR) framework of \textcite{antonakakis2020}. We
 make three contributions relative to that work. The first is \emph{span}: we extend
-the sample back to the Great Inflation, so that the surge of the 1970s and the
-COVID-era surge of 2021--22 can be compared within a common empirical framework. The
+the sample back to the Great Inflation, so that the high inflation of the 1970s and the
+COVID-era  high inflation of 2021--22 can be compared within a common empirical framework. The
 second is \emph{scope}: alongside the six disaggregated CPI categories we include
-wages and inflation expectations, which lets us examine wage--price interactions, the
-expectations channel, and whether price connectedness feeds into the monetary-policy
-reaction function. The third is \emph{methodological}: we replace the TVP-VAR with the
-pseudo-$R^2$ quantile connectedness approach of \textcite{shahzadetal}, which suits the
+wages and inflation expectations, which lets us examine wage--price interactions and the
+inflation--expectations interactions; additionally, we examine the role price connectedness plays in the setting of monetary policy. The third is \emph{methodological}: we replace the connectedness measures derived from the TVP-VAR with the
+pseudo-$R^2$ quantile connectedness approach of \textcite{shahzadetal}, which better suits the
 question for two reasons. First, it measures connectedness at different points of the
 inflation distribution rather than only at the conditional mean or median, so the
 dependence structure in high-inflation states can differ from that in normal
@@ -143,9 +142,11 @@ times.\footnote{A rolling-window TVP-VAR could in principle track the two episod
 through time, but it still measures connectedness at the centre of the conditional
 distribution within each window; it cannot isolate behaviour in the tail.} Second, it
 separates \emph{contemporaneous} co-movement from \emph{lagged} propagation, letting us
-distinguish categories that move together within the period from those linked through
-delayed pass-through---the distinction that underlies our comparison of the two
-episodes.
+distinguish time series that move together within the period from those linked through
+delayed pass-through; this is important in distinguishing common shocks from lagged propagation from price series to price series (that is, spiral type behaviour). Throughout, we emphasise that connectedness measures statistical
+association and lead--lag dependence, not identified causal transmission; our claims
+concern how the dependence structure shifts across inflation states, not what causes
+what.
 
 This paper tests six hypotheses. The first tests whether
 inflation becomes more broad-based when inflation is high:
@@ -165,13 +166,9 @@ We then compare two major U.S. inflation episodes: the Great Inflation of the
 1970s and the COVID-era inflation surge of 2021--22. Much of the conventional
 understanding of high-inflation dynamics is informed by the 1970s. The
 pandemic-era surge provides a modern episode, under a very different
-monetary-policy regime, in which inflation became sufficiently high to revisit
-those mechanisms. The two episodes differed in important respects. The Great
-Inflation occurred in an economy more dependent on oil, with less anchored
-expectations and a different monetary-policy framework. The COVID-era surge, by
-contrast, reflected a combination of pandemic-related supply constraints, large
-shifts in goods demand, shipping disruption, energy shocks and subsequent
-services pressures. These differences suggest that the two episodes may have
+monetary policy regime, in which inflation became sufficiently high to revisit
+those price/wage and inflation dynamics in high inflation environments. The two episodes differed in important respects. The Great
+Inflation occurred in an economy more dependent on oil and a different monetary policy framework. The COVID-era inflation, differs from the Great Inflation, in that supply shock that affected many prices simultaneously; the pandemic-related supply constraints, in part owing to shipping disruptions was not just concentrated in oil-related phenomenon. These differences suggest that the two episodes may have
 broadened through different channels. This motivates the third hypothesis:
 
 \noindent\textbf{H3 (Episode mechanism).} The COVID-era surge was characterised
@@ -179,7 +176,7 @@ primarily by contemporaneous connectedness, consistent with a large common
 shock, whereas the Great Inflation was characterised more by lagged propagation
 across prices.
 
-The differences in monetary policy frameworks between the two periods of high inflation motivates the fourth hypothesis. Specifically, we study if the adoption of inflation targeting and the associated anchoring of inflation expectations, alter the
+The differences in monetary policy frameworks between the two periods of high inflation motivate the fourth hypothesis. Specifically, we study if the adoption of inflation targeting and the associated anchoring of inflation expectations, alter the
 connectedness of inflation expectations and inflation:
 
 \noindent\textbf{H4 (Expectations channel).} Inflation expectations were a
@@ -197,41 +194,28 @@ more strongly:
 \noindent\textbf{H5 (Connectedness and monetary policy).} When the subcomponents of the
 CPI are more highly connected, monetary policy responds more strongly to inflation.
 
-Further, when realised and expected inflation become more tightly connected, the
+Further, when realised and expected inflation aree more tightly connected at high levels of inflation, the
 risk of a self-reinforcing spiral rises: expectations may be behaving adaptively
 rather than remaining anchored. Policy makers may then respond more aggressively
 to forestall such a spiral. This motivates our final hypothesis:
  
 
 \noindent\textbf{H6 (Connectedness and monetary policy II).} When inflation spills over
-more strongly into inflation expectations, monetary policy responds more strongly to
+more strongly into inflation expectations at high levels of inflation, monetary policy responds more strongly to
 inflation.
 
 
-Our central finding is that the dependence structure among prices changes with the
+Our central finding is that the connectedness among prices changes with the
 level of inflation. Cross-category connectedness among the CPI subcomponents rises
 roughly threefold from the median to the high-inflation tail (from $11.8$ to $35.2$
 per cent at $\tau=0.9$), and the increase is accounted for increasingly by the
 \emph{lagged} rather than the contemporaneous component ($23.3$ against $11.9$ per
-cent at $\tau=0.9$), with shelter and core services the central lagged transmitters.
-The two episodes broadened through different channels: the COVID-era surge chiefly
+cent at $\tau=0.9$). We also find hetereogeneity in connectedness between the two periods of high inflation: the COVID-era surge chiefly
 through contemporaneous co-movement, consistent with a common supply shock, and the
-Great Inflation more through lagged propagation across categories. Wage--price
-dependence follows the same pattern---negligible in the calm post-1983 sample but
-pronounced in the Great-Inflation-inclusive period ($25.2$ against $3.6$ per cent at
-$\tau=0.9$)---so it too is a high-inflation-regime phenomenon.
-
-A prominent narrative the data do not support is that inflation expectations lead.
-Pooled over the anchored 1983--2019 period, expectations transmit to inflation (net
-connectedness $+29.1$ at $\tau=0.9$); but conditional on either high-inflation episode
-the sign reverses (Great Inflation $-20.2$, COVID $-6.7$), so expectations \emph{follow}
-realised inflation, consistent with adaptive rather than forward-looking behaviour. We
-find only limited and non-robust evidence that monetary policy responds more strongly to
-inflation when price changes are more highly connected, and we report it as suggestive
-rather than firm. Throughout, we emphasise that connectedness measures statistical
-association and lead--lag dependence, not identified causal transmission; our claims
-concern how the dependence structure shifts across inflation states, not what causes
-what.
+Great Inflation more through lagged propagation across categories. We find wages and prices are more tightly connected at the top end of the distribution, especially during the Great Inflation,  Further, as expected during the Great Inflation we see strong evidence consistent with a wage price spiral lagged inflation spills over into wages and lagged inflation spills over into inflation. We also find interesting results regarding the connectedness between inflation and inflation expectations.  Over the 1983--2019 period where it could be argued inflation expectations were well achonored, expectations transmit to inflation (net
+connectedness $+29.1$ at $\tau=0.9$); but once  either high-inflation episode enters the sample period the sign reverses, so expectations \emph{follow}
+realised inflation, consistent with adaptive rather than forward-looking behaviour. Finally, we some suggestive evidence that monetary policy responds more strongly to
+inflation when CPI subcomponent price changes are more highly connected.  
 
 The remainder of the paper proceeds as follows.
 Section~\ref{sec:data} describes the data; Section~\ref{sec:method} sets out the method; and
@@ -241,9 +225,9 @@ Section~\ref{sec:results} reports the tests of the hypotheses.
 \section{Data}\label{sec:data}
 % ============================================================
 
-Our headline analysis studies the interconnectedness among the six monthly CPI subcomponent series
-drawn from the FRED database that together form a complete, non-overlapping decomposition of
-headline CPI. Each is expressed as a month-on-month percentage change and the sample covers
+Hypotheses 1, 3 and 5 are to do with the connectedness between CPI subcomponents. Our study uses six monthly CPI subcomponent series; these series collectively  
+cover all of the
+headline CPI without overlapping. Each is expressed as a month-on-month percentage change and are downloaded from the FRED website. The sample covers
 February 1967 to May 2026. The six subcomponents are:
 \begin{itemize}
     \item Core goods (excluding food)
@@ -254,32 +238,29 @@ February 1967 to May 2026. The six subcomponents are:
     \item Gasoline
 \end{itemize}
 
-These six follow the standard expenditure-class decomposition: energy is separated into gasoline and household energy services, and core services into shelter and core services excluding shelter. The shelter series is available from FRED, but the core-services-ex-shelter series we construct as:
+There are two exceptions from the standard expenditure-class decomposition: energy is separated into gasoline and household energy services, and core services into shelter and core services excluding shelter. The shelter series is available from FRED, but the core-services-ex-shelter series, we construct as:
 \begin{align}
 \%\Delta\text{CoreServ}^{\text{ex-shelter}}
   = \frac{\%\Delta\text{CoreServ} - w\,\%\Delta\text{Shelter}}{1-w},
 \end{align}
-where $w=0.60$ is shelter's share of core services.\footnote{The results are insensitive to this choice: connectedness and the directional structure are stable for $w\in[0.50,0.65]$ (reported in the robustness analysis).}
+where $w=0.60$ is estimated shelter's share of core services.\footnote{The results are insensitive to this choice: connectedness and the directional structure are stable for $w\in[0.50,0.65]$ (reported in the robustness analysis).}
 
-We separate shelter from other core services because shelter inflation is driven by distinct dynamics --- long lease durations and the imputed owners'-equivalent-rent methodology --- and may behave differently from other services prices.
+We separate shelter from other core services because shelter inflation is driven by distinct dynamics and may behave differently from other services' prices.
 
-Our subsequent analyses use three additional series, again from FRED. For the overall Consumer
+To test hypotheses 2, 4 and 6, we use three additional series, again from FRED. For the overall Consumer
 Price Index, we use the Consumer Price Index for All Urban Consumers, All Items, transformed into a
 month-on-month percentage change to obtain headline inflation.\footnote{We omit the overall CPI from the subcomponent system because it is constructed from those very subcomponents, so any connectedness found would in part reflect a mechanical accounting relationship rather than economic co-movement.} Wage growth is measured using the average hourly earnings of production and nonsupervisory employees in the total private sector
 (\texttt{AHETPI}, dollars per hour, seasonally adjusted), expressed as a
 month-on-month percentage change. We use this series rather than the broader
 all employees measure because it is the longest-running monthly earnings series,
 beginning in 1964, and therefore spans the Great Inflation. A long span of data is needed for the
-for comparative analysis of inflation between the Great Inflation and the COVID Inflation. The broader
+for comparative analysis of wage and inflation connectedness between the Great Inflation and the COVID Inflation. The broader
 all-employees series begins only in 2006.
 
 Finally, we use the University of Michigan median expected change in prices over the next twelve
 months (\texttt{MICH}, percent), available monthly from January 1978. The monthly series therefore
-misses the 1973--77 period, the early un-anchoring phase of the Great Inflation, which is not ideal
-for a hypothesis about expectations during that episode. The Michigan measure is, however, available
-back to 1960 at a quarterly frequency, so we also run the expectations analysis quarterly. Our
-Great-Inflation expectations claims rest on that longer quarterly series (\texttt{MICH\_QTR}); the
-monthly analysis uses \texttt{MICH} from 1978.
+misses the 1973--77 period, a key period of the Great Inflation. The Michigan measure is, however, available
+back to 1960 at a quarterly frequency, so we also run the expectations analysis at a quarterly frequency.
    
     
 
@@ -290,23 +271,35 @@ monthly analysis uses \texttt{MICH} from 1978.
 
 \subsection{Pseudo-quantile $R^2$ connectedness}
 
-\subsubsection{Setup}
-Let $\bm{y}_t=(y_{1,t},\dots,y_{K,t})'$ collect the $K$ time series we study.
-In one application this system is the month-on-month percentage change of the six CPI subcomponents; in another it is wage growth, inflation expectations and headline inflation.
 
-For each series $y_{k,t}$ in turn, we ask how much of its variation can be attributed
+Let $\bm{y}_t=(y_{1,t},\dots,y_{K,t})'$ collect the $K$ time series we study. The precise membership of $\bm{y}_t$ depends on the hypothesis under study. For hypotheses 1, 3 and 5, $\bm{y}_t$ contains the month-on-month percentage change of the six CPI subcomponents. For hypotheses 4 and 5 it contains inflation expectations and headline inflation. For hypothesis 2 it contains wage growth  and headline inflation.
+
+For each series $y_{k,t}$ in turn within the system $\bm{y}_t$, we ask how much of its variation can be attributed
 to (i) variation of the remaining series in the system at time \textit{t}, $\bm{y}_{-k,t}$, and (ii)
 the first $p$ lags of all the time series in the whole system, $(\bm{y}_{t-1}',\dots,\bm{y}_{t-p}')'$.
-The first source captures \emph{contemporaneous} dependence: categories that
-move together within the month (or the quarter), while the second captures \emph{lagged}
-dependence, that is, delayed propagation from one series to another over time. The
-distinction between the two is what allows us to separate a common shock from
+Channel (i) captures \emph{contemporaneous} dependence: the extent to which variables
+move together within the month (or the quarter), while the second channel (ii) captures \emph{lagged}
+dependence; that is, delayed propagation from one series to another over time. The ability to isolate and distinct between the two channels is what allows us to separate a common shock from
 sequential pass-through.
 
-A natural starting point is the goodness of fit of a regression of $y_{k,t}$ on
-this regressor set. The difficulty is that the regressors are themselves
-mutually correlated, so the regression $R^2$ cannot be partitioned unambiguously
-into the portion owed to each one.
+A natural starting point to decompose the two channels is the goodness of fit of a regression as measured by the $R^2$. Consider quantifying the connectedness between inflation ($\pi$) and inflation expectations ($\pi^e$)
+the following regression:
+
+\[
+\pi_t
+=
+\alpha_0
++
+\alpha_1 \pi_t^e
++
+\sum_{i=1}^{p} \beta_i \pi_{t-i}^e
+%+
+%\sum_{i=1}^{p} \gamma_i \pi_{t-i}
++
+\epsilon_t.
+\]
+
+The $R^2$ tells us how well collectively  inflation expectations in time \textit{t} and lagged inflation expectations are correlated with inflation.  But the lags are correlated with the contemporaneous value of inflation expectations,  so the regression $R^2$ cannot be partitioned unambiguously into the portions that reflect the lagged and the contemporaneous contributions respectively.  This problem is exacerbated when you move to more than two variables (like the six individual subcomponents of the CPI) and therefore have contemporaneous and lagged values of two or more independent variables in the regression; if these variables are correlated, the partitioning of the $R^2$ becomes even more fraught.
 
 
 \textcite{genizi1993} proposes an order-invariant decomposition of the regression
@@ -319,7 +312,7 @@ vector of decomposed $R^2$ shares is
 \begin{align}
 \bm{R}_{xx} &= \bm{V}\,\bm{\Lambda}\,\bm{V}' = \bm{C}\,\bm{C}', \label{eq:rxx}\\
 \bm{C}      &= \bm{V}\,\bm{\Lambda}^{1/2}\,\bm{V}', \label{eq:C}\\
-\bm{R}^{2,d} &= \bigl[\,\bm{C}^2\,(\bm{C}^{-1}\bm{r}_{yx})^2\,\bigr]',
+\bm{R}^{2,d} &= \bigl[\,\bm{C}^2\,(\bm{C}^{-1}\bm{r}_{yx})^2\,\bigr]' 
   \label{eq:r2d}
 \end{align}
 where $\bm{r}_{yx}$ is the vector of correlations between the dependent variable
@@ -328,7 +321,7 @@ uniquely to a single regressor, net of the correlation it shares with the others
 non-negative and sum to the regression $R^2$.
 
 %\subsubsection{Measuring dependence in the tails}
- Using the above decomposition with Pearson correlations as inputs, \textcite{balli2023} show how contemporaneous and lagged connectedness can be quantified at the centre of the distribution. Because, however, our interest is in how dependence behaves when inflation is high, we use the adaptation of \textcite{shahzadetal}, which replaces the Pearson correlations with the quantile correlation of \textcite{choishin2022}; this allows contemporaneous and lagged connectedness to be measured at any chosen quantile $\tau$.
+ Using the above decomposition with Pearson correlations as inputs, \textcite{balli2023} show how contemporaneous and lagged connectedness can be quantified at the centre of the distribution. Because, however, our interest is in how dependence behaves when inflation is high, we use the adaptation of \textcite{shahzadetal}, which replaces the Pearson correlations with the quantile correlations of \textcite{choishin2022}; this allows contemporaneous and lagged connectedness to be measured at any chosen quantile $\tau$.
 
 The specifics of the \textcite{shahzadetal} measure are as follows. The quantile correlation of \textcite{choishin2022} between two variables, $r_{1,2,\tau}$, is substituted for $\bm{R}_{xx}$ and $\bm{r}_{yx}$ in equations~\ref{eq:rxx} and~\ref{eq:r2d}. For each time series in turn,
 equation~\ref{eq:r2d} then returns a vector $\bm{R}^{2,d}_{\tau}$ that allocates
@@ -337,7 +330,7 @@ record the contemporaneous contributions of the other series; the remaining
 entries record the lagged contributions of all series in the system.
 
 
-For a system of $K$ variables, applying \eqref{eq:r2d} to each of the $K$ equations in that system and stacking the results
+For a system of $K$ variables, applying  the decomposition with the quantile correlation for each of the $K$ equations in that system and stacking the results
 yields the connectedness matrix
 \begin{align}
 \bm{R}_{\tau}^{2,d}
@@ -347,7 +340,7 @@ yields the connectedness matrix
   = \bigl[\, \bm{R}_{lag=0,\tau}^{2,d} \;\big|\; \bm{R}_{lag=1,\tau}^{2,d}
     \;\big|\; \cdots \;\big|\; \bm{R}_{lag=p,\tau}^{2,d} \,\bigr],
 \end{align}
-in which row $k$ indexes the dependent (or the receiving) variable.\footnote{So that the equations align, the $k$th position
+in which row $k$ indexes the dependent variable.\footnote{So that the equations align, the $k$th position
 of $\bm{R}_{\tau,k}^{2,d}$ is set to zero, since $y_{k,t}$ is not regressed on its
 own contemporaneous value.}   
 
@@ -370,7 +363,7 @@ with
 where $\bm{R}_{lag=l,\tau,k,j}^{2,d}$ is the share of series $k$'s variation contributed by
 series $j$ at lag $l$. Throughout, connectedness measures are reported as percentages (shares of
 the $R^2$ multiplied by 100). Equivalently, $\mathrm{TCI}_{\tau}$ is the average of the directional
-\textsc{from} --- or, identically, \textsc{to} --- measures defined below.
+\textsc{from} --- or, identically, \textsc{to} --- measures defined below [in this true?].
 
 Directional measures in a similar spirit to those put forward by \textcite{dieboldyilmaz2012} can also be calculated. The total connectedness \emph{received} by series $k$
 (its \textsc{from} measure) sums the shares contributed by all other series, at
@@ -381,7 +374,7 @@ every lag, into row $k$;
    + \sum_{j=1}^{K}\sum_{l=1}^{p}\bm{R}_{lag=l,\tau,k,j}^{2,d}.
 \end{align}
 
-The total connectedness \emph{transmitted} by series $j$ to other series
+[now we switch to j instead of k, would we? ]The total connectedness \emph{transmitted} by series $j$ to other series
 (its \textsc{to} measure) sums the shares it contributes, at every lag, down
 column $j$:
 \begin{align}
@@ -395,10 +388,9 @@ The net directional connectedness of series $j$,
 \mathrm{NET}_{j,\tau} = \mathrm{TO}_{j,\tau} - \mathrm{FROM}_{j,\tau},
 \end{align}
 is positive when $j$ is, on balance, a transmitter of connectedness and
-negative when it is a net receiver; averaging $\mathrm{FROM}$, equivalently
-$\mathrm{TO}$, across series returns $\mathrm{TCI}_{\tau}$.
+negative when it is a net receiver.
 
-We prefer this measure to other approaches to quantile connectedness, such as that of \textcite{ando2022}. Those measures propagate the non-zero-mean residuals from quantile regressions through a generalised forecast-error variance decomposition that treats them as zero-mean shocks. As \textcite{shahzadetal} show, this inflates measured connectedness in both tails.
+We prefer this measure of  quantile connectednes to other approaches to quantile connectedness, such as that of \textcite{ando2022}. Those measures propagate the non-zero-mean residuals from quantile regressions through a generalised forecast-error variance decomposition that treats them as zero-mean shocks. As \textcite{shahzadetal} show, this inflates measured connectedness in both tails.
 
 
 \section{Results}\label{sec:results}
