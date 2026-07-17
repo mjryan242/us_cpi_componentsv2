@@ -293,13 +293,13 @@ the following regression:
 \alpha_1 \pi_t^e
 +
 \sum_{i=1}^{p} \beta_i \pi_{t-i}^e
-%+
-%\sum_{i=1}^{p} \gamma_i \pi_{t-i}
+ +
+ \sum_{i=1}^{p} \gamma_i \pi_{t-i}
 +
 \epsilon_t.
 \]
 
-The $R^2$ tells us how well collectively  inflation expectations in time \textit{t} and lagged inflation expectations are correlated with inflation.  But the lags are correlated with the contemporaneous value of inflation expectations,  so the regression $R^2$ cannot be partitioned unambiguously into the portions that reflect the lagged and the contemporaneous contributions respectively.  This problem is exacerbated when you move to more than two variables (like the six individual subcomponents of the CPI) and therefore have contemporaneous and lagged values of two or more independent variables in the regression; if these variables are correlated, the partitioning of the $R^2$ becomes even more fraught.
+The $R^2$ tells us how well collectively  inflation expectations in time \textit{t} and lagged inflation expectations are correlated with inflation, and how inflation is correlated with its own lags. The issue for the researcher wondering about the relative role of contemporaneous vs lagged inflation expectations in the inflation process is the lags are correlated with the contemporaneous value of inflation expectations,  so the regression $R^2$ cannot be partitioned unambiguously into the portions that reflect the lagged and the contemporaneous contributions respectively.  This problem is exacerbated when you move to more than two variables (like the six individual subcomponents of the CPI) and therefore have contemporaneous and lagged values of two or more independent variables in the regression; if these variables are correlated, the partitioning of the $R^2$ becomes even more fraught.
 
 
 \textcite{genizi1993} proposes an order-invariant decomposition of the regression
@@ -340,17 +340,10 @@ The specifics of the \textcite{shahzadetal} measure are as follows. The quantile
 equation~\ref{eq:r2d} then returns a vector $\bm{R}^{2,d}_{\tau}$ that allocates
 the regression's overall pseudo-$R^2$ across its regressors at that $\tau$.\footnote{Quantile regressions do \emph{not} have an $R^2$ in the conventional (least-squares) sense, hence the term ``pseudo''.} The first $K-1$ entries
 record the contemporaneous contributions of the other series; the remaining
-entries record the lagged contributions of all series in the system.
-
-A quantile-correlation matrix estimated from a finite sample need not be positive
-semi-definite---a difficulty that becomes more pronounced in the tails ($\tau=0.9$ in our
-data) and in short rolling windows. Before applying the decomposition we therefore
-regularise the matrix, following the implementation of \textcite{shahzadetal}. We first
-apply the \textcite{schafer2005} shrinkage estimator, which shrinks the quantile-correlation
-matrix towards the identity; the shrinkage intensity is set to the smaller of the
-\textcite{schafer2005} analytic value and the smallest intensity that renders the shrunk
-matrix positive semi-definite. Where the shrunk matrix is still not positive semi-definite,
-we project it onto the nearest positive-semi-definite correlation matrix \citep{higham2002}.
+entries record the lagged contributions of all series in the system.\footnote{ A quantile-correlation matrix estimated from a finite sample need not be positive
+semi-definite; a difficulty that becomes more pronounced in the tails ($\tau=0.9$ in our
+data) and in short rolling windows. As per \textcite{shahzadetal}. we
+apply the \textcite{schafer2005} shrinkage procedure} 
 
 
 For a system of $K$ variables, applying  the decomposition with the quantile correlation for each of the $K$ equations in that system and stacking the results
@@ -369,7 +362,7 @@ own contemporaneous value.}
 
 
 The total connectedness index at quantile $\tau$, $\mathrm{TCI}_{\tau}$, is the average across the
-$K$ series of the off-diagonal $R^{2,d}$ shares, and splits into a contemporaneous and a lagged
+$K$ series of the off-diagonal $R^{2,d}$ shares and splits into a contemporaneous and a lagged
 component,
 \begin{align}
 \mathrm{TCI}_{\tau} = \mathrm{TCI}_{\tau}^{C} + \mathrm{TCI}_{\tau}^{L},
@@ -412,27 +405,25 @@ The net directional connectedness of series $k$,
 \mathrm{NET}_{k,\tau} = \mathrm{TO}_{k,\tau} - \mathrm{FROM}_{k,\tau},
 \end{align}
 is positive when $k$ is, on balance, a transmitter of connectedness and
-negative when it is a net receiver.
+negative when it is a net receiver.  
 
 We prefer this measure of  quantile connectednes to other approaches to quantile connectedness, such as that of \textcite{ando2022}. Those measures propagate the non-zero-mean residuals from quantile regressions through a generalised forecast-error variance decomposition that treats them as zero-mean shocks. As \textcite{shahzadetal} show, this inflates measured connectedness in both tails.
 
 
 \section{Results}\label{sec:results}
 
-All connectedness measures reported below are percentages (shares of the $R^2$, multiplied by
-$100$). 
 
 \subsection{H1: inflation broadens in the high tail}
-Our first hypothesis is \textbf{H1 (CPI broadening)}: as inflation rises,
+Our first hypothesis is \textbf{H1 (CPI broadening)}: \textit{as inflation rises,
 connectedness among disaggregated CPI categories increases, particularly in the
-upper tail of the inflation distribution. Table~\ref{tab:h1} reports the overall
-connectedness at different levels of $\tau$ over our whole sample period (the
-and its decomposition into contemporaneous and lagged 
-connectedness; Table~\ref{tab:h1} reports the same by quantile, monthly (Panel~A)
-and quarterly (Panel~B). Overall connectedness rises about threefold from the
+upper tail of the inflation distribution.}  Figure~\ref{fig:h1} reports the overall
+connectedness at different levels of $\tau$ over our whole sample period on a monthly frequency (the black line). Further, the  figure shows the decomposition into contemporaneous (the blue line) and lagged (the red line)
+connectedness. Overall connectedness rises about threefold from the
 median to the high tail (from $11.8$ to $35.2$ at monthly frequency); both the
 contemporaneous and lagged components increase, but slightly more of the rise
-comes from the lagged component ($23.3$ vs $11.9$ at $\tau=0.9$). This indicates that high-inflation states are characterised not only by stronger common movements across prices, but also by more pronounced sequential propagation across categories. This result also holds if quarterly data are used (see Panel B).
+comes from the lagged component ($23.3$ vs $11.9$ at $\tau=0.9$).  These estimates of connectedness  are based off estimating the system with two lags; longer lag lengths are not possible as there is a risk the quartile-correlation matrix is no longer positive semi definite.\footnote{As we use shrinkage procedures \citep{schafer2005} to keep the matrix positive semi definite, the real issue is the shrinkage required to keep it positive semi-definite
+grows large enough to distort the resulting connectedness estimates.}  This means the connectedness is being measured over a relatively short span of time: two months.   We also run the system on a quarterly frequency. The idea being that two lags now capture a longer span of time i.e. six months; this allows more time for prices to spillover into other prices.  Table~\ref{tab:h1} reports connectedness measured at a monthly (Panel~A)
+and quarterly (Panel~B) frequency for selected quartiles. The table indicates that key conclusions from the monthly analysis hold at a quarterly frequency: high-inflation states are characterised by increased connectedness and, in particular, increased lagged connectedness.  Based on this evidence, we conclude hypothesis one is strongly supported.
 
 \begin{figure}[!ht]
 \centering
@@ -443,80 +434,73 @@ $\tau$ (monthly, $n_{\text{lag}}=2$).}
 \label{fig:h1}
 \end{figure}
 
-Table \ref{conn_contemp_full}    in the appendix show the contemporaneous dependency between CPI subcomponents at $\tau = 0.9$. The rows indicate FROM connectedness so Food gets 0.2 units from Gas and 1.6 from Energy; the columns indicate TO connectedness, so Food gives 0.4 to gasoline and 1.6 household energy. The strongest contemporaneous connectedness is recorded between household energy and gasoline (in both directions), and  core goods and core services with shelter, again in both directions.  The bidirectional nature of these suggests they represent common shocks.  Higher nominal incomes and low interest rates could increase demand for houses, good and services for example.     
-Table [] shows the same for lagged connectedness. In line with the results in Table~\ref{tab:h1} we see, generally, connectedness is stronger with a lag.  WE see that shelter, services and gasoline are a net transmitter of non-contemporaneous connectedness, where as Food, core goods and household energy are net receivers [need to revise this].
-
 \input{paper/tables/h1}
+%Table \ref{conn_contemp_full}    in the appendix show the contemporaneous dependency between CPI subcomponents at $\tau = 0.9$. The rows indicate FROM connectedness so Food gets 0.2 units from Gas and 1.6 from Energy; the columns indicate TO connectedness, so Food gives 0.4 to gasoline and 1.6 household energy. The strongest contemporaneous connectedness is recorded between household energy and gasoline (in both directions), and  core goods and core services with shelter, again in both directions.  The bidirectional nature of these suggests they represent common shocks.  Higher nominal incomes and low interest rates could increase demand for houses, good and services for example.     
+%Table [] shows the same for lagged connectedness. In line with the results in Table~\ref{tab:h1} we see, generally, connectedness is stronger with a lag.  WE see that shelter, services and gasoline are a net transmitter of non-contemporaneous connectedness, where as Food, core goods and household energy are net receivers [need to revise this].
 
-\subsection{H3: how the two episodes broadened}
-Our most distinctive result concerns \emph{how} inflation broadened in each episode.
-Table~\ref{tab:h3} reports how high-tail ($\tau=0.9$) connectedness changes when each episode is
-added to the calm 1983--2019 core --- estimating the model with the Great Inflation included (but
-COVID dropped) and with COVID included (but the Great Inflation dropped). Both contemporaneous and
-lagged connectedness rise by more in the Great Inflation, consistent with its higher inflation
-level. More tellingly, the Great-Inflation increase comes mainly through the \emph{lagged}
-component, whereas the COVID increase is almost entirely \emph{contemporaneous} --- its lagged
-marginal is in fact negative. The two components have a natural reading: contemporaneous
-connectedness is categories moving together within the period, as a common shock hitting all prices
-at once would produce; lagged connectedness is one category's past movement being associated with
-another's current movement, the signature of a sequential, cross-category process. The COVID pattern
-is thus consistent with a common shock (pandemic supply constraints and shipping disruption), and
-the Great-Inflation pattern with a slower, sequential build-up --- supporting H3. This distinction
-is precisely the object the contemporaneous/lagged decomposition is built to measure, and it links
-to the wage channel examined next. The contrast is sharp at monthly frequency (Panel~A); at
-quarterly frequency (Panel~B) the calm-era base connectedness is already high and lagged-dominated,
-so the episode marginals are small and less sharply signed, and we read the monthly result as the
-primary evidence.
 
-\input{paper/tables/h3}
+\subsection{H2: Wages and inflation}
+The second hypothesis states that  connectedness between wages and prices is stronger during
+high-inflation states than during normal-inflation states. Panel A of Table~\ref{tab:h2} shows that the connectedness between wages and the overall CPI
+rises with the quantile, and that at higher quantiles the lagged inflation--wage association
+strengthens; this pattern holds at quarterly frequency (Panel~C). This provides strong support for Hypothesis 3.
 
-\subsection{Self-reinforcement: wages and expectations}
-The next two hypotheses ask whether inflation became self-reinforcing through wages and
-expectations. Table~\ref{tab:h2} shows that the connectedness between wages and the overall CPI
-rises with the quantile (H2), and that at higher quantiles the lagged inflation--wage association
-strengthens. The pattern holds at quarterly frequency (Panel~C) and is concentrated in the
-Great-Inflation-inclusive subperiod (Panel~B): wage--price connectedness at $\tau=0.9$ is $25.2$ in
-1964--2019 against only $3.6$ post-1983. Wage--price dependence is thus, like broadening itself, a
-high-inflation-regime phenomenon.
+Where the monthly and quarterly data differ is the monthly data suggest at high inflation, lagged spillovers are stronger from inflation to wage growth  than from lagged wage growth to the CPI; the quarterly data point to the opposite conclusion [this is a puzzle that need investigating or rationalising].  
+
+To understand how wage and inflation dynamics changed during the two inflation episodes in our sample (the Great Inflation and the COVID inflation), we conduct a `one in/ one out' exercise; see Panel~B.     In the
+Great-Inflation-inclusive subperiod (1964-2019): wage--price connectedness is much stronger and the spillovers are in both directions; this is consistent with a reinforcing spiral.  For example, at $\tau=0.9$, the 1964–2019 sample has spillovers from inflation to wages at 15.5 and 14.9 in the opposite direction i.e. roughly even.  Examining the results from the sample including COVID, but excluding the Great Inflation (1983-2026), we make two observations. The first is the spillovers are relatively stronger from inflation to wages (3.0) than in the other direction (1.3). The second is level of connectedness is much lower.  In part, this reflects that the level of inflation was much higher during the Great Inflation, so a given $\tau$ is associated with higher inflation.  It may also reflect that with better anchored inflation expectations, wage price spirals are less likely. [github issue #4 will help tease these two channels out]
 
 \input{paper/tables/h2}
 
-For expectations (\textbf{H4}), Table~\ref{tab:h6net} reports the net directional connectedness of
-inflation expectations. Pooled over the full sample, expectations are net transmitters in the upper
-tail --- more connected \emph{to} inflation than they receive \emph{from} it --- but this reflects
-the anchored 1983--2019 period, where expectations lead (NET $=+29.1$ at $\tau=0.9$). Conditional on
-a high-inflation episode the sign reverses: in the high tail of both the Great Inflation (NET
-$=-20.2$) and COVID ($-6.7$) expectations follow realised inflation, consistent with adaptive
-expectations. The Great-Inflation figure uses the quarterly Michigan series (from 1960), which
-covers the 1973--77 un-anchoring the monthly series misses. Table~\ref{tab:h6} decomposes the link
-by direction: in the full sample the lagged expectations$\to$inflation term is the larger, but in
-the Great Inflation the lagged inflation$\to$expectations term dominates at higher $\tau$ (reaching
-$50.7$ at $\tau=0.9$, against $27.5$ in the reverse direction) --- the adaptive channel. COVID shows
-the same pattern, less pronounced.
 
-\input{paper/tables/h6net}
+
+\subsection{H3: The two high inflation episodes were different in terms of how price changes propagated at a subcompoment level }
+
+Table~\ref{tab:h3} reports the marginal change in high-tail ($\tau=0.9$) connectedness changes when each episode is added to the 1983--2019 sample. That is, estimating the model with the Great Inflation included (but
+COVID dropped) and then with COVID included (but the Great Inflation dropped). Both contemporaneous and
+lagged connectedness rise by more in the Great Inflation, consistent with its higher inflation
+level. More tellingly, the Great-Inflation increase comes mainly through the \emph{lagged}
+component, whereas the COVID increase is almost entirely \emph{contemporaneous}, its lagged
+marginal is in fact negative. The COVID results are
+ thus consistent with a common shock (pandemic supply constraints and shipping disruption), while
+the Great-Inflation pattern with relatively lagged propogation playing a more important role, supporting H3. 
+
+At a quarterly frequency (Panel~B) the calm-era base connectedness is already high and lagged-dominated [is this true??], so the episode marginals are small and less sharply signed, and we read the monthly result as the
+primary evidence. [or is it the case that very few quarters associated with tau = 0.9 as we lose some on the aggregation]
+
+\input{paper/tables/h3}
+
+\subsection{H4: Inflation expectations and headline inflation}
+
+ Table~\ref{tab:h6} [need to add a NET column to this table, i.e fold the current h6net into this table, order table Full, Core, Great Inflation, COVID ] reports the directional connectedness of
+inflation expectations and headline inflation.\footnote{This is quarter on quarter growth in the CPI.  There is an arguement we should work with annual growth to match the measurement of inflation expectations.  This is problematic at a quarterly frequency as it induces a moving average component into the underlying regressions [Claude to comment on this claim].  If the analysis is done this way our key results still hold; the results are available from the authors on request. }  Note this is carried out on a quarterly frequency so we can study a sample that includes the Great Inflation.  As noted earlier, monthly inflation expectations data only become available in 1978 [check?].  Pooled over the full sample, inflation expectations are net transmitters in the upper tail. Taking $\tau=0.9$ as example, contemporaneous plus lagged transmission from inflation to inflation expectations is (19.5+33.6) 53.1; it is (26.2+37.3) 63.5 in the other direction. If one excludes the two large inflation episodes in our sample and focuses on the 1983-2019 period, the stronger connectedness from inflation expectations to inflation (rather than vice-versa) is still evident. Examining the two high inflation episodes in isolation, however, we see   in
+the Great Inflation the lagged inflation$\to$expectations term dominates at higher $\tau$ (reaching
+$50.7$ at $\tau=0.9$, against $27.5$ in the reverse direction).  This is consistent with the adaptive channel: recent inflation spillovers into expectations. COVID shows a lower level of lagged connectedness from inflation expectations to inflation; this is consistent with better-anchored inflation expectations.
+
+[The high inflation episode results in Table~\ref{tab:h3}, as I understand it, were not constructed using the one/ in out methodology as per earlier tables, is it worth adding these?/]
+%\input{paper/tables/h6net}
 \input{paper/tables/h6}
 
+\subsection{H5 and H6: connectedness and the conduct of monetary policy}
 
-To test H5 and H6 we proceed in three steps. First, for each connectedness system we
+We motivated hypotheses five and six by noting that monetary policy makers might be more concerned when inflation is more board-based. To test H5 and H6 we proceed in three steps. First, for each connectedness system we
 compute the pseudo-quantile $R^2$ connectedness measure over rolling windows, using both
-60- and 120-month windows and evaluating it at $\tau=0.5$, $0.7$ and $0.9$ so as to
-characterise connectedness at the centre as well as in the upper tail of the distribution.
-This yields, for each window length and quantile, a monthly series of total connectedness,
-$C_t$.
+a 120-month window and evaluating it at $\tau=0.5$, $0.7$ and $0.9$ so as to
+characterise connectedness at the centre as well as in the upper tail of the distribution.\foonote{We choose this window to balance two competing requirements. Too short a window means connectedness (particularly at higher $\tau$s) depends on a small number of months. Too long a window means that the connectedness measure is not dynamic enough; that is, it evolves too slowly to capture policy-makers perceptions of the broadness of inflation).  } This yields, for each quantile, a monthly series of total connectedness,
+$C_t^{\tau}$.
 
 Second, we classify each month into a high- or low-connectedness regime. Rather than
 imposing an ad hoc threshold, we let the data determine the regimes by fitting the
-two-state Markov-switching model of \citet{hamilton1989new} to $C_t$. Specifically, we
-treat connectedness as a first-order autoregression whose intercept, autoregressive
+two-state Markov-switching model of \citet{hamilton1989new} to $C_t^{\tau}$. Specifically, we
+model connectedness as a first-order autoregressive process whose intercept, autoregressive
 coefficient and error variance all switch between two latent states,
 $s_t\in\{\text{low},\text{high}\}$, that evolve as a first-order Markov chain. The AR(1)
-specification captures the well-known persistence of the connectedness series whilst
+specification captures the persistence of the connectedness series (in part, brought about owing to the rolling window construction) whilst
 allowing both its level and its volatility to differ across regimes. We estimate the model
 by maximum likelihood, recover the smoothed probability that each month belongs to each
 state, and assign every month to its most probable state; the state with the higher mean
 connectedness is labelled the `high' regime, so that $\text{High}_t=1$ for months in that
-state and zero otherwise.
+state and zero otherwise.  Note because $C_t^{\tau}$ differs for different ${\tau}$s, the high and low connectedness regimes will be different for different ${\tau}$s.
 
 Third,   we estimate an inertial Taylor rule augmented
 with a regime interaction:
@@ -527,12 +511,12 @@ with a regime interaction:
 \end{equation}
 where $i_t$ is the Wu--Xia \citep{wu2016measuring} shadow policy rate, $\pi_t$ is twelve-month
 CPI inflation, $\pi^*=2$ per cent is the assumed inflation target, and $x_t$ is the
-unemployment gap.\footnote{he unemployment gap is the difference between the civilian unemployment rate
+unemployment gap.\footnote{The unemployment gap is the difference between the civilian unemployment rate
 and the Congressional Budget Office's estimate of the natural (non-cyclical) rate of
 unemployment, both obtained from FRED (series \texttt{UNRATE} and \texttt{NROU}). Because
-the CBO series is published quarterly, we linearly interpolate it to monthly frequency.} The coefficient $\rho$ captures interest-rate smoothing  \cite[p.151-152]{ClaridaGaliGertler2000}; one motivation for this specification is that under uncertainty central banks only partially adjust to the interest rate warranted based on current economic conditions. In equation   \ref{eq:regime_taylor} $\beta_\pi$ the
-baseline response to the inflation gap, and $\beta_x$ the response to unemployment. The
-object of interest is $\delta$: it measures the \emph{additional} response to inflation in
+the CBO series is published quarterly, we linearly interpolate it to monthly frequency.} The coefficient $\rho$ captures interest-rate smoothing  \citep[p.151-152]{ClaridaGaliGertler2000}; one motivation for this specification is that under uncertainty central banks only partially adjust to the interest rate warranted based on current economic conditions. In equation   \ref{eq:regime_taylor}, $\beta_\pi$ estimates the
+baseline response of monetary policy to the inflation gap, and $\beta_x$ the response to unemployment. The
+object of interest is $\delta$: it measures the \emph{additional} monetary response to inflation in
 the high-connectedness regime. If H5 and H6 are true, then $\delta>0$: monetary policy
 responds more strongly to inflation when price changes (H5) or inflation and inflation expectations (H6) are more highly connected. All inference is based on
 Newey--West HAC standard errors.  
@@ -547,40 +531,23 @@ shifted over time, with different Federal Reserve chairs placing different weigh
 inflation \citep{ClaridaGaliGertler2000}; estimating over later subsamples guards against
 attributing such governor-preference changes in the rule to the connectedness regime.  
 
- 
-
-
-
-Two readings of this evidence are possible. On the first, the state dependence is rea;
-but recent: it emerges only in the samples beginning in 1993 and 2003, consistent with
+Two readings of the evidence presented in Table~\ref{tab:sixconn} are possible. On the first reading, the connectedness state dependence of monetary policy is real, but
+ recent: it emerges only in the samples beginning in 1993 and 2003; this is consistent with
 modern central banks, operating under explicit or implicit inflation targets. being more
 attentive to the breadth of price changes than their predecessors. That the effect appears
 only at $\tau=0.9$ reinforces this reading, suggesting that policymakers respond more
-strongly to inflation only once connectedness is concentrated in the upper tail, amongst
-those components already experiencing large price increases. This interpretation has some plausiblity. A second, more sceptical reading is that the two significant coefficients
+strongly to inflation only once connectedness is concentrated in the upper tail. That is, it is when CPI subcomponents are experiencing large price increases that policy makers start to care about spillovers. This interpretation has some plausiblity. 
+
+A second, more sceptical, reading is that the two significant coefficients
 are false positives. The interaction $\delta$ is estimated over twelve quantile--sample
-combinations, so at conventional levels one or two spurious rejections are to be expected
+combinations, so at conventional levels one or two spurious rejections of the null hypothesis are to be expected
 by chance alone; that one of the two is significant only at the 10 per cent level lends
-this reading further weight. We therefore treat the result as no more than suggestive, and
-note below that it does not survive a shorter, 60-month estimation window.
-
-Table \label{tab:expconn} shows connectedness between inflation expectations and inflation under two different measures of inflation.  One the annual percentage change in inflation (panel A), one is the monthly change in inflatioon (panel B); we study the annual percentage change so it is one the same period as inflation expectations which are measured over a year.  On that measure only $\tau=0.7$ connectedness shows any change in the monetary policy reaction function for inflation; this does not survive if monthly CPI growth is used. 
-
-Table~\ref{tab:expconn} reports the Taylor rule estimates when the connectedness
-regime is identified from the inflation--expectations system, under two measures of
-inflation: the twelve-month (annual) percentage change in the CPI (Panel~A) and the
-month-on-month change (Panel~B). We prefer the annual measure, as it is defined over the
-same twelve-month horizon as the Michigan expectations series. On that measure the
-interaction $\delta$ is positive and statistically significant only at $\tau=0.7$, where
-it is significant across every sample start date, with $\delta$ ranging from $0.04$ to
-$0.06$ indicating a stronger inflation response in high-connectedness months. This
-result does not survive when month-on-month CPI inflation is used instead: in Panel~B
-$\delta$ is statistically insignificant throughout. Again not overly strong support for the hypothesis that connectedness is taken into account when setting monetary policy.
+this reading further weight. Balancing these two readings of the data, we therefore treat the result as no more than suggestive support for Hypothesis H5.
 
 \begin{table}[!htbp]
 \centering
 \caption{Subcomponent connectedness }
-\label{tab:expconn}
+\label{tab:sixconn}
 
 \input{paper/tables/regime_tex/ms_six_120}
 \begin{tablenotes}\footnotesize
@@ -592,53 +559,12 @@ response $\beta_\pi/(1-\rho)$ in the low and high regimes.
 \end{tablenotes}
 \end{table}
 
-\begin{table}[!htbp]
-\centering
-\caption{Expectations connectedness and the policy reaction function: 120-month window}
-\label{tab:expconn120}
-\begin{threeparttable}
-\centering
-
-\textbf{Panel A. Matched: MICH and 12-month CPI inflation}\par\smallskip
-{\input{paper/tables/regime_tex/ms_expM_120}}\par\bigskip
-
-\textbf{Panel B. Mismatched: MICH and month-on-month CPI inflation}\par\smallskip
-{\input{paper/tables/regime_tex/ms_expX_120}}
-
-\begin{tablenotes}\footnotesize
-\item \textit{Notes:} Estimates of equation~\eqref{eq:regime_taylor} in which the
-connectedness regime is identified from the inflation--expectations system over a 120-month
-rolling window. Panel~A pairs the Michigan one-year inflation expectation with 12-month CPI
-inflation; Panel~B pairs it with month-on-month CPI inflation. Columns are sample start
-dates; within each panel the three blocks are the quantiles $\tau=0.5$, $0.7$ and $0.9$.
-Newey--West HAC $t$-statistics in parentheses; $^{*}$, $^{**}$, $^{***}$ denote significance
-at 10, 5 and 1 per cent. $\Delta\beta_\pi^{\text{High}}$ is the interaction $\delta$; the
-final row of each block reports the implied long-run response $\beta_\pi/(1-\rho)$ in the
-low and high regimes.
-\end{tablenotes}
-\end{threeparttable}
-\end{table}
-
-A limitation of the preceding analysis is that, at a monthly frequency, connectedness is
-estimated with only two lags, so lagged spillovers are captured over a two-month horizon.
-This restriction is necessary: within the short rolling windows the underlying vector
-autoregression must remain estimable, and the implied variance-decomposition matrix must be
-well-conditioned and positive semi-definite. Additional lags rapidly exhaust the available
-degrees of freedom and degrade the connectedness estimates. The concern, however, is that the
-price spirals and broad subcomponent co-movements that might concern policymakers could build
-over a horizon longer than two months. We therefore re-estimate connectedness at a quarterly
-frequency, again with two lags, which extends the horizon over which spillovers can propagate
-to roughly six months. The Taylor rule continues to be estimated at a monthly frequency; a
-given month is assigned to the high- or low-connectedness regime according to the state of
-the quarter in which it falls.
-
-
 Table~\ref{tab:sixcpiQ} reports the Taylor-rule estimates for the six CPI subcomponents when
-the connectedness regime is based on connecedness measured at quarterly frequency. The evidence is notably stronger than under the monthly measure. Of the eight estimates of the interaction $\delta$ at
-$\tau=0.5$ and $\tau=0.7$---four sample start dates at each quantile---six are positive and
+the connectedness regime is based on connecedness measured at quarterly frequency. The advantage of this approach is that subcomponent changes have a longer span of time (two quarters as opposed to two months) to propagate through the system. The evidence for connectedness state dependent monetary policy is notably stronger than under the monthly measure. Of the eight estimates of the state dependence $\delta$ at
+$\tau=0.5$ and $\tau=0.7$ (four sample start dates at each quantile), six are positive and
 statistically significant at the 10 per cent level or better (most at 5 per cent or better),
 indicating a stronger inflation response in high-connectedness months. At $\tau=0.9$, by
-contrast, only one of the four estimates is statistically significant.
+contrast, only one of the four estimates is statistically significant.   
 
 \begin{table}[!htbp]
 \centering
@@ -658,32 +584,105 @@ response $\beta_\pi/(1-\rho)$ in the low and high regimes.
 \end{tablenotes}
 \end{table}
 
-Table~\ref{tab:expconnQ} repeats the analysis for the inflation--expectations system under
-quarterly connectedness; an added advantage of this is quarterly inflation expectations are available back to 1960. Using year-on-year inflation, matched to the one-year horizon of
-the Michigan survey, any evidence of a stronger inflation response is confined to
-$\tau=0.5$, where the interaction $\delta$ is positive and statistically significant in the
-1993 and 2003 samples. At $\tau=0.7$ and $\tau=0.9$ it is statistically insignificant, and in
-one specification significantly negative. Aggregating connectedness to a quarterly frequency
-therefore does not strengthen the evidence that inflation--expectations connectedness shifts
-the monetary-policy reaction function.\footnote{This conclusion holds if inflation is measured as quarterly percentage change as well}.
+%Table \label{tab:sixconn} shows connectedness between inflation expectations and inflation under two different measures of inflation.  One the annual percentage change in inflation (panel A), one is the monthly change in inflatioon (panel B); we study the annual percentage change so it is one the same period as inflation expectations which are measured over a year.  On that measure only $\tau=0.7$ connectedness shows any change in the monetary policy reaction function for inflation; this does not survive if monthly CPI growth is used. 
+
+Table~\ref{tab:expconn120} reports the Taylor rule estimates when the connectedness
+regime is identified from the inflation--expectations system.   Panel~A shows the quarterly analysis, where inflation is measured using the quarterly percentage change in the CPI.  Panel~B shows the monthly analysis, where inflation is measured using the monthly percentage change in the CPI; note the monthly data only starts in 1978 owing to the availability of the monthly data. 
+
+%and the
+%month-on-month change (Panel~B). We prefer the annual measure, as it is defined over the
+%same twelve-month horizon as the Michigan expectations series. On that measure the
+%interaction $\delta$ is positive and statistically significant only at $\tau=0.7$, where
+%it is significant across every sample start date, with $\delta$ ranging from $0.04$ to
+%$0.06$ indicating a stronger inflation response in high-connectedness months. This
+%result does not survive when month-on-month CPI inflation is used instead: in Panel~B
+%$\delta$ is statistically insignificant throughout. Again not overly strong support for the hypothesis that %connectedness is taken into account when setting monetary policy.
+
+ 
 
 \begin{table}[!htbp]
 \centering
-\caption{Expectations connectedness: Quarterly }
-\label{tab:expcpiQ}
+\caption{Expectations connectedness and the policy reaction function: 120-month window}
+\label{tab:expconn120}
+\begin{threeparttable}
+\centering
 
  
- 
 
-\input{paper/tables/regime_texQtr/msq_exp12_120}
+\textbf{Panel A. Mismatched: MICH and month-on-month CPI inflation}\par\smallskip
+{\input{paper/tables/regime_tex/ms_expX_120}}
+
+\textbf{Panel B. Mismatched: MICH and quarter-on-quarter CPI inflation}\par\smallskip
+ [Claude to do]
+
 \begin{tablenotes}\footnotesize
-\item \textit{Notes:} Estimates of equation~\eqref{eq:regime_taylor}. Columns are sample
-start dates; each panel a quantile $\tau$. Newey--West HAC $t$-statistics in parentheses;
-$^{*}$, $^{**}$, $^{***}$ denote significance at 10, 5 and 1 per cent. $\Delta\beta_\pi^{
-\text{High}}$ is the interaction $\delta$; the final row reports the implied long-run
-response $\beta_\pi/(1-\rho)$ in the low and high regimes. $^{\dagger}$ The Extended column uses the quarterly Michigan survey (available from 1960); the remaining columns use the monthly survey (from 1978) aggregated to quarters.
+\item \textit{Notes:} Estimates of equation~\eqref{eq:regime_taylor} in which the
+connectedness regime is identified from the inflation--expectations system over a 120-month
+rolling window. Panel~A pairs the Michigan one-year inflation expectation with 12-month CPI
+inflation; Panel~B pairs it with month-on-month CPI inflation. Columns are sample start
+dates; within each panel the three blocks are the quantiles $\tau=0.5$, $0.7$ and $0.9$.
+Newey--West HAC $t$-statistics in parentheses; $^{*}$, $^{**}$, $^{***}$ denote significance
+at 10, 5 and 1 per cent. $\Delta\beta_\pi^{\text{High}}$ is the interaction $\delta$; the
+final row of each block reports the implied long-run response $\beta_\pi/(1-\rho)$ in the
+low and high regimes.
 \end{tablenotes}
+\end{threeparttable}
 \end{table}
+
+%A limitation of the preceding analysis is that, at a monthly frequency, connectedness is
+%estimated with only two lags, so lagged spillovers are captured over a two-month horizon.
+%This restriction is necessary: within the short rolling windows the underlying vector
+%autoregression must remain estimable, and the implied variance-decomposition matrix must be
+%well-conditioned and positive semi-definite. Additional lags rapidly exhaust the available
+%degrees of freedom and degrade the connectedness estimates. The concern, however, is that the
+%price spirals and broad subcomponent co-movements that might concern policymakers could build
+%over a horizon longer than two months. We therefore re-estimate connectedness at a quarterly
+%frequency, again with two lags, which extends the horizon over which spillovers can propagate
+%to roughly six months. The Taylor rule continues to be estimated at a monthly frequency; a
+%given month is assigned to the high- or low-connectedness regime according to the state of
+%the quarter in which it falls.
+
+
+%Table~\ref{tab:sixcpiQ} reports the Taylor-rule estimates for the six CPI subcomponents when
+%the connectedness regime is based on connecedness measured at quarterly frequency. The evidence is notably stronger than under the monthly measure. Of the eight estimates of the interaction $\delta$ at
+%$\tau=0.5$ and $\tau=0.7$---four sample start dates at each quantile---six are positive and
+%statistically significant at the 10 per cent level or better (most at 5 per cent or better),
+%indicating a stronger inflation response in high-connectedness months. At $\tau=0.9$, by
+%contrast, only one of the four estimates is statistically significant.
+
+ 
+
+ 
+ 
+
+ 
+
+%Table~\ref{tab:expconnQ} repeats the analysis for the inflation--expectations system under
+%quarterly connectedness; an added advantage of this is quarterly inflation expectations are available back to 1960. Using year-on-year inflation, matched to the one-year horizon of
+%the Michigan survey, any evidence of a stronger inflation response is confined to
+%$\tau=0.5$, where the interaction $\delta$ is positive and statistically significant in the
+%1993 and 2003 samples. At $\tau=0.7$ and $\tau=0.9$ it is statistically insignificant, and in
+%one specification significantly negative. Aggregating connectedness to a quarterly frequency
+%therefore does not strengthen the evidence that inflation--expectations connectedness shifts
+%the monetary-policy reaction function.\footnote{This conclusion holds if inflation is measured as quarterly percentage change as well}.
+
+%\begin{table}[!htbp]
+%\centering
+%\caption{Expectations connectedness: Quarterly }
+%\label{tab:expcpiQ}
+
+ 
+ 
+
+%\input{paper/tables/regime_texQtr/msq_exp12_120}
+%\begin{tablenotes}\footnotesize
+%\item \textit{Notes:} Estimates of equation~\eqref{eq:regime_taylor}. Columns are sample
+%start dates; each panel a quantile $\tau$. Newey--West HAC $t$-statistics in parentheses;
+%$^{*}$, $^{**}$, $^{***}$ denote significance at 10, 5 and 1 per cent. $\Delta\beta_\pi^{
+%\text{High}}$ is the interaction $\delta$; the final row reports the implied long-run
+%response $\beta_\pi/(1-\rho)$ in the low and high regimes. $^{\dagger}$ The Extended column uses the quarterly Michigan survey (available from 1960); the remaining columns use the monthly survey (from 1978) aggregated to quarters.
+%\end{tablenotes}
+%\end{table}
  
 % ============================================================
 \appendix
