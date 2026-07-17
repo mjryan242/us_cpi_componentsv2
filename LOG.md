@@ -281,3 +281,19 @@ best", parallel to H5, and DECISIONS.md carries the correction.
 Compile: clean (3 passes + biber), no undefined references, 36 pages with
 the float pages at the back. The only bracketed note remaining sits inside
 an already-commented-out draft line.
+
+### 2026-07-17 (later) — Extended (1969) column added to Table 7 Panel B
+
+The user corrected an earlier instruction: Panel B of the expectations policy
+table only went back to 1987 because the quarterly regime script aggregates
+the *monthly* Michigan survey (from 1978). Cloned the exp12 add-column script
+for the mismatched (QoQ) system: the new Extended column uses the native
+quarterly survey (MICH_QTR, from 1960), so the 40-quarter rolling window
+delivers connectedness from 1969 and the Taylor rule runs on 674 months
+spanning the Great Inflation and Volcker eras. The 1987/1993/2003 columns are
+kept for comparability with Panel A. Result: the extended-sample interaction
+delta is insignificant at all three taus — the H6 significance remains
+confined to the later short samples (3 of 12 cells), and the paper's prose
+now says so explicitly. Also confirmed for the user: the quarterly `_120`
+regime tables (Table 6 included) are built on a 40-quarter (=120-month)
+rolling window (`WIN_Q` in us_cpi_regime_ms_quarterly.R).
