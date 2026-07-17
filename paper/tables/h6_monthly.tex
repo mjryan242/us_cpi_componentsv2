@@ -1,0 +1,35 @@
+\begin{table}[!ht]
+\centering
+\caption{Monthly robustness --- connectedness between inflation and expectations}
+\label{tab:h6monthly}
+\setlength{\tabcolsep}{6pt}\footnotesize
+\begin{threeparttable}
+\begin{tabular}{l c c c c c c}
+\toprule
+ & & \multicolumn{2}{c}{Inflation $\to$ Expectations} & \multicolumn{2}{c}{Expectations $\to$ Inflation} & \\
+\cmidrule(lr){3-4}\cmidrule(lr){5-6}
+Sample & $\tau$ & Contemp. & Lagged & Contemp. & Lagged & NET \\
+\midrule
+Full (1978--2026) & 0.5 & 5.6 & 12.6 & 6.4 & 8.0 & -3.9 \\
+ & 0.7 & 9.2 & 16.1 & 12.9 & 20.3 & +7.9 \\
+ & 0.9 & 15.2 & 30.3 & 19.6 & 36.4 & +10.4 \\
+\addlinespace
+Late Great Inflation (1978--82) & 0.5 & 16.9 & 32.5 & 20.1 & 23.5 & -5.8 \\
+ & 0.7 & 12.5 & 27.9 & 13.9 & 22.1 & -4.4 \\
+ & 0.9 & 5.1 & 8.9 & 4.7 & 15.5 & +6.2 \\
+\addlinespace
+Core (1983--2019) & 0.5 & 5.6 & 7.0 & 8.0 & 3.2 & -1.4 \\
+ & 0.7 & 5.8 & 8.5 & 11.2 & 7.3 & +4.2 \\
+ & 0.9 & 11.4 & 11.4 & 20.7 & 26.2 & +24.1 \\
+\addlinespace
+COVID (2020--26) & 0.5 & 1.7 & 11.6 & 2.8 & 3.8 & -6.7 \\
+ & 0.7 & 4.6 & 8.7 & 5.4 & 3.6 & -4.3 \\
+ & 0.9 & 3.2 & 5.5 & 3.4 & 4.2 & -1.1 \\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item \textit{Notes:} Monthly analogue of Table~\ref{tab:h6}: pairwise pseudo-quantile $R^2$ connectedness (\%) in a two-variable system of the Michigan one-year inflation expectation (FRED \texttt{MICH}, available monthly from January 1978) and month-on-month CPI inflation (CPIAUCSL), $n_{\text{lag}}=2$ (a two-month lag horizon). NET is the net directional connectedness of expectations (TO $-$ FROM); $>0$ means expectations lead, $<0$ that they follow. Because the monthly survey begins in 1978, the Great-Inflation sample covers only its final years (1978--82, 60 months) and should be read with caution. Dependence, not identified causation.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
