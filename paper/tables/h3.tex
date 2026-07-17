@@ -5,27 +5,37 @@
 \setlength{\tabcolsep}{6pt}\footnotesize
 \begin{threeparttable}
 \begin{tabular}{l c c c c}
-\multicolumn{5}{l}{\textit{Panel A. Monthly: marginal $\Delta$TCI$(0.9)$ vs.\ the 1983--2019 core}}\\
+\multicolumn{5}{l}{\textit{Panel A. Monthly: marginal $\Delta$TCI$(\tau)$ vs.\ the 1983--2019 core}}\\
 \toprule
 Episode & $\Delta$Overall & $\Delta$Contemp. & $\Delta$Lagged & Lagged \% \\
 \midrule
+\multicolumn{5}{l}{\textit{\;$\tau=0.7$}}\\
+GreatInflation (1967-82) & +12.3 & +4.4 & +7.9 & 64.4 \\
+COVID (2020-26) & -0.1 & +0.0 & -0.2 & 139.6 \\
+\addlinespace
+\multicolumn{5}{l}{\textit{\;$\tau=0.9$}}\\
 GreatInflation (1967-82) & +14.3 & +5.0 & +9.3 & 64.9 \\
-COVID (2020-26) & +1.1 & +1.9 & -0.8 & -70.6 \\
+COVID (2020-26) & +1.1 & +1.9 & -0.8 & -74.7 \\
 \bottomrule
 \end{tabular}
 
 \vspace{4pt}
 \begin{tabular}{l c c c c}
-\multicolumn{5}{l}{\textit{Panel B. Quarterly: marginal $\Delta$TCI$(0.9)$ vs.\ the 1983--2019 core}}\\
+\multicolumn{5}{l}{\textit{Panel B. Quarterly: marginal $\Delta$TCI$(\tau)$ vs.\ the 1983--2019 core}}\\
 \toprule
 Episode & $\Delta$Overall & $\Delta$Contemp. & $\Delta$Lagged & Lagged \% \\
 \midrule
+\multicolumn{5}{l}{\textit{\;$\tau=0.7$}}\\
+GreatInflation (1967-82) & +25.6 & +6.9 & +18.6 & 72.9 \\
+COVID (2020-26) & -0.1 & -0.4 & +0.3 & -405.9 \\
+\addlinespace
+\multicolumn{5}{l}{\textit{\;$\tau=0.9$}}\\
 GreatInflation (1967-82) & +3.2 & +3.8 & -0.6 & -17.8 \\
-COVID (2020-26) & -18.6 & -4.6 & -14.0 & 75.4 \\
+COVID (2020-26) & -19.9 & -5.0 & -14.9 & 74.9 \\
 \bottomrule
 \end{tabular}
 \begin{tablenotes}[flushleft]\footnotesize
-\item \textit{Notes:} Each episode's marginal contribution to high-tail ($\tau=0.9$) connectedness relative to the calm 1983--2019 core (nested subtraction), split into contemporaneous and lagged; six-CPI system, Panel A monthly, Panel B quarterly. At monthly frequency the Great Inflation broadened mainly through the \emph{lagged} (propagation) channel while COVID broadened contemporaneously (its lagged marginal is negative). At quarterly frequency the calm-era base connectedness is already high and lagged-dominated, so the episode marginals are small and less sharply signed.
+\item \textit{Notes:} Each episode's marginal contribution to connectedness at $\tau\in\{0.7,0.9\}$ relative to the calm 1983--2019 core (nested subtraction), split into contemporaneous and lagged; six-CPI system, Panel A monthly, Panel B quarterly. At monthly frequency the Great Inflation broadened mainly through the \emph{lagged} (propagation) channel at both quantiles, while COVID broadened contemporaneously (its lagged marginal is negative at $\tau=0.9$ and essentially zero at $\tau=0.7$). At quarterly frequency the same contrast is sharp at $\tau=0.7$; at $\tau=0.9$ the calm-era base is already high and lagged-dominated, and the COVID window contributes only 26 quarters, so the episode marginals there are less informative.
 \end{tablenotes}
 \end{threeparttable}
 \end{table}

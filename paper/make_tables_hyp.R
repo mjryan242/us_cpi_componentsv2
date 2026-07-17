@@ -92,27 +92,33 @@ wr("h2", paste0(
 cat("building h3\n")
 mm <- read.csv("results_6cpi_era/episode_marginal_decomposition.csv")
 mq <- read.csv("results_6cpi_era_q/episode_marginal_decomposition.csv")
-erow <- function(df, i) sprintf("%s & %s & %s & %s & %s \\\\", gsub("_","\\\\_",df$Episode[i]),
-  sprintf("%+.1f",df$d_Overall[i]), sprintf("%+.1f",df$d_Contemp[i]), sprintf("%+.1f",df$d_Lagged[i]), f1(df$Lagged_share_pct[i]))
+erow <- function(df, tau, ep) { r <- df[df$Tau==tau & grepl(ep, df$Episode), ]
+  sprintf("%s & %s & %s & %s & %s \\\\", gsub("_","\\\\_",r$Episode),
+    sprintf("%+.1f",r$d_Overall), sprintf("%+.1f",r$d_Contemp), sprintf("%+.1f",r$d_Lagged), f1(r$Lagged_share_pct)) }
+tblock <- function(df, tau) paste0(
+  "\\multicolumn{5}{l}{\\textit{\\;$\\tau=", tau, "$}}\\\\\n",
+  erow(df, tau, "GreatInflation"), "\n", erow(df, tau, "COVID"))
+epanel <- function(df) paste0(tblock(df, 0.7), "\n\\addlinespace\n", tblock(df, 0.9))
 ehdr <- "Episode & $\\Delta$Overall & $\\Delta$Contemp. & $\\Delta$Lagged & Lagged \\%"
 wr("h3", paste0(
 "\\begin{table}[!ht]\n\\centering\n\\caption{H3 --- COVID broadened contemporaneously; the Great Inflation through lagged propagation}\n\\label{tab:h3}\n",
 "\\setlength{\\tabcolsep}{6pt}\\footnotesize\n\\begin{threeparttable}\n",
 "\\begin{tabular}{l c c c c}\n",
-"\\multicolumn{5}{l}{\\textit{Panel A. Monthly: marginal $\\Delta$TCI$(0.9)$ vs.\\ the 1983--2019 core}}\\\\\n\\toprule\n",
-ehdr, " \\\\\n\\midrule\n", erow(mm,1), "\n", erow(mm,2),
+"\\multicolumn{5}{l}{\\textit{Panel A. Monthly: marginal $\\Delta$TCI$(\\tau)$ vs.\\ the 1983--2019 core}}\\\\\n\\toprule\n",
+ehdr, " \\\\\n\\midrule\n", epanel(mm),
 "\n\\bottomrule\n\\end{tabular}\n\n\\vspace{4pt}\n",
 "\\begin{tabular}{l c c c c}\n",
-"\\multicolumn{5}{l}{\\textit{Panel B. Quarterly: marginal $\\Delta$TCI$(0.9)$ vs.\\ the 1983--2019 core}}\\\\\n\\toprule\n",
-ehdr, " \\\\\n\\midrule\n", erow(mq,1), "\n", erow(mq,2),
+"\\multicolumn{5}{l}{\\textit{Panel B. Quarterly: marginal $\\Delta$TCI$(\\tau)$ vs.\\ the 1983--2019 core}}\\\\\n\\toprule\n",
+ehdr, " \\\\\n\\midrule\n", epanel(mq),
 "\n\\bottomrule\n\\end{tabular}\n",
 "\\begin{tablenotes}[flushleft]\\footnotesize\n",
-"\\item \\textit{Notes:} Each episode's marginal contribution to high-tail ($\\tau=0.9$) connectedness relative to ",
+"\\item \\textit{Notes:} Each episode's marginal contribution to connectedness at $\\tau\\in\\{0.7,0.9\\}$ relative to ",
 "the calm 1983--2019 core (nested subtraction), split into contemporaneous and lagged; six-CPI system, Panel A ",
 "monthly, Panel B quarterly. At monthly frequency the Great Inflation broadened mainly through the \\emph{lagged} ",
-"(propagation) channel while COVID broadened contemporaneously (its lagged marginal is negative). At quarterly ",
-"frequency the calm-era base connectedness is already high and lagged-dominated, so the episode marginals are ",
-"small and less sharply signed.\n",
+"(propagation) channel at both quantiles, while COVID broadened contemporaneously (its lagged marginal is ",
+"negative at $\\tau=0.9$ and essentially zero at $\\tau=0.7$). At quarterly frequency the same contrast is sharp ",
+"at $\\tau=0.7$; at $\\tau=0.9$ the calm-era base is already high and lagged-dominated, and the COVID window ",
+"contributes only 26 quarters, so the episode marginals there are less informative.\n",
 "\\end{tablenotes}\n\\end{threeparttable}\n\\end{table}\n"))
 
 ## ============================================================
@@ -170,39 +176,47 @@ cpi_q  <- to_qpc(getSymbols("CPIAUCSL", src="FRED", auto.assign=FALSE)); colname
 mich_q <- read_mich_qtr("MICH_QTR.csv")
 de <- merge(MICH=mich_q, CPI=cpi_q, all=FALSE); de <- na.omit(de[, c("MICH","CPI")]); storage.mode(de) <- "double"
 sampE <- list(Full=de,
-  GreatInflation=window(de,start=as.yearqtr("1967 Q2"),end=as.yearqtr("1982 Q4")),
   Core=window(de,start=as.yearqtr("1983 Q1"),end=as.yearqtr("2019 Q4")),
+  GreatInflation=window(de,start=as.yearqtr("1967 Q2"),end=as.yearqtr("1982 Q4")),
   COVID=window(de,start=as.yearqtr("2020 Q1")))
-labE <- c(Full="Full (1960--2026)", GreatInflation="Great Inflation (1967--82)",
-          Core="Core (1983--2019)", COVID="COVID (2020--26)")
+labE <- c(Full="Full (1960--2026)", Core="Core (1983--2019)",
+          GreatInflation="Great Inflation (1967--82)", COVID="COVID (2020--26)")
 dec <- function(d,tau){ r<-R2ConnectednessQ2(d,window.size=NULL,nlag=2,tau=tau,shrink=TRUE,drop_own_lags=FALSE,progbar=FALSE)
   C<-r$CT[,,1,1]*100; L<-r$CT[,,1,2]*100  # [receiver, source]
-  c(cCE=C["MICH","CPI"], lCE=L["MICH","CPI"], cEC=C["CPI","MICH"], lEC=L["CPI","MICH"]) }  # CPI->Exp ; Exp->CPI
+  O<-C+L; diag(O)<-0
+  c(cCE=C["MICH","CPI"], lCE=L["MICH","CPI"], cEC=C["CPI","MICH"], lEC=L["CPI","MICH"],  # CPI->Exp ; Exp->CPI
+    NET=unname(colSums(O)["MICH"]-rowSums(O)["MICH"])) }                                  # NET of expectations
 blocks <- sapply(names(sampE), function(s)
   paste(sapply(c(0.5,0.7,0.9), function(tau){ m<-dec(sampE[[s]],tau)
     lead <- if (tau==0.5) labE[s] else ""
-    sprintf("%s & %.1f & %s & %s & %s & %s \\\\", lead, tau, f1(m["cCE"]), f1(m["lCE"]), f1(m["cEC"]), f1(m["lEC"])) }), collapse="\n"))
+    sprintf("%s & %.1f & %s & %s & %s & %s & %s \\\\", lead, tau, f1(m["cCE"]), f1(m["lCE"]),
+      f1(m["cEC"]), f1(m["lEC"]), sprintf("%+.1f", m["NET"])) }), collapse="\n"))
 bodyH6 <- paste(blocks, collapse="\n\\addlinespace\n")
 wr("h6", paste0(
 "\\begin{table}[!ht]\n\\centering\n\\caption{H4 --- Contemporaneous and lagged connectedness between inflation and expectations}\n\\label{tab:h6}\n",
 "\\setlength{\\tabcolsep}{6pt}\\footnotesize\n\\begin{threeparttable}\n",
-"\\begin{tabular}{l c c c c c}\n\\toprule\n",
-" & & \\multicolumn{2}{c}{Inflation $\\to$ Expectations} & \\multicolumn{2}{c}{Expectations $\\to$ Inflation} \\\\\n",
+"\\begin{tabular}{l c c c c c c}\n\\toprule\n",
+" & & \\multicolumn{2}{c}{Inflation $\\to$ Expectations} & \\multicolumn{2}{c}{Expectations $\\to$ Inflation} & \\\\\n",
 "\\cmidrule(lr){3-4}\\cmidrule(lr){5-6}\n",
-"Sample & $\\tau$ & Contemp. & Lagged & Contemp. & Lagged \\\\\n\\midrule\n",
+"Sample & $\\tau$ & Contemp. & Lagged & Contemp. & Lagged & NET \\\\\n\\midrule\n",
 bodyH6, "\n\\bottomrule\n\\end{tabular}\n\\begin{tablenotes}[flushleft]\\footnotesize\n",
 "\\item \\textit{Notes:} Pairwise pseudo-quantile $R^2$ connectedness (\\%) in a two-variable quarterly system of ",
 "Michigan inflation expectations (\\texttt{MICH\\_QTR}, from 1960) and overall CPI (CPIAUCSL), $n_{\\text{lag}}=2$ ",
 "(a six-month lag horizon). ``Inflation $\\to$ Expectations'' is the share of \\emph{expectations'} variation ",
-"explained by CPI, split into contemporaneous and lagged; ``Expectations $\\to$ Inflation'' is the reverse. The ",
-"\\emph{lagged} Inflation $\\to$ Expectations term (the adaptive channel) dominates in the high tail of both ",
-"episodes --- most strongly in the Great Inflation ($50.7$ at $\\tau=0.9$) --- whereas in the calm 1983--2019 ",
-"period the lagged Expectations $\\to$ Inflation term is the larger. Dependence, not identified causation.\n",
+"explained by CPI, split into contemporaneous and lagged; ``Expectations $\\to$ Inflation'' is the reverse. NET ",
+"is the net directional connectedness of expectations (TO $-$ FROM); $>0$ means expectations lead (transmit), ",
+"$<0$ that they follow. The \\emph{lagged} Inflation $\\to$ Expectations term (the adaptive channel) dominates ",
+"in the high tail of both episodes --- most strongly in the Great Inflation ($50.7$ at $\\tau=0.9$) --- and ",
+"expectations are net followers there, whereas in the calm 1983--2019 period expectations lead. Dependence, ",
+"not identified causation.\n",
 "\\end{tablenotes}\n\\end{threeparttable}\n\\end{table}\n"))
 
 ## ============================================================
 ## H6net -- NET directional connectedness of expectations (lead/follow)
+##   RETIRED: the NET column is now folded into table h6 above (user
+##   request, 2026-07-17). Kept dormant for reference; not written.
 ## ============================================================
+if (FALSE) {
 cat("building h6net\n")
 qd <- read.csv("results_2var_exp_q/MICH_vs_CPI_directional.csv")
 sB <- c("Full","GreatInflation","Core","COVID")
@@ -224,5 +238,6 @@ bodyN, "\n\\bottomrule\n\\end{tabular}\n\\begin{tablenotes}[flushleft]\\footnote
 "at $\\tau=0.9$); conditional on a high-inflation episode the sign reverses (Great Inflation $-20.2$, COVID ",
 "$-6.7$), consistent with adaptive expectations. The COVID window (25 quarters) is short.\n",
 "\\end{tablenotes}\n\\end{threeparttable}\n\\end{table}\n"))
+}
 
 cat("\nAll per-hypothesis tables written to", TD, "\n")

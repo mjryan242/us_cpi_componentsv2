@@ -1,3 +1,5 @@
-"Episode","d_Overall","d_Contemp","d_Lagged","Lagged_share_pct"
-"GreatInflation (1967-82)",14.32,5.03,9.29,64.9
-"COVID (2020-26)",1.12,1.91,-0.79,-70.6
+"Tau","Episode","d_Overall","d_Contemp","d_Lagged","Lagged_share_pct"
+0.7,"GreatInflation (1967-82)",12.29,4.38,7.91,64.4
+0.7,"COVID (2020-26)",-0.14,0.05,-0.19,139.6
+0.9,"GreatInflation (1967-82)",14.32,5.03,9.29,64.9
+0.9,"COVID (2020-26)",1.07,1.87,-0.8,-74.7
