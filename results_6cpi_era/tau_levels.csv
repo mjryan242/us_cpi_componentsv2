@@ -1,0 +1,7 @@
+"Design","Episode","Level_ann_pct","Tau_raw","Tau_used","d_Overall","d_Contemp","d_Lagged"
+"1: common level (COVID 0.9 ref)","GreatInflation",8.7,0.693,0.693,12.24,4.37,7.87
+"1: common level (COVID 0.9 ref)","COVID",8.7,0.9,0.9,1.07,1.87,-0.8
+"1: common level (GI 0.9 ref)","GreatInflation",13.08,0.9,0.9,14.32,5.03,9.29
+"1: common level (GI 0.9 ref)","COVID",13.08,0.974,0.95,1.34,5.26,-3.92
+"2: 5% annualised threshold","GreatInflation",5,0.349,0.349,5.58,1.95,3.63
+"2: 5% annualised threshold","COVID",5,0.645,0.645,0.7,0.58,0.12

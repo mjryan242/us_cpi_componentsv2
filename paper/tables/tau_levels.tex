@@ -1,0 +1,30 @@
+\begin{table}[!ht]
+\centering
+\caption{Level-matched episode comparison: same inflation rate, episode-specific $\tau$}
+\label{tab:taulevels}
+\setlength{\tabcolsep}{6pt}\footnotesize
+\begin{threeparttable}
+\begin{tabular}{l c c c c c}
+\toprule
+Episode & Level (\% ann.) & $\tau$ used & $\Delta$Overall & $\Delta$Contemp. & $\Delta$Lagged \\
+\midrule
+\multicolumn{6}{l}{\textit{Panel A. Common level: COVID $\tau=0.9$ headline rate as reference}}\\
+Great Inflation & 8.70 & 0.693 & +12.2 & +4.4 & +7.9 \\
+COVID & 8.70 & 0.900 & +1.1 & +1.9 & -0.8 \\
+\addlinespace
+\multicolumn{6}{l}{\textit{Panel B. Common level: Great-Inflation $\tau=0.9$ headline rate as reference}}\\
+Great Inflation & 13.08 & 0.900 & +14.3 & +5.0 & +9.3 \\
+COVID & 13.08 & 0.950$^{\dagger}$ & +1.3 & +5.3 & -3.9 \\
+\addlinespace
+\multicolumn{6}{l}{\textit{Panel C. Common absolute threshold: 5\% annualised headline inflation}}\\
+Great Inflation & 5.00 & 0.349 & +5.6 & +1.9 & +3.6 \\
+COVID & 5.00 & 0.645 & +0.7 & +0.6 & +0.1 \\
+\addlinespace
+\bottomrule
+\end{tabular}
+\begin{tablenotes}[flushleft]\footnotesize
+\item \textit{Notes:} Comparing the two episodes at the same $\tau$ compares different inflation levels, because their inflation distributions differ. Here the comparison is level-matched: within each episode, $\tau$ is chosen so that the corresponding quantile of annualised month-on-month headline CPI inflation equals the common reference level shown. $\Delta$ columns are the episode's one-in/one-out marginal connectedness relative to the 1983--2019 core (as in Table~\ref{tab:h3}), evaluated at that episode-specific $\tau$; six-CPI system, monthly, $n_{\text{lag}}=2$. $^{\dagger}$~The implied $\tau$ lies outside $[0.05,0.95]$ (the reference level sits at or beyond the edge of that episode's inflation distribution) and is clamped to the boundary; the comparison at that reference should be read as one-sided.
+\end{tablenotes}
+\end{threeparttable}
+\end{table}
+
