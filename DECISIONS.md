@@ -223,12 +223,55 @@ measure (the earlier entry's preference, now superseded). Grounds:
   tau=0.9 matched cell is degenerate (shrinkage saturates in ~25 quarters).
 
 **Consequences:** the single significant H6-policy result (matched, tau=0.7,
-120-month) is no longer headline; under the working measure the H6 policy
-interaction is insignificant throughout, so H6 reads as a clean null. Policy-
-section prose that "prefers the annual measure" must be rewritten, and the
-quarterly policy table should present msq_expmm rather than msq_exp12.
+120-month) is no longer headline. CORRECTION (2026-07-17, on actually reading
+the fragments): the working-measure H6 policy evidence is NOT a clean null --
+the monthly system (ms_expX_120) is null (two opposite-signed 10% cells), but
+the quarterly mismatched system (msq_expmm_120) has delta positive and
+significant at tau=0.5 (1993\*\*\*, 2003\*\*\*) and tau=0.7 (2003\*\*), i.e.
+3 of 9 cells, none in the upper tail. The paper now frames H6 as "suggestive
+at best", parallel to H5's quarterly result. Policy-section prose rewritten;
+quarterly policy table presents msq_expmm rather than msq_exp12.
 
 **Confidence:** Medium-High. Consistency and overlap-smoothing arguments are
 solid; the cost is the horizon-mismatch critique (one-year expectation vs
 one-month realised inflation), which should be acknowledged in a footnote with
 the matched results reported as robustness.
+
+---
+
+## Issue #4 robustness design: level-matched taus, both variants
+
+**Chosen (2026-07-17):** two designs run side by side in
+`us_cpi_tau_levels.R` (appendix table `tau_levels.tex`): (1) common level ->
+episode-specific taus, using each episode's tau=0.9 annualised headline m/m
+inflation rate in turn as the reference (COVID's 8.70% maps to GI tau*=0.693;
+GI's 13.08% maps to COVID tau*=0.974, clamped to 0.95 and flagged as beyond
+support); (2) a common absolute threshold of 5% annualised (GI tau=0.349,
+COVID tau=0.645). The connectedness object is the one-in/one-out marginal vs
+the 1983-2019 core, matching Table h3.
+
+**Rejected:** running either design alone (user chose "both" -- the two
+designs bracket the arbitrariness: design 1 anchors to the episodes' own
+distributions, design 2 to an external round number).
+
+**Result:** the episode contrast survives level-matching (GI +12.2 vs COVID
++1.1 at the common 8.7% level; +5.6 vs +0.7 at 5%), so the GI-COVID
+broadening difference is not a level artefact.
+
+**Confidence:** High on the mechanics; the tau<->level mapping via headline
+inflation quantiles is an interpretive device (tau in the estimator is each
+series' own quantile), stated as such in the appendix notes.
+
+---
+
+## Float placement: endfloat package, not manual restructure
+
+**Chosen (2026-07-17):** `\usepackage[nolists,tablesfirst]{endfloat}` --
+all tables/figures move to the back automatically with "[Table X about
+here.]" markers (GitHub issue #5).
+
+**Rejected:** manually moving every float to a back section. More fragile,
+and endfloat is trivially reversible when a journal wants floats inline.
+
+**Confidence:** High. Verified: compile clean, 19 markers in the PDF,
+threeparttable/tablenotes unaffected.

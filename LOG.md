@@ -226,3 +226,58 @@ substantially — including their own version of the shrinkage/PSD paragraph, so
 earlier locally-drafted "smaller"→"larger" correction to that paragraph was discarded
 as superseded rather than reapplied. The mismatched-measure consequences above are
 documented but still need to be implemented in the paper text and table selection.
+
+### 2026-07-17 — GitHub issues #1/#2/#4/#5/#6 + all bracketed draft notes resolved
+
+One coordinated pass over the open GitHub issues (except #3, bootstrapping,
+deferred by decision) and every bracketed `[...]` note the user left in the
+draft. New computations first, then a single paper edit, then a full compile.
+
+**New analysis.** (i) The episode-mechanism (era) scripts now run at tau=0.7
+as well as 0.9, monthly and quarterly, and also save the calm-core base
+levels (issue #6). The tau=0.7 results strengthen H3: quarterly, the Great
+Inflation adds 25.6 points of connectedness (73% lagged) while COVID adds
+essentially nothing. (ii) A monthly analogue of the expectations table
+(issue #1): monthly MICH starts Jan 1978 (verified — the draft's "[check?]"),
+so the Great Inflation appears only as a caveated 1978-82 sample; the
+monthly pattern matches the quarterly one (expectations lead in the calm
+core, NET +24.1 at tau=0.9; follow during COVID). (iii) The "taus and
+levels" robustness (issue #4), both designs: matching episodes at the same
+inflation level rather than the same tau. Key number: at the common 8.7%
+annualised level, the GI marginal is +12.2 vs COVID's +1.1 — the episode
+difference is not a level artefact, which supports the anchoring reading.
+(iv) A one-in/one-out marginal construction for the expectations system,
+matching h3's design (the draft asked whether this was worth adding).
+
+**Table changes.** h3 now has tau sub-panels; h6 gained a NET column (the
+separate h6net table is retired, folded in) and its samples reordered to
+Full, Core, Great Inflation, COVID; the replication guard passed (existing
+h6 cells reproduce exactly). Three new appendix tables: h6_monthly,
+h6_marginal, tau_levels.
+
+**Paper edits.** endfloat added (issue #5) — all floats now collect at the
+back with "[Table X about here.]" markers (19 in the compiled PDF). The
+shelter-separation sentence expanded with verified references (issue #2):
+Genesove 2003 REStat; Gallin-Verbrugge 2019 JET; Adams-Loewenstein-Montag-
+Verbrugge 2024 AER:Insights; Bolhuis-Cramer-Summers 2022 Rev. Finance. The
+H2 monthly/quarterly direction flip is rationalised as a lag-window effect
+(wage-setting adjusts at multi-month horizons; verified in the CSVs: monthly
+CPI->Wages 16.2 vs 11.5, quarterly flips to 23.8 vs 35.1). The H3 quarterly
+caveat now cites the actual base levels (76.1 overall / 51.4 lagged at
+tau=0.9 — the "[is this true??]" was true) AND the 26-quarter COVID window.
+The H4 footnote on annual-vs-quarterly inflation now explains the overlap-
+induced moving-average component properly. The policy section's Panel B
+(msq_expmm_120, mismatched quarterly) is wired in with corrected panel
+headings and notes, and the superseded matched-measure commented blocks were
+deleted.
+
+**A correction to our own records:** DECISIONS.md previously claimed the
+mismatched-measure H6 policy interaction was "insignificant throughout".
+Reading the actual fragments, that is wrong: the monthly system is null, but
+the quarterly mismatched system has delta significant at tau=0.5 (1993***,
+2003***) and tau=0.7 (2003**). The paper now frames H6 as "suggestive at
+best", parallel to H5, and DECISIONS.md carries the correction.
+
+Compile: clean (3 passes + biber), no undefined references, 36 pages with
+the float pages at the back. The only bracketed note remaining sits inside
+an already-commented-out draft line.
