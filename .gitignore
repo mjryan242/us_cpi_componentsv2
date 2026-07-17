@@ -34,3 +34,7 @@ desktop.ini
 # Private working materials — NEVER push (e.g. the unpublished companion
 # methods paper). Kept local only.
 additional_materials/
+
+# endfloat aux files
+*.fff
+*.ttt

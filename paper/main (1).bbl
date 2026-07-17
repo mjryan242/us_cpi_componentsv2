@@ -19,6 +19,50 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global}
+    \entry{adamsetal2024}{article}{}
+      \name{author}{4}{}{%
+        {{hash=7103b9823c88bde13c9aedf433a95337}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=87759e28d998a27bd80c582396310096}{%
+           family={Loewenstein},
+           familyi={L\bibinitperiod},
+           given={Lara},
+           giveni={L\bibinitperiod}}}%
+        {{hash=ccddabdfed72b0d5f5943b6a52a2215d}{%
+           family={Montag},
+           familyi={M\bibinitperiod},
+           given={Hugh},
+           giveni={H\bibinitperiod}}}%
+        {{hash=865794d640ae6da7d5a209d0be055656}{%
+           family={Verbrugge},
+           familyi={V\bibinitperiod},
+           given={Randal},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{52fc8a2d12b6b73017a43f68ac7662d4}
+      \strng{fullhash}{2250ab583528e9a556270b02eb432296}
+      \strng{bibnamehash}{2250ab583528e9a556270b02eb432296}
+      \strng{authorbibnamehash}{2250ab583528e9a556270b02eb432296}
+      \strng{authornamehash}{52fc8a2d12b6b73017a43f68ac7662d4}
+      \strng{authorfullhash}{2250ab583528e9a556270b02eb432296}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American Economic Review: Insights}
+      \field{number}{2}
+      \field{title}{Disentangling rent index differences: Data, methods, and scope}
+      \field{volume}{6}
+      \field{year}{2024}
+      \field{pages}{230\bibrangedash 245}
+      \range{pages}{16}
+    \endentry
     \entry{ando2022}{article}{}
       \name{author}{3}{}{%
         {{hash=375fde861454228231f96f7a635a9ff6}{%
@@ -143,18 +187,63 @@
       \field{pages}{104168}
       \range{pages}{1}
     \endentry
-    \entry{bryan1994measuring}{article}{}
+    \entry{bolhuisetal2022}{article}{}
+      \name{author}{3}{}{%
+        {{hash=6645b31764295b1dfd1e0550a2faacfd}{%
+           family={Bolhuis},
+           familyi={B\bibinitperiod},
+           given={Marijn\bibnamedelima A},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=d7e5922e705a05998b6bf0717dd5a32b}{%
+           family={Cramer},
+           familyi={C\bibinitperiod},
+           given={Judd\bibnamedelimb N\bibnamedelima L},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=99d97b6119dc8e6173e861cc94d01099}{%
+           family={Summers},
+           familyi={S\bibinitperiod},
+           given={Lawrence\bibnamedelima H},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{8908fb8aeb17069b85c9df45cb685f0c}
+      \strng{fullhash}{12edd1c1c9924befc9a90fd46eaf4eb6}
+      \strng{bibnamehash}{12edd1c1c9924befc9a90fd46eaf4eb6}
+      \strng{authorbibnamehash}{12edd1c1c9924befc9a90fd46eaf4eb6}
+      \strng{authornamehash}{8908fb8aeb17069b85c9df45cb685f0c}
+      \strng{authorfullhash}{12edd1c1c9924befc9a90fd46eaf4eb6}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Review of Finance}
+      \field{number}{5}
+      \field{title}{The coming rise in residential inflation}
+      \field{volume}{26}
+      \field{year}{2022}
+      \field{pages}{1051\bibrangedash 1072}
+      \range{pages}{22}
+    \endentry
+    \entry{bryan1994measuring}{inbook}{}
       \name{author}{2}{}{%
         {{hash=bd534b024fb909d8a99ec43e14a6a01c}{%
            family={Bryan},
            familyi={B\bibinitperiod},
-           given={Michael\bibnamedelima F.},
+           given={Michael\bibnamedelima F},
            giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
         {{hash=245fa654e11dfedf6b6154c9eeb56365}{%
            family={Cecchetti},
            familyi={C\bibinitperiod},
-           given={Stephen\bibnamedelima G.},
+           given={Stephen\bibnamedelima G},
            giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The University of Chicago Press}%
       }
       \strng{namehash}{c30d6a8988a89e0f3d25e2cce51c1301}
       \strng{fullhash}{c30d6a8988a89e0f3d25e2cce51c1301}
@@ -169,10 +258,11 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Monetary Policy (NBER)}
-      \field{note}{In N.G. Mankiw (ed.), \textit{Monetary Policy}, University of Chicago Press, 195--215}
+      \field{booktitle}{Monetary policy}
       \field{title}{Measuring core inflation}
       \field{year}{1994}
+      \field{pages}{195\bibrangedash 219}
+      \range{pages}{25}
     \endentry
     \entry{choishin2022}{article}{}
       \name{author}{2}{}{%
@@ -215,8 +305,8 @@
            familyi={C\bibinitperiod},
            given={Richard},
            giveni={R\bibinitperiod}}}%
-        {{hash=9f86081942834923a86a56e2f4d2a7cd}{%
-           family={Galí},
+        {{hash=2eb29b2de0e8395a3a59f8899cfbdebc}{%
+           family={Gali},
            familyi={G\bibinitperiod},
            given={Jordi},
            giveni={J\bibinitperiod}}}%
@@ -226,12 +316,15 @@
            given={Mark},
            giveni={M\bibinitperiod}}}%
       }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
       \strng{namehash}{9b734dc7151782a431d361764f59bfef}
-      \strng{fullhash}{f748fa6025648e49fa4583c167cd1572}
-      \strng{bibnamehash}{f748fa6025648e49fa4583c167cd1572}
-      \strng{authorbibnamehash}{f748fa6025648e49fa4583c167cd1572}
+      \strng{fullhash}{aa7611b9ae63f3e67c97c3171c9d9445}
+      \strng{bibnamehash}{aa7611b9ae63f3e67c97c3171c9d9445}
+      \strng{authorbibnamehash}{aa7611b9ae63f3e67c97c3171c9d9445}
       \strng{authornamehash}{9b734dc7151782a431d361764f59bfef}
-      \strng{authorfullhash}{f748fa6025648e49fa4583c167cd1572}
+      \strng{authorfullhash}{aa7611b9ae63f3e67c97c3171c9d9445}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
@@ -239,9 +332,9 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Quarterly Journal of Economics}
+      \field{journaltitle}{The Quarterly journal of economics}
       \field{number}{1}
-      \field{title}{Monetary policy rules and macroeconomic stability: Evidence and some theory}
+      \field{title}{Monetary policy rules and macroeconomic stability: evidence and some theory}
       \field{volume}{115}
       \field{year}{2000}
       \field{pages}{147\bibrangedash 180}
@@ -281,6 +374,74 @@
       \field{pages}{57\bibrangedash 66}
       \range{pages}{10}
     \endentry
+    \entry{gallinverbrugge2019}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b70ce2f4a932d6b13e1e3d4f00349c21}{%
+           family={Gallin},
+           familyi={G\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod}}}%
+        {{hash=076177f11416d2ea5b65623a862c3597}{%
+           family={Verbrugge},
+           familyi={V\bibinitperiod},
+           given={Randal\bibnamedelima J},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{2cbedd4724f13ca367a49fc3dbdc84f5}
+      \strng{fullhash}{2cbedd4724f13ca367a49fc3dbdc84f5}
+      \strng{bibnamehash}{2cbedd4724f13ca367a49fc3dbdc84f5}
+      \strng{authorbibnamehash}{2cbedd4724f13ca367a49fc3dbdc84f5}
+      \strng{authornamehash}{2cbedd4724f13ca367a49fc3dbdc84f5}
+      \strng{authorfullhash}{2cbedd4724f13ca367a49fc3dbdc84f5}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Economic Theory}
+      \field{title}{A theory of sticky rents: Search and bargaining with incomplete information}
+      \field{volume}{183}
+      \field{year}{2019}
+      \field{pages}{478\bibrangedash 519}
+      \range{pages}{42}
+    \endentry
+    \entry{genesove2003}{article}{}
+      \name{author}{1}{}{%
+        {{hash=63992ef3307c301b1bef99b39f864c3a}{%
+           family={Genesove},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{63992ef3307c301b1bef99b39f864c3a}
+      \strng{fullhash}{63992ef3307c301b1bef99b39f864c3a}
+      \strng{bibnamehash}{63992ef3307c301b1bef99b39f864c3a}
+      \strng{authorbibnamehash}{63992ef3307c301b1bef99b39f864c3a}
+      \strng{authornamehash}{63992ef3307c301b1bef99b39f864c3a}
+      \strng{authorfullhash}{63992ef3307c301b1bef99b39f864c3a}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Review of Economics and Statistics}
+      \field{number}{4}
+      \field{title}{The nominal rigidity of apartment rents}
+      \field{volume}{85}
+      \field{year}{2003}
+      \field{pages}{844\bibrangedash 853}
+      \range{pages}{10}
+    \endentry
     \entry{genizi1993}{article}{}
       \name{author}{1}{}{%
         {{hash=a7aa8e48d8adfa2127795d8b2d553108}{%
@@ -310,7 +471,7 @@
       \field{pages}{407\bibrangedash 420}
       \range{pages}{14}
     \endentry
-    \entry{goodfriend1997new}{inbook}{}
+    \entry{goodfriend1997new}{article}{}
       \name{author}{2}{}{%
         {{hash=735d653161d3a96a0848b76fe55f94b6}{%
            family={Goodfriend},
@@ -320,23 +481,11 @@
         {{hash=e068047c81ba350319902fe3f06656cf}{%
            family={King},
            familyi={K\bibinitperiod},
-           given={Robert\bibnamedelima G.},
+           given={Robert\bibnamedelima G},
            giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
       }
-      \name{editor}{2}{}{%
-        {{hash=7c898d91e08f8405749c5ad0d0817ac2}{%
-           family={Bernanke},
-           familyi={B\bibinitperiod},
-           given={Ben\bibnamedelima S.},
-           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=3968abaaacf460fcf10761ff1a87e388}{%
-           family={Rotemberg},
-           familyi={R\bibinitperiod},
-           given={Julio\bibnamedelima J.},
-           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
       \list{publisher}{1}{%
-        {MIT Press}%
+        {MIT press}%
       }
       \strng{namehash}{f61a4672795e98e4e51f03590b1713e4}
       \strng{fullhash}{f61a4672795e98e4e51f03590b1713e4}
@@ -344,9 +493,6 @@
       \strng{authorbibnamehash}{f61a4672795e98e4e51f03590b1713e4}
       \strng{authornamehash}{f61a4672795e98e4e51f03590b1713e4}
       \strng{authorfullhash}{f61a4672795e98e4e51f03590b1713e4}
-      \strng{editorbibnamehash}{83ce44b18d6d7981eb367f1c2a4b0d11}
-      \strng{editornamehash}{83ce44b18d6d7981eb367f1c2a4b0d11}
-      \strng{editorfullhash}{83ce44b18d6d7981eb367f1c2a4b0d11}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
@@ -354,20 +500,23 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{NBER Macroeconomics Annual 1997}
+      \field{journaltitle}{NBER macroeconomics annual}
       \field{title}{The new neoclassical synthesis and the role of monetary policy}
       \field{volume}{12}
       \field{year}{1997}
-      \field{pages}{231\bibrangedash 296}
-      \range{pages}{66}
+      \field{pages}{231\bibrangedash 283}
+      \range{pages}{53}
     \endentry
     \entry{hamilton1989new}{article}{}
       \name{author}{1}{}{%
         {{hash=f1528bc518ebb8f6103311513805ac7d}{%
            family={Hamilton},
            familyi={H\bibinitperiod},
-           given={James\bibnamedelima D.},
+           given={James\bibnamedelima D},
            giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
       }
       \strng{namehash}{f1528bc518ebb8f6103311513805ac7d}
       \strng{fullhash}{f1528bc518ebb8f6103311513805ac7d}
@@ -382,10 +531,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Econometrica}
-      \field{number}{2}
+      \field{journaltitle}{Econometrica: Journal of the econometric society}
       \field{title}{A new approach to the economic analysis of nonstationary time series and the business cycle}
-      \field{volume}{57}
       \field{year}{1989}
       \field{pages}{357\bibrangedash 384}
       \range{pages}{28}
@@ -441,6 +588,40 @@
       \field{note}{Speech at ``Reassessing Constraints on the Economy and Policy,'' economic policy symposium sponsored by the Federal Reserve Bank of Kansas City, Jackson Hole, Wyoming, August 26}
       \field{title}{Monetary Policy and Price Stability}
       \field{year}{2022}
+    \endentry
+    \entry{schafer2005}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c5738e2e7401f99e4f88caa29137dea0}{%
+           family={Schäfer},
+           familyi={S\bibinitperiod},
+           given={Juliane},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7f1cb33b9b093158687e4529dd1fd9b0}{%
+           family={Strimmer},
+           familyi={S\bibinitperiod},
+           given={Korbinian},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{cd34ed244def86d0018048979444e934}
+      \strng{fullhash}{cd34ed244def86d0018048979444e934}
+      \strng{bibnamehash}{cd34ed244def86d0018048979444e934}
+      \strng{authorbibnamehash}{cd34ed244def86d0018048979444e934}
+      \strng{authornamehash}{cd34ed244def86d0018048979444e934}
+      \strng{authorfullhash}{cd34ed244def86d0018048979444e934}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistical Applications in Genetics and Molecular Biology}
+      \field{number}{1}
+      \field{title}{A shrinkage approach to large-scale covariance matrix estimation and implications for functional genomics}
+      \field{volume}{4}
+      \field{year}{2005}
+      \field{pages}{Article 32}
+      \range{pages}{-1}
     \endentry
     \entry{shahzadetal}{misc}{}
       \name{author}{3}{}{%
@@ -535,6 +716,9 @@
            familyi={X\bibinitperiod},
            given={Fan\bibnamedelima Dora},
            giveni={F\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
       }
       \strng{namehash}{8583c3455f6c52bf9776d9f7646ffe3a}
       \strng{fullhash}{8583c3455f6c52bf9776d9f7646ffe3a}
@@ -559,6 +743,50 @@
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global}
+    \entry{adamsetal2024}{article}{}
+      \name{author}{4}{}{%
+        {{hash=7103b9823c88bde13c9aedf433a95337}{%
+           family={Adams},
+           familyi={A\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=87759e28d998a27bd80c582396310096}{%
+           family={Loewenstein},
+           familyi={L\bibinitperiod},
+           given={Lara},
+           giveni={L\bibinitperiod}}}%
+        {{hash=ccddabdfed72b0d5f5943b6a52a2215d}{%
+           family={Montag},
+           familyi={M\bibinitperiod},
+           given={Hugh},
+           giveni={H\bibinitperiod}}}%
+        {{hash=865794d640ae6da7d5a209d0be055656}{%
+           family={Verbrugge},
+           familyi={V\bibinitperiod},
+           given={Randal},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{52fc8a2d12b6b73017a43f68ac7662d4}
+      \strng{fullhash}{2250ab583528e9a556270b02eb432296}
+      \strng{bibnamehash}{2250ab583528e9a556270b02eb432296}
+      \strng{authorbibnamehash}{2250ab583528e9a556270b02eb432296}
+      \strng{authornamehash}{52fc8a2d12b6b73017a43f68ac7662d4}
+      \strng{authorfullhash}{2250ab583528e9a556270b02eb432296}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{American Economic Review: Insights}
+      \field{number}{2}
+      \field{title}{Disentangling rent index differences: Data, methods, and scope}
+      \field{volume}{6}
+      \field{year}{2024}
+      \field{pages}{230\bibrangedash 245}
+      \range{pages}{16}
+    \endentry
     \entry{ando2022}{article}{}
       \name{author}{3}{}{%
         {{hash=375fde861454228231f96f7a635a9ff6}{%
@@ -683,18 +911,63 @@
       \field{pages}{104168}
       \range{pages}{1}
     \endentry
-    \entry{bryan1994measuring}{article}{}
+    \entry{bolhuisetal2022}{article}{}
+      \name{author}{3}{}{%
+        {{hash=6645b31764295b1dfd1e0550a2faacfd}{%
+           family={Bolhuis},
+           familyi={B\bibinitperiod},
+           given={Marijn\bibnamedelima A},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=d7e5922e705a05998b6bf0717dd5a32b}{%
+           family={Cramer},
+           familyi={C\bibinitperiod},
+           given={Judd\bibnamedelimb N\bibnamedelima L},
+           giveni={J\bibinitperiod\bibinitdelim N\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=99d97b6119dc8e6173e861cc94d01099}{%
+           family={Summers},
+           familyi={S\bibinitperiod},
+           given={Lawrence\bibnamedelima H},
+           giveni={L\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{8908fb8aeb17069b85c9df45cb685f0c}
+      \strng{fullhash}{12edd1c1c9924befc9a90fd46eaf4eb6}
+      \strng{bibnamehash}{12edd1c1c9924befc9a90fd46eaf4eb6}
+      \strng{authorbibnamehash}{12edd1c1c9924befc9a90fd46eaf4eb6}
+      \strng{authornamehash}{8908fb8aeb17069b85c9df45cb685f0c}
+      \strng{authorfullhash}{12edd1c1c9924befc9a90fd46eaf4eb6}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Review of Finance}
+      \field{number}{5}
+      \field{title}{The coming rise in residential inflation}
+      \field{volume}{26}
+      \field{year}{2022}
+      \field{pages}{1051\bibrangedash 1072}
+      \range{pages}{22}
+    \endentry
+    \entry{bryan1994measuring}{inbook}{}
       \name{author}{2}{}{%
         {{hash=bd534b024fb909d8a99ec43e14a6a01c}{%
            family={Bryan},
            familyi={B\bibinitperiod},
-           given={Michael\bibnamedelima F.},
+           given={Michael\bibnamedelima F},
            giveni={M\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
         {{hash=245fa654e11dfedf6b6154c9eeb56365}{%
            family={Cecchetti},
            familyi={C\bibinitperiod},
-           given={Stephen\bibnamedelima G.},
+           given={Stephen\bibnamedelima G},
            giveni={S\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {The University of Chicago Press}%
       }
       \strng{namehash}{c30d6a8988a89e0f3d25e2cce51c1301}
       \strng{fullhash}{c30d6a8988a89e0f3d25e2cce51c1301}
@@ -709,10 +982,11 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Monetary Policy (NBER)}
-      \field{note}{In N.G. Mankiw (ed.), \textit{Monetary Policy}, University of Chicago Press, 195--215}
+      \field{booktitle}{Monetary policy}
       \field{title}{Measuring core inflation}
       \field{year}{1994}
+      \field{pages}{195\bibrangedash 219}
+      \range{pages}{25}
     \endentry
     \entry{choishin2022}{article}{}
       \name{author}{2}{}{%
@@ -755,8 +1029,8 @@
            familyi={C\bibinitperiod},
            given={Richard},
            giveni={R\bibinitperiod}}}%
-        {{hash=9f86081942834923a86a56e2f4d2a7cd}{%
-           family={Galí},
+        {{hash=2eb29b2de0e8395a3a59f8899cfbdebc}{%
+           family={Gali},
            familyi={G\bibinitperiod},
            given={Jordi},
            giveni={J\bibinitperiod}}}%
@@ -766,12 +1040,15 @@
            given={Mark},
            giveni={M\bibinitperiod}}}%
       }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
       \strng{namehash}{9b734dc7151782a431d361764f59bfef}
-      \strng{fullhash}{f748fa6025648e49fa4583c167cd1572}
-      \strng{bibnamehash}{f748fa6025648e49fa4583c167cd1572}
-      \strng{authorbibnamehash}{f748fa6025648e49fa4583c167cd1572}
+      \strng{fullhash}{aa7611b9ae63f3e67c97c3171c9d9445}
+      \strng{bibnamehash}{aa7611b9ae63f3e67c97c3171c9d9445}
+      \strng{authorbibnamehash}{aa7611b9ae63f3e67c97c3171c9d9445}
       \strng{authornamehash}{9b734dc7151782a431d361764f59bfef}
-      \strng{authorfullhash}{f748fa6025648e49fa4583c167cd1572}
+      \strng{authorfullhash}{aa7611b9ae63f3e67c97c3171c9d9445}
       \field{sortinit}{C}
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{extradatescope}{labelyear}
@@ -779,9 +1056,9 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Quarterly Journal of Economics}
+      \field{journaltitle}{The Quarterly journal of economics}
       \field{number}{1}
-      \field{title}{Monetary policy rules and macroeconomic stability: Evidence and some theory}
+      \field{title}{Monetary policy rules and macroeconomic stability: evidence and some theory}
       \field{volume}{115}
       \field{year}{2000}
       \field{pages}{147\bibrangedash 180}
@@ -821,6 +1098,74 @@
       \field{pages}{57\bibrangedash 66}
       \range{pages}{10}
     \endentry
+    \entry{gallinverbrugge2019}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b70ce2f4a932d6b13e1e3d4f00349c21}{%
+           family={Gallin},
+           familyi={G\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod}}}%
+        {{hash=076177f11416d2ea5b65623a862c3597}{%
+           family={Verbrugge},
+           familyi={V\bibinitperiod},
+           given={Randal\bibnamedelima J},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{2cbedd4724f13ca367a49fc3dbdc84f5}
+      \strng{fullhash}{2cbedd4724f13ca367a49fc3dbdc84f5}
+      \strng{bibnamehash}{2cbedd4724f13ca367a49fc3dbdc84f5}
+      \strng{authorbibnamehash}{2cbedd4724f13ca367a49fc3dbdc84f5}
+      \strng{authornamehash}{2cbedd4724f13ca367a49fc3dbdc84f5}
+      \strng{authorfullhash}{2cbedd4724f13ca367a49fc3dbdc84f5}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Economic Theory}
+      \field{title}{A theory of sticky rents: Search and bargaining with incomplete information}
+      \field{volume}{183}
+      \field{year}{2019}
+      \field{pages}{478\bibrangedash 519}
+      \range{pages}{42}
+    \endentry
+    \entry{genesove2003}{article}{}
+      \name{author}{1}{}{%
+        {{hash=63992ef3307c301b1bef99b39f864c3a}{%
+           family={Genesove},
+           familyi={G\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{63992ef3307c301b1bef99b39f864c3a}
+      \strng{fullhash}{63992ef3307c301b1bef99b39f864c3a}
+      \strng{bibnamehash}{63992ef3307c301b1bef99b39f864c3a}
+      \strng{authorbibnamehash}{63992ef3307c301b1bef99b39f864c3a}
+      \strng{authornamehash}{63992ef3307c301b1bef99b39f864c3a}
+      \strng{authorfullhash}{63992ef3307c301b1bef99b39f864c3a}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{The Review of Economics and Statistics}
+      \field{number}{4}
+      \field{title}{The nominal rigidity of apartment rents}
+      \field{volume}{85}
+      \field{year}{2003}
+      \field{pages}{844\bibrangedash 853}
+      \range{pages}{10}
+    \endentry
     \entry{genizi1993}{article}{}
       \name{author}{1}{}{%
         {{hash=a7aa8e48d8adfa2127795d8b2d553108}{%
@@ -850,7 +1195,7 @@
       \field{pages}{407\bibrangedash 420}
       \range{pages}{14}
     \endentry
-    \entry{goodfriend1997new}{inbook}{}
+    \entry{goodfriend1997new}{article}{}
       \name{author}{2}{}{%
         {{hash=735d653161d3a96a0848b76fe55f94b6}{%
            family={Goodfriend},
@@ -860,23 +1205,11 @@
         {{hash=e068047c81ba350319902fe3f06656cf}{%
            family={King},
            familyi={K\bibinitperiod},
-           given={Robert\bibnamedelima G.},
+           given={Robert\bibnamedelima G},
            giveni={R\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
       }
-      \name{editor}{2}{}{%
-        {{hash=7c898d91e08f8405749c5ad0d0817ac2}{%
-           family={Bernanke},
-           familyi={B\bibinitperiod},
-           given={Ben\bibnamedelima S.},
-           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
-        {{hash=3968abaaacf460fcf10761ff1a87e388}{%
-           family={Rotemberg},
-           familyi={R\bibinitperiod},
-           given={Julio\bibnamedelima J.},
-           giveni={J\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
-      }
       \list{publisher}{1}{%
-        {MIT Press}%
+        {MIT press}%
       }
       \strng{namehash}{f61a4672795e98e4e51f03590b1713e4}
       \strng{fullhash}{f61a4672795e98e4e51f03590b1713e4}
@@ -884,9 +1217,6 @@
       \strng{authorbibnamehash}{f61a4672795e98e4e51f03590b1713e4}
       \strng{authornamehash}{f61a4672795e98e4e51f03590b1713e4}
       \strng{authorfullhash}{f61a4672795e98e4e51f03590b1713e4}
-      \strng{editorbibnamehash}{83ce44b18d6d7981eb367f1c2a4b0d11}
-      \strng{editornamehash}{83ce44b18d6d7981eb367f1c2a4b0d11}
-      \strng{editorfullhash}{83ce44b18d6d7981eb367f1c2a4b0d11}
       \field{sortinit}{G}
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{extradatescope}{labelyear}
@@ -894,20 +1224,23 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{NBER Macroeconomics Annual 1997}
+      \field{journaltitle}{NBER macroeconomics annual}
       \field{title}{The new neoclassical synthesis and the role of monetary policy}
       \field{volume}{12}
       \field{year}{1997}
-      \field{pages}{231\bibrangedash 296}
-      \range{pages}{66}
+      \field{pages}{231\bibrangedash 283}
+      \range{pages}{53}
     \endentry
     \entry{hamilton1989new}{article}{}
       \name{author}{1}{}{%
         {{hash=f1528bc518ebb8f6103311513805ac7d}{%
            family={Hamilton},
            familyi={H\bibinitperiod},
-           given={James\bibnamedelima D.},
+           given={James\bibnamedelima D},
            giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {JSTOR}%
       }
       \strng{namehash}{f1528bc518ebb8f6103311513805ac7d}
       \strng{fullhash}{f1528bc518ebb8f6103311513805ac7d}
@@ -922,10 +1255,8 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Econometrica}
-      \field{number}{2}
+      \field{journaltitle}{Econometrica: Journal of the econometric society}
       \field{title}{A new approach to the economic analysis of nonstationary time series and the business cycle}
-      \field{volume}{57}
       \field{year}{1989}
       \field{pages}{357\bibrangedash 384}
       \range{pages}{28}
@@ -981,6 +1312,40 @@
       \field{note}{Speech at ``Reassessing Constraints on the Economy and Policy,'' economic policy symposium sponsored by the Federal Reserve Bank of Kansas City, Jackson Hole, Wyoming, August 26}
       \field{title}{Monetary Policy and Price Stability}
       \field{year}{2022}
+    \endentry
+    \entry{schafer2005}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c5738e2e7401f99e4f88caa29137dea0}{%
+           family={Schäfer},
+           familyi={S\bibinitperiod},
+           given={Juliane},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7f1cb33b9b093158687e4529dd1fd9b0}{%
+           family={Strimmer},
+           familyi={S\bibinitperiod},
+           given={Korbinian},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{cd34ed244def86d0018048979444e934}
+      \strng{fullhash}{cd34ed244def86d0018048979444e934}
+      \strng{bibnamehash}{cd34ed244def86d0018048979444e934}
+      \strng{authorbibnamehash}{cd34ed244def86d0018048979444e934}
+      \strng{authornamehash}{cd34ed244def86d0018048979444e934}
+      \strng{authorfullhash}{cd34ed244def86d0018048979444e934}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Statistical Applications in Genetics and Molecular Biology}
+      \field{number}{1}
+      \field{title}{A shrinkage approach to large-scale covariance matrix estimation and implications for functional genomics}
+      \field{volume}{4}
+      \field{year}{2005}
+      \field{pages}{Article 32}
+      \range{pages}{-1}
     \endentry
     \entry{shahzadetal}{misc}{}
       \name{author}{3}{}{%
@@ -1075,6 +1440,9 @@
            familyi={X\bibinitperiod},
            given={Fan\bibnamedelima Dora},
            giveni={F\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
       }
       \strng{namehash}{8583c3455f6c52bf9776d9f7646ffe3a}
       \strng{fullhash}{8583c3455f6c52bf9776d9f7646ffe3a}
