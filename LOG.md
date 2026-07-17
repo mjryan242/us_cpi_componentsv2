@@ -182,3 +182,47 @@ own-lag-dropping (clipping) estimator to match the companion paper (a code
 change, not a footnote).
 
 Also added `additional_materials/` to `.gitignore`.
+
+### 2026-07-13 (later) — Matched-horizon robustness for H4/h6; decided on mismatched throughout
+
+Ran a new standalone check (`us_cpi_h6_matched_robustness.R`) re-estimating table h6's
+{MICH, CPI} directional decomposition with YoY (4-quarter) CPI inflation — matched to
+the Michigan survey's 1-year horizon — alongside the QoQ version the paper currently
+uses ("mismatched"). The QoQ panel exactly reproduced the published h6 numbers first,
+as a check that the new script's data construction was right, before trusting the YoY
+comparison. Result: the net lead/follow sign pattern (expectations lead in Core,
+follow in Great Inflation/COVID) survives the horizon change, but the headline GI
+$\tau=0.9$ lagged-dominance claim (inflation→expectations $50.7$ vs reverse $27.5$)
+does not — under YoY the two are roughly equal ($37.1$ vs $39.8$). The COVID
+$\tau=0.9$ matched cell is also degenerate (shrinkage saturates with only ~25
+quarters of post-2020 data).
+
+Based on this, the user decided to adopt the **mismatched (short-horizon) measure as
+the paper's headline throughout** — wherever realised inflation is paired with
+expectations, use m/m (monthly) or QoQ (quarterly), not YoY/12-month — reversing an
+earlier documented preference for the matched measure. This is mainly an internal-
+consistency move (every other system in the paper — six CPI subcomponents, wages —
+already uses short-horizon changes) plus a mechanical argument (overlapping YoY
+changes share most of their underlying months with neighbouring observations, which
+inflates lagged connectedness and blurs the contemporaneous/lagged and directional
+attributions H3 and H4 rely on). Logged in `DECISIONS.md`, with the earlier "matched"
+entry marked superseded rather than deleted.
+
+**Consequences still to implement in the paper (not yet done):** the H5/H6 policy
+tables' headline expectations panel needs to switch from the matched variant
+(`ms_expM_*`, `msq_exp12_*`) to the mismatched one (`ms_expX_*`, `msq_expmm_*`); the
+"we prefer the annual measure" policy-section prose needs rewriting since it now says
+the opposite of the working choice; and under the mismatched measure the one
+significant H6-policy result (matched, $\tau=0.7$, 120-month) is no longer headline —
+H6-policy reads as a clean null throughout, which should be reflected in the
+hypothesis framing. The h6/h6net (H4) prose should also gain a footnote noting the
+horizon mismatch, citing the new matched-YoY results as robustness rather than as an
+equally-weighted alternative panel.
+
+**Not done in this pass:** touching `main (1).tex` itself. The user pushed a large
+"post first readthrough" revision to the paper directly from Overleaf in parallel
+(commit `b095edc`, pulled in) that already rewrote the methodology section
+substantially — including their own version of the shrinkage/PSD paragraph, so an
+earlier locally-drafted "smaller"→"larger" correction to that paragraph was discarded
+as superseded rather than reapplied. The mismatched-measure consequences above are
+documented but still need to be implemented in the paper text and table selection.

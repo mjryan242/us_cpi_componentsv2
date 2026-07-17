@@ -91,6 +91,11 @@ this was a judgment call, not a decisive empirical result either way.
 
 ## Inflation measure for the expectations system: matched (12-month), not mismatched (m/m)
 
+> **SUPERSEDED (2026-07-13)** by the "MISMATCHED (short-horizon) throughout"
+> entry at the bottom of this file. The paper now uses the short-horizon
+> (m/m, QoQ) measure as headline; the matched measure below is retained only
+> as robustness. Kept here for the record.
+
 **Chosen:** Pair the Michigan 1-year-ahead expectation with 12-month
 (year-over-year) CPI inflation ("matched" — same horizon as the survey
 question).
@@ -193,3 +198,37 @@ mode differs) — this is the same resolution behaviour Overleaf will use.
 **Confidence:** High — this is a documented Overleaf behaviour (project
 root is always the sync root), not a judgment call, and the fix was
 verified by reproducing Overleaf's exact resolution mode locally.
+
+---
+
+## Expectations-system inflation measure: MISMATCHED (short-horizon) throughout [supersedes the earlier "matched" preference]
+
+**Chosen (2026-07-13, user decision):** wherever realised inflation is paired with
+Michigan expectations, use the short-horizon transform -- month-on-month CPI at
+monthly frequency, quarter-on-quarter at quarterly frequency ("mismatched"
+relative to the survey's one-year horizon).
+
+**Rejected:** the matched-horizon (12-month / 4-quarter) pairing as the headline
+measure (the earlier entry's preference, now superseded). Grounds:
+- internal consistency: every other system in the paper (six CPI subcomponents,
+  wages, h6/h6net) already uses short-horizon changes;
+- overlapping YoY/12-month changes are mechanically smooth (adjacent observations
+  share 11 months / 3 quarters of price data), inflating lagged connectedness in
+  both directions and blurring the contemporaneous-vs-lagged and directional
+  attributions that H3 and H4 are built on;
+- matched-horizon results are demoted to robustness. The h6 matched check
+  (results_2var_exp_q/h6_matched_robustness.csv) shows the net lead/follow signs
+  survive the horizon change (GI -20.2 -> -5.9; Core +29.1 -> +8.3) but the GI
+  lagged-dominance headline (50.7 vs 27.5) does not (37.1 vs 39.8), and the COVID
+  tau=0.9 matched cell is degenerate (shrinkage saturates in ~25 quarters).
+
+**Consequences:** the single significant H6-policy result (matched, tau=0.7,
+120-month) is no longer headline; under the working measure the H6 policy
+interaction is insignificant throughout, so H6 reads as a clean null. Policy-
+section prose that "prefers the annual measure" must be rewritten, and the
+quarterly policy table should present msq_expmm rather than msq_exp12.
+
+**Confidence:** Medium-High. Consistency and overlap-smoothing arguments are
+solid; the cost is the horizon-mismatch critique (one-year expectation vs
+one-month realised inflation), which should be acknowledged in a footnote with
+the matched results reported as robustness.
