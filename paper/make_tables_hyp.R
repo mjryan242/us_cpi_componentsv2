@@ -61,6 +61,14 @@ panel3 <- function(df, win) paste(
   vrow(df,win,"\\quad lagged Wages$\\to$CPI","Wages_to_CPI_L"),
   vrow(df,win,"\\quad lagged CPI$\\to$Wages","CPI_to_Wages_L"), sep="\n")
 hdr <- "$\\tau=0.5$ & $\\tau=0.7$ & $\\tau=0.9$"
+# Panel D: 1964-2019, level-matched taus (from us_cpi_wage_taulevel.R)
+tl <- read.csv("results_wage_spiral/tau_level_matched.csv")
+tl7 <- tl[tl$post_tau==0.7, ]; tl9 <- tl[tl$post_tau==0.9, ]
+panelD <- paste(
+  sprintf("Wage--CPI total connectedness (TCI) & %s & %s \\\\", f1(tl7$TCI), f1(tl9$TCI)),
+  sprintf("\\quad lagged Wages$\\to$CPI & %s & %s \\\\", f1(tl7$Wages_to_CPI_L), f1(tl9$Wages_to_CPI_L)),
+  sprintf("\\quad lagged CPI$\\to$Wages & %s & %s \\\\", f1(tl7$CPI_to_Wages_L), f1(tl9$CPI_to_Wages_L)), sep="\n")
+hdrD <- sprintf("Matched to $\\tau{=}0.7$ & Matched to $\\tau{=}0.9$")
 wr("h2", paste0(
 "\\begin{table}[!ht]\n\\centering\n\\caption{H2 --- Wage--price connectedness is stronger when inflation is high}\n\\label{tab:h2}\n",
 "\\setlength{\\tabcolsep}{6pt}\\footnotesize\n\\begin{threeparttable}\n",
@@ -69,21 +77,34 @@ wr("h2", paste0(
 " & ", hdr, " \\\\\n\\midrule\n", panel3(sp,"Full"),
 "\n\\bottomrule\n\\end{tabular}\n\n\\vspace{4pt}\n",
 "\\begin{tabular}{l c c c}\n",
-"\\multicolumn{4}{l}{\\textit{Panel B. By subperiod (monthly)}}\\\\\n\\toprule\n",
+"\\multicolumn{4}{l}{\\textit{Panel B. Quarterly (full sample), by quantile}}\\\\\n\\toprule\n",
+" & ", hdr, " \\\\\n\\midrule\n", panel3(spq,"Full"),
+"\n\\bottomrule\n\\end{tabular}\n\n\\vspace{4pt}\n",
+"\\begin{tabular}{l c c c}\n",
+"\\multicolumn{4}{l}{\\textit{Panel C. By subperiod (monthly), by quantile}}\\\\\n\\toprule\n",
 " & ", hdr, " \\\\\n\\midrule\n",
 "\\multicolumn{4}{l}{\\textit{\\;1964--2019 (with Great Inflation)}}\\\\\n", panel3(sp,"Pre_1964_2019"), "\n\\addlinespace\n",
 "\\multicolumn{4}{l}{\\textit{\\;1983--2026 (post-Great-Inflation)}}\\\\\n", panel3(sp,"Post_1983_2026"),
 "\n\\bottomrule\n\\end{tabular}\n\n\\vspace{4pt}\n",
-"\\begin{tabular}{l c c c}\n",
-"\\multicolumn{4}{l}{\\textit{Panel C. Quarterly (full sample), by quantile}}\\\\\n\\toprule\n",
-" & ", hdr, " \\\\\n\\midrule\n", panel3(spq,"Full"),
+"\\begin{tabular}{l c c}\n",
+"\\multicolumn{3}{l}{\\textit{Panel D. 1964--2019 (with Great Inflation), level-matched $\\tau$ (monthly)}}\\\\\n\\toprule\n",
+" & ", hdrD, " \\\\\n\\midrule\n", panelD,
 "\n\\bottomrule\n\\end{tabular}\n",
 "\\begin{tablenotes}[flushleft]\\footnotesize\n",
 "\\item \\textit{Notes:} Two-variable system of wage growth (AHETPI) and overall CPI (CPIAUCSL); pseudo-quantile ",
 "$R^2$ connectedness (\\%), Genizi estimator, $n_{\\text{lag}}=2$. Wage--price connectedness rises sharply into ",
-"the high-inflation tail at all frequencies, and is far stronger in the Great-Inflation-inclusive subperiod ",
-"(1964--2019) than post-1983. In the high tail the lagged components dominate. Quarterly ($n_{\\text{lag}}=2$) ",
-"spans a six-month horizon.\n",
+"the high-inflation tail at all frequencies (Panels A--B), and is far stronger in the Great-Inflation-inclusive ",
+"subperiod (1964--2019) than post-1983 (Panel C). In the high tail the lagged components dominate. Quarterly ",
+"($n_{\\text{lag}}=2$) spans a six-month horizon. Panel~D addresses the fact that comparing the two subperiods ",
+"at the same $\\tau$ compares different inflation \\emph{levels}: it reports the 1964--2019 connectedness at the ",
+"quantiles ($\\tau=", f2(tl7$tau_matched), "$ and $", f2(tl9$tau_matched), "$) whose month-on-month CPI-inflation ",
+"level matches that of the post-1983 sample at $\\tau=0.7$ and $\\tau=0.9$ (about ", sprintf("%.1f",tl7$level_ann),
+
+" and ", sprintf("%.1f",tl9$level_ann), " per cent annualised). Even level-matched, 1964--2019 connectedness ",
+"(", f1(tl7$TCI), " and ", f1(tl9$TCI), ") remains far above the post-1983 values in Panel~C (", f1(sp$TCI[sp$window=="Post_1983_2026" & sp$estimator=="Genizi" & sp$nlag==2 & sp$tau==0.7]),
+" and ", f1(sp$TCI[sp$window=="Post_1983_2026" & sp$estimator=="Genizi" & sp$nlag==2 & sp$tau==0.9]),
+"), so the gap is not a level artefact; the level-matched spillovers also stay roughly symmetric, the balanced ",
+"feedback characteristic of a spiral.\n",
 "\\end{tablenotes}\n\\end{threeparttable}\n\\end{table}\n"))
 
 ## ============================================================
