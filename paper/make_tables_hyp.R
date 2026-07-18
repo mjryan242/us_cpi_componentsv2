@@ -111,35 +111,51 @@ wr("h2", paste0(
 ## H3 -- Episode mechanism
 ## ============================================================
 cat("building h3\n")
-mm <- read.csv("results_6cpi_era/episode_marginal_decomposition.csv")
-mq <- read.csv("results_6cpi_era_q/episode_marginal_decomposition.csv")
+mm <- read.csv("results_6cpi_era/episode_marginal_decomposition.csv")   # same-quantile monthly marginals
+tl <- read.csv("results_6cpi_era/tau_levels.csv")                        # level-matched marginals
+# --- Panel A: same-quantile monthly marginals (no Lagged% col, no quarterly panel) ---
 erow <- function(df, tau, ep) { r <- df[df$Tau==tau & grepl(ep, df$Episode), ]
-  sprintf("%s & %s & %s & %s & %s \\\\", gsub("_","\\\\_",r$Episode),
-    sprintf("%+.1f",r$d_Overall), sprintf("%+.1f",r$d_Contemp), sprintf("%+.1f",r$d_Lagged), f1(r$Lagged_share_pct)) }
+  sprintf("%s & %s & %s & %s \\\\", gsub("_","\\\\_",r$Episode),
+    sprintf("%+.1f",r$d_Overall), sprintf("%+.1f",r$d_Contemp), sprintf("%+.1f",r$d_Lagged)) }
 tblock <- function(df, tau) paste0(
-  "\\multicolumn{5}{l}{\\textit{\\;$\\tau=", tau, "$}}\\\\\n",
+  "\\multicolumn{4}{l}{\\textit{\\;$\\tau=", tau, "$}}\\\\\n",
   erow(df, tau, "GreatInflation"), "\n", erow(df, tau, "COVID"))
 epanel <- function(df) paste0(tblock(df, 0.7), "\n\\addlinespace\n", tblock(df, 0.9))
-ehdr <- "Episode & $\\Delta$Overall & $\\Delta$Contemp. & $\\Delta$Lagged & Lagged \\%"
+# --- level-matched panels (fold in tau_levels; drop its GI-reference design) ---
+lrow <- function(design, ep) { r <- tl[tl$Design==design & tl$Episode==ep, ]
+  lab <- if (ep=="GreatInflation") "Great Inflation" else "COVID"
+  clamp <- if (abs(r$Tau_raw - r$Tau_used) > 1e-9) "$^{\\dagger}$" else ""
+  sprintf("%s ($\\tau=%.2f$)%s & %s & %s & %s \\\\", lab, r$Tau_used, clamp,
+    sprintf("%+.1f",r$d_Overall), sprintf("%+.1f",r$d_Contemp), sprintf("%+.1f",r$d_Lagged)) }
+lpanel <- function(design) paste0(lrow(design,"GreatInflation"), "\n", lrow(design,"COVID"))
+covid_ref <- "1: common level (COVID 0.9 ref)"; thr5 <- "2: 5% annualised threshold"
+ehdr  <- "Episode & $\\Delta$Overall & $\\Delta$Contemp. & $\\Delta$Lagged"
 wr("h3", paste0(
 "\\begin{table}[!ht]\n\\centering\n\\caption{H3 --- COVID broadened contemporaneously; the Great Inflation through lagged propagation}\n\\label{tab:h3}\n",
 "\\setlength{\\tabcolsep}{6pt}\\footnotesize\n\\begin{threeparttable}\n",
-"\\begin{tabular}{l c c c c}\n",
-"\\multicolumn{5}{l}{\\textit{Panel A. Monthly: marginal $\\Delta$TCI$(\\tau)$ vs.\\ the 1983--2019 core}}\\\\\n\\toprule\n",
+"\\begin{tabular}{l c c c}\n",
+"\\multicolumn{4}{l}{\\textit{Panel A. Marginal $\\Delta$TCI$(\\tau)$ vs.\\ the 1983--2019 core, same $\\tau$}}\\\\\n\\toprule\n",
 ehdr, " \\\\\n\\midrule\n", epanel(mm),
 "\n\\bottomrule\n\\end{tabular}\n\n\\vspace{4pt}\n",
-"\\begin{tabular}{l c c c c}\n",
-"\\multicolumn{5}{l}{\\textit{Panel B. Quarterly: marginal $\\Delta$TCI$(\\tau)$ vs.\\ the 1983--2019 core}}\\\\\n\\toprule\n",
-ehdr, " \\\\\n\\midrule\n", epanel(mq),
+"\\begin{tabular}{l c c c}\n",
+"\\multicolumn{4}{l}{\\textit{Panel B. Level-matched to COVID $\\tau=0.9$ (8.7\\% annualised)}}\\\\\n\\toprule\n",
+ehdr, " \\\\\n\\midrule\n", lpanel(covid_ref),
+"\n\\bottomrule\n\\end{tabular}\n\n\\vspace{4pt}\n",
+"\\begin{tabular}{l c c c}\n",
+"\\multicolumn{4}{l}{\\textit{Panel C. Level-matched to a common 5\\% annualised threshold}}\\\\\n\\toprule\n",
+ehdr, " \\\\\n\\midrule\n", lpanel(thr5),
 "\n\\bottomrule\n\\end{tabular}\n",
 "\\begin{tablenotes}[flushleft]\\footnotesize\n",
-"\\item \\textit{Notes:} Each episode's marginal contribution to connectedness at $\\tau\\in\\{0.7,0.9\\}$ relative to ",
-"the calm 1983--2019 core (nested subtraction), split into contemporaneous and lagged; six-CPI system, Panel A ",
-"monthly, Panel B quarterly. At monthly frequency the Great Inflation broadened mainly through the \\emph{lagged} ",
-"(propagation) channel at both quantiles, while COVID broadened contemporaneously (its lagged marginal is ",
-"negative at $\\tau=0.9$ and essentially zero at $\\tau=0.7$). At quarterly frequency the same contrast is sharp ",
-"at $\\tau=0.7$; at $\\tau=0.9$ the calm-era base is already high and lagged-dominated, and the COVID window ",
-"contributes only 26 quarters, so the episode marginals there are less informative.\n",
+"\\item \\textit{Notes:} Each episode's marginal contribution to monthly connectedness relative to the calm ",
+"1983--2019 core (nested subtraction), split into contemporaneous and lagged; six-CPI system, $n_{\\text{lag}}=2$. ",
+"Panel~A compares the episodes at the same quantile $\\tau\\in\\{0.7,0.9\\}$. Because a given $\\tau$ corresponds to a ",
+"higher inflation level in the Great Inflation, Panels~B and~C instead match on the inflation \\emph{level}: each ",
+"episode is evaluated at the $\\tau$ whose annualised month-on-month CPI inflation equals a common reference --- ",
+"the COVID $\\tau=0.9$ level of $8.7$ per cent in Panel~B, and $5$ per cent in Panel~C. Throughout, the ",
+"Great Inflation broadened mainly through the \\emph{lagged} (propagation) channel, whereas COVID broadened ",
+"contemporaneously (its lagged marginal is negative). The level-matched panels show the Great Inflation's larger ",
+"broadening is not merely a level artefact. $^{\\dagger}$~The implied $\\tau$ falls outside $[0.05,0.95]$ (the ",
+"reference level sits beyond that episode's inflation distribution) and is clamped to the boundary.\n",
 "\\end{tablenotes}\n\\end{threeparttable}\n\\end{table}\n"))
 
 ## ============================================================
