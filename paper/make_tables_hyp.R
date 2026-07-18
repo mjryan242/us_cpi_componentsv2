@@ -215,9 +215,13 @@ de <- merge(MICH=mich_q, CPI=cpi_q, all=FALSE); de <- na.omit(de[, c("MICH","CPI
 sampE <- list(Full=de,
   Core=window(de,start=as.yearqtr("1983 Q1"),end=as.yearqtr("2019 Q4")),
   GreatInflation=window(de,start=as.yearqtr("1967 Q2"),end=as.yearqtr("1982 Q4")),
-  COVID=window(de,start=as.yearqtr("2020 Q1")))
+  COVID=window(de,start=as.yearqtr("2020 Q1")),
+  Y1960_2019=window(de,end=as.yearqtr("2019 Q4")),
+  Y1970_2019=window(de,start=as.yearqtr("1970 Q1"),end=as.yearqtr("2019 Q4")),
+  Y1983_2026=window(de,start=as.yearqtr("1983 Q1")))
 labE <- c(Full="Full (1960--2026)", Core="Core (1983--2019)",
-          GreatInflation="Great Inflation (1967--82)", COVID="COVID (2020--26)")
+          GreatInflation="Great Inflation (1967--82)", COVID="COVID (2020--26)",
+          Y1960_2019="1960--2019", Y1970_2019="1970--2019", Y1983_2026="1983--2026")
 dec <- function(d,tau){ r<-R2ConnectednessQ2(d,window.size=NULL,nlag=2,tau=tau,shrink=TRUE,drop_own_lags=FALSE,progbar=FALSE)
   C<-r$CT[,,1,1]*100; L<-r$CT[,,1,2]*100  # [receiver, source]
   O<-C+L; diag(O)<-0
