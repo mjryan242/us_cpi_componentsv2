@@ -229,11 +229,19 @@ dec <- function(d,tau){ r<-R2ConnectednessQ2(d,window.size=NULL,nlag=2,tau=tau,s
   O<-C+L; diag(O)<-0
   c(cCE=C["MICH","CPI"], lCE=L["MICH","CPI"], cEC=C["CPI","MICH"], lEC=L["CPI","MICH"],  # CPI->Exp ; Exp->CPI
     NET=unname(colSums(O)["MICH"]-rowSums(O)["MICH"])) }                                  # NET of expectations
-blocks <- sapply(names(sampE), function(s)
-  paste(sapply(c(0.5,0.7,0.9), function(tau){ m<-dec(sampE[[s]],tau)
-    lead <- if (tau==0.5) labE[s] else ""
-    sprintf("%s & %.1f & %s & %s & %s & %s & %s \\\\", lead, tau, f1(m["cCE"]), f1(m["lCE"]),
-      f1(m["cEC"]), f1(m["lEC"]), sprintf("%+.1f", m["NET"])) }), collapse="\n"))
+# tau within each sample whose quarter-on-quarter CPI inflation equals 5% annualised
+lev5_qoq <- 100*((1.05)^(1/4) - 1)                       # QoQ % consistent with 5% ann.
+tau5 <- function(d) mean(as.numeric(d[,"CPI"]) <= lev5_qoq, na.rm=TRUE)   # empirical CDF
+rowE <- function(s, tau, lead, taulab){ m <- dec(sampE[[s]], tau)
+  sprintf("%s & %s & %s & %s & %s & %s & %s \\\\", lead, taulab, f1(m["cCE"]), f1(m["lCE"]),
+    f1(m["cEC"]), f1(m["lEC"]), sprintf("%+.1f", m["NET"])) }
+blocks <- sapply(names(sampE), function(s){
+  ts_raw <- tau5(sampE[[s]]); ts <- min(max(ts_raw, 0.05), 0.95)
+  dag <- if (abs(ts_raw - ts) > 1e-9) "$^{\\dagger}$" else ""
+  paste(rowE(s, 0.5, labE[s], "0.5"),
+        rowE(s, 0.7, "", "0.7"),
+        rowE(s, 0.9, "", "0.9"),
+        rowE(s, ts, "", paste0(sprintf("%.2f", ts), "$^{\\ddagger}$", dag)), sep="\n") })
 bodyH6 <- paste(blocks, collapse="\n\\addlinespace\n")
 wr("h6", paste0(
 "\\begin{table}[!ht]\n\\centering\n\\caption{H4 --- Contemporaneous and lagged connectedness between inflation and expectations}\n\\label{tab:h6}\n",
@@ -251,7 +259,10 @@ bodyH6, "\n\\bottomrule\n\\end{tabular}\n\\begin{tablenotes}[flushleft]\\footnot
 "$<0$ that they follow. The \\emph{lagged} Inflation $\\to$ Expectations term (the adaptive channel) dominates ",
 "in the high tail of both episodes --- most strongly in the Great Inflation ($50.7$ at $\\tau=0.9$) --- and ",
 "expectations are net followers there, whereas in the calm 1983--2019 period expectations lead. Dependence, ",
-"not identified causation.\n",
+"not identified causation. $^{\\ddagger}$~The fourth row of each block reports connectedness at the quantile ",
+"whose quarter-on-quarter CPI inflation equals $5$ per cent annualised within that sample (a common-level ",
+"comparison across samples). $^{\\dagger}$~The $5$ per cent level lies outside $[0.05,0.95]$ for that sample and ",
+"the quantile is clamped to the boundary.\n",
 "\\end{tablenotes}\n\\end{threeparttable}\n\\end{table}\n"))
 
 ## ============================================================
