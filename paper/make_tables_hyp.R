@@ -214,14 +214,11 @@ mich_q <- read_mich_qtr("MICH_QTR.csv")
 de <- merge(MICH=mich_q, CPI=cpi_q, all=FALSE); de <- na.omit(de[, c("MICH","CPI")]); storage.mode(de) <- "double"
 sampE <- list(Full=de,
   Core=window(de,start=as.yearqtr("1983 Q1"),end=as.yearqtr("2019 Q4")),
-  GreatInflation=window(de,start=as.yearqtr("1967 Q2"),end=as.yearqtr("1982 Q4")),
-  COVID=window(de,start=as.yearqtr("2020 Q1")),
   Y1960_2019=window(de,end=as.yearqtr("2019 Q4")),
   Y1970_2019=window(de,start=as.yearqtr("1970 Q1"),end=as.yearqtr("2019 Q4")),
   Y1983_2026=window(de,start=as.yearqtr("1983 Q1")),
   Y1993_2026=window(de,start=as.yearqtr("1993 Q1")))
 labE <- c(Full="Full (1960--2026)", Core="Core (1983--2019)",
-          GreatInflation="Great Inflation (1967--82)", COVID="COVID (2020--26)",
           Y1960_2019="1960--2019", Y1970_2019="1970--2019", Y1983_2026="1983--2026",
           Y1993_2026="1993--2026")
 dec <- function(d,tau){ r<-R2ConnectednessQ2(d,window.size=NULL,nlag=2,tau=tau,shrink=TRUE,drop_own_lags=FALSE,progbar=FALSE)
@@ -256,9 +253,7 @@ bodyH6, "\n\\bottomrule\n\\end{tabular}\n\\begin{tablenotes}[flushleft]\\footnot
 "(a six-month lag horizon). ``Inflation $\\to$ Expectations'' is the share of \\emph{expectations'} variation ",
 "explained by CPI, split into contemporaneous and lagged; ``Expectations $\\to$ Inflation'' is the reverse. NET ",
 "is the net directional connectedness of expectations (TO $-$ FROM); $>0$ means expectations lead (transmit), ",
-"$<0$ that they follow. The \\emph{lagged} Inflation $\\to$ Expectations term (the adaptive channel) dominates ",
-"in the high tail of both episodes --- most strongly in the Great Inflation ($50.7$ at $\\tau=0.9$) --- and ",
-"expectations are net followers there, whereas in the calm 1983--2019 period expectations lead. Dependence, ",
+"$<0$ that they follow. Dependence, ",
 "not identified causation. $^{\\ddagger}$~The fourth row of each block reports connectedness at the quantile ",
 "whose quarter-on-quarter CPI inflation equals $5$ per cent annualised within that sample (a common-level ",
 "comparison across samples). $^{\\dagger}$~The $5$ per cent level lies outside $[0.05,0.95]$ for that sample and ",
